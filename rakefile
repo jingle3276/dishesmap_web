@@ -1,0 +1,65 @@
+#
+# The assessment web app build script.
+#
+
+require 'find'
+
+
+# Load other rake tasks
+Dir.glob('tasks/*.rake') {|f| load(f) }
+
+#-----------------------------------------------------
+# Helper methods
+#-----------------------------------------------------
+def highlight(message, length=nil)
+    stars = '*' * ((length or message.length) + 4)
+    lines = ["", stars, "* #{message} *", stars, "", ""]
+    return lines.join("\n")
+end
+
+def colorize(message, color=:red)
+    colors = { :red => "31",
+               :green => "32" }
+
+    color_code = colors[color]
+
+    output = "\e[#{color_code}m#{message}\e[0m"
+
+    return output
+end
+
+def lowlight(message)
+    to_print = "FAILURE: #{message}"
+    raw_length = to_print.length
+
+    if $stdout.isatty
+        to_print = colorize(to_print, :red)
+    end
+
+    return highlight(to_print, raw_length)
+end
+
+def notice(message)
+    puts highlight(message)
+end
+
+def command_in_dir(dir)
+    puts "running in #{dir}"
+    cur_dir = pwd()
+    cd(dir)
+    yield
+ensure
+    cd(cur_dir)
+end
+
+#-----------------------------------------------------
+# Additional Configuration
+#-----------------------------------------------------
+def mac?
+  RUBY_PLATFORM.include? 'darwin'
+end
+
+def cygwin?
+  RUBY_PLATFORM.include? 'cygwin'
+end
+
