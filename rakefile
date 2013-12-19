@@ -1,9 +1,11 @@
 #
-# The assessment web app build script.
+# The dishes map build script.
 #
 
 require 'find'
 
+# Global variables
+CODE_DIR='dmwa'
 
 # Load other rake tasks
 Dir.glob('tasks/*.rake') {|f| load(f) }
