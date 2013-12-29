@@ -1,9 +1,26 @@
 <!doctype html>
-<html>
-    <head>
-    </head>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    	<title>demo</title>
+	    <meta name="description" content="">
+	</head>
+	
+	<body>
+	    <div id="todo">
+	    	<div id="inner_todo"></div>
+	    	<input type="button" id="change_button" value="Change" />
+	    </div>
 
-    <body>
-    	<h1>Hello DishesMap</h1>
-    </body>	
-</html>    
+	    <script type="text/template" id="todo_template">
+		    <label><%= content %></label>
+   		</script>
+
+	    <script src="javascript/3p/jquery.js"></script>
+	    <script src="javascript/3p/underscore.js"></script>
+	    <script src="javascript/3p/backbone.js"></script>
+	    <script src="javascript/dmwa/todo.js"></script>
+	    <script src="javascript/dmwa/todo_view.js"></script>
+
+	</body>
+</html>
