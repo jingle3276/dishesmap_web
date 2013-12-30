@@ -12,7 +12,7 @@ var Todo = Backbone.Model.extend({
 
 	// Default todo attribute values
 	defaults: {
-		content: 'ABC'
+		content: 'default content'
 	},
 
 	setContent: function(newContent){

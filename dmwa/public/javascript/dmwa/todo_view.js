@@ -16,12 +16,13 @@ var TodoView = Backbone.View.extend({
   //
   render: function() {
     var compiled = _.template($("#todo_template").html(), this.model.toJSON());
-    this.$el.find("#inner_todo").html(compiled);
+    this.$el.find("#display").html(compiled);
   },
 
   doChange: function(event) {
     // Button clicked, you can access the element that was clicked with event.currentTarget
-    this.model.setContent("EFG");
+    var content = this.$el.find("#input").val();
+    this.model.setContent(content);
     this.render();
   }
 
