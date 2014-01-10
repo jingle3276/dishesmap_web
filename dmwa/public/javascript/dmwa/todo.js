@@ -1,9 +1,9 @@
-goog.provide('wz.dmwa.Todo');
+goog.provide('wz.dmwa.models.Todo');
 
 
 (function () {
 // Define a Todo Model
-	wz.dmwa.Todo = Backbone.Model.extend({
+	wz.dmwa.models.Todo = Backbone.Model.extend({
 
 		initialize: function() {
 	      console.log('This model has been initialized.');

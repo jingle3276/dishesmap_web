@@ -1,12 +1,12 @@
-goog.provide('wz.dmwa.TodoView');
+goog.provide('wz.dmwa.views.TodoView');
 
-goog.require('wz.dmwa.Todo');
+goog.require('wz.dmwa.models.Todo');
 
 (function () {
 
-  var myTodo = wz.dmwa.Todo;
+  var myTodo = wz.dmwa.models.Todo;
 
-  wz.dmwa.TodoView = Backbone.View.extend({
+  wz.dmwa.views.TodoView = Backbone.View.extend({
 
     tagName:  'input',
 
@@ -37,6 +37,6 @@ goog.require('wz.dmwa.Todo');
 
   });
   // create a view for a todo
-  todoView = new wz.dmwa.TodoView({model: myTodo});
+  //todoView = new wz.dmwa.views.TodoView({model: myTodo});
 
 }());
