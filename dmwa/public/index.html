@@ -7,15 +7,10 @@
 	</head>
 	
 	<body>
-	    <div id="todo">
-	    	<div id="display"></div>
-	    	<input type="text" id="input"/>
-	    	<input type="button" id="change_button" value="Change" />
-	    </div>
-
-	    <script type="text/template" id="todo_template">
-		    <label><%= content %></label>
-   		</script>
+		<div id="home">
+		    <div id="todo">
+		    </div>
+		</div>
 
    		<script src="javascript/3p/goog/base.js"></script>
    		
@@ -27,9 +22,15 @@
 	    <script src="javascript/dmwa/lib/object.js"></script>
 
 	    <script src="javascript/dmwa/core/controllers/controller.js"></script>
+
+		<script src="javascript/dmwa/core/templates/template_index.js"></script>
+	    <script src="javascript/dmwa/core/templates/render_template.js"></script>
+	    <script src="javascript/target/templates/todo_template_index.js"></script>	
+
+	    <script src="javascript/dmwa/todo/models/todo.js"></script>
+	    <script src="javascript/dmwa/todo/views/todo_view.js"></script>
+	    <script src="javascript/dmwa/todo/controllers/todo_controller.js"></script>
+
 	    
-	    <script src="javascript/dmwa/todo.js"></script>
-	    <script src="javascript/dmwa/todo_view.js"></script>
-	    <script src="javascript/dmwa/todo_controller.js"></script>
 	</body>
 </html>

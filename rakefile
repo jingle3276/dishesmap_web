@@ -5,6 +5,7 @@
 require 'find'
 
 # Global variables
+JAVASCRIPT_DIR="dmwa/public/javascript"
 CODE_DIR='dmwa'
 
 # Load other rake tasks

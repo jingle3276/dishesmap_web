@@ -2,11 +2,14 @@ goog.provide('wz.dmwa.views.TodoView');
 
 goog.require('wz.dmwa.models.Todo');
 goog.require('wz.dmwa.lib.log');
+goog.require('wz.dmwa.core.templates.renderTemplate');
 
 (function () {
 
   var myTodo = wz.dmwa.models.Todo;
   var EVENT_SPLITTER = /^(\w+)\s*(.*)$/;
+
+  var renderTemplate = wz.dmwa.core.templates.renderTemplate;
 
   wz.dmwa.views.TodoView = Backbone.View.extend({
 
@@ -32,7 +35,6 @@ goog.require('wz.dmwa.lib.log');
       this.submitEvent = _.extend({}, {
         "click #change_button" : this._changeButtonClickHandler
       });
-      this._domEvents
     },
 
     start: function() {
@@ -45,9 +47,11 @@ goog.require('wz.dmwa.lib.log');
 
     //
     render: function(item) {
-      var contentObj = {content: item}; 
-      var compiled = _.template($("#todo_template").html(), contentObj);
-      this.$el.find("#display").html(compiled);
+      var contentObj = {content: item};
+      //var compiled = _.template($("#todo_template").html(), contentObj);
+      //this.$el.find("#display").html(compiled);
+      var html = renderTemplate('todo_template', contentObj);
+      this.$el.html(html);
     },
 
     getInput: function() {
