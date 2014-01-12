@@ -43,7 +43,7 @@ goog.require('wz.dmwa.lib.log');
          */
         //start : wgen.assess.abstractMethod,
         start : function () {
-            //Abstract
+            this.delegateEvents(this._domEvents);
         },
 
         /**

@@ -1,20 +1,20 @@
 // Controller for assessments
 //
 
-goog.provide('wz.dmwa.controllers.TodoController');
+goog.provide('wz.dmwa.todo.controllers.TodoController');
 
 goog.require('wz.dmwa.core.controllers.Controller');
-goog.require('wz.dmwa.models.Todo');
-goog.require('wz.dmwa.views.TodoView');
+goog.require('wz.dmwa.todo.models.Todo');
+goog.require('wz.dmwa.todo.views.TodoView');
 
 
 (function () {
 
     var Controller = wz.dmwa.core.controllers.Controller;
-    var TodoView = wz.dmwa.views.TodoView;
-    var Todo = wz.dmwa.models.Todo;
+    var TodoView = wz.dmwa.todo.views.TodoView;
+    var Todo = wz.dmwa.todo.models.Todo;
 
-    wz.dmwa.controllers.TodoController = Controller.extend({
+    wz.dmwa.todo.controllers.TodoController = Controller.extend({
 
         _logNamespace : "TodoController",
 
@@ -56,6 +56,6 @@ goog.require('wz.dmwa.views.TodoView');
 
     });
 
-    var ac = new wz.dmwa.controllers.TodoController();
+    var ac = new wz.dmwa.todo.controllers.TodoController();
     ac.start();
 }());
