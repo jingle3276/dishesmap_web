@@ -3,6 +3,7 @@
 
 goog.provide('wz.dmwa.todo.controllers.TodoController');
 
+goog.require('goog.asserts')
 goog.require('wz.dmwa.core.controllers.Controller');
 goog.require('wz.dmwa.todo.models.Todo');
 goog.require('wz.dmwa.todo.views.TodoView');
@@ -14,13 +15,16 @@ goog.require('wz.dmwa.todo.views.TodoView');
     var TodoView = wz.dmwa.todo.views.TodoView;
     var Todo = wz.dmwa.todo.models.Todo;
 
+    var asserts = goog.asserts;
+
     wz.dmwa.todo.controllers.TodoController = Controller.extend({
 
         _logNamespace : "TodoController",
 
         initialize : function (options) {
+            var a = 12;
             this._log("TodoController Initialized");
-
+            asserts.assert(a, "Error msg");
             //Controller.prototype.initialize.call(this, options);
         },
 

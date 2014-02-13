@@ -6,7 +6,7 @@ goog.provide('wz.dmwa.todo.models.Todo');
 	wz.dmwa.todo.models.Todo = Backbone.Model.extend({
 
 		initialize: function() {
-	      console.log('This model has been initialized.');
+	        console.log('This model has been initialized.');
 
 	      this.on('change', function(){
 	        console.log('Values for this model have changed.');
