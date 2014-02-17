@@ -1,3 +1,4 @@
+//This file is executed by phantomjs
 var EJS_EXTENSION = 'ejs';
 
 var fs = require('fs');
@@ -66,7 +67,7 @@ function generateTemplateIndex (path, indexPath, prefixString) {
     for (templateId in ejsTemplateDictionary) {
         var templateStr = ejsTemplateDictionary[templateId];
         var functionStr = templatize(templateStr);
-        templateIndex.push("wz.dmwa.core.templates.index.compiledTemplates['" + templateId + "'] = " + functionStr + ";");
+        templateIndex.push("wz.dmwa.lib.templates.index.compiledTemplates['" + templateId + "'] = " + functionStr + ";");
     }
     var indexOutput = prefixString + templateIndex.join("\n");
     fs.write(indexPath, indexOutput, 'w');

@@ -1,25 +1,26 @@
-<!doctype html>
 <html lang="en">
 	<head>
-	    <meta charset="utf-8">
-	    	<title>demo</title>
-	    <meta name="description" content="">
-	</head>
-	
-	<body>
-		<div id="home">
-		    <div id="todo">
-		    </div>
-		</div>
-
 	    <script src="javascript/3p/jquery.js"></script>
 	    <script src="javascript/3p/underscore.js"></script>
 	    <script src="javascript/3p/backbone.js"></script>
 
    		<script src="javascript/3p/goog/base.js"></script>
 
-   		<script src="javascript/built/dmwa_js_deps.js"></script>
+   		<script src="javascript/built/dmwa_deps.js"></script>
+        
+        <script >
+        	goog.require('wz.dmwa.lib.templates.index'); //global compileTemplates
+        	goog.require('wz.dmwa.core.templates.index');
+        	goog.require('wz.dmwa.todo.templates.index');
 
-   		<script src>
+        	goog.require('wz.dmwa.todo.controllers.TodoController');
+        </script>
+
+	</head>
+	
+	<body>
+		<div id="home">
+		    <div id="todo">1234</div>
+		</div>
 	</body>
 </html>

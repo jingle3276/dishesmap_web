@@ -1,12 +1,13 @@
 goog.provide('wz.dmwa.todo.views.TodoView');
 
 goog.require('wz.dmwa.lib.log');
-goog.require('wz.dmwa.core.templates.renderTemplate');
+goog.require('wz.dmwa.lib.templates.renderTemplate');
+goog.require('wz.dmwa.core.views.View');
 
 (function () {
 
   var View = wz.dmwa.core.views.View;
-  var renderTemplate = wz.dmwa.core.templates.renderTemplate;
+  var renderTemplate = wz.dmwa.lib.templates.renderTemplate;
 
   wz.dmwa.todo.views.TodoView = View.extend({
 

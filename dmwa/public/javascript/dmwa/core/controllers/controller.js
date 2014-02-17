@@ -1,6 +1,7 @@
 
 goog.provide('wz.dmwa.core.controllers.Controller');
 
+goog.require('wz.dmwa.lib.Object');
 
 (function () {
 

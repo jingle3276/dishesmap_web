@@ -2,7 +2,7 @@ namespace :javascript do
 
     OUTPUT_FILE_DIR = "#{JAVASCRIPT_DIR}/built"
     COMPILED_TEMPLATES_DIR = "#{JAVASCRIPT_DIR}/target/templates"
-    OUTPUT_FILE_JS_DEPS = "#{OUTPUT_FILE_DIR}/dmwa_js_deps.js"
+    OUTPUT_FILE_JS_DEPS = "#{OUTPUT_FILE_DIR}/dmwa_deps.js"
     TASKS_JAVASCRIPT_DIR = "tasks/javascript"
     JAVASCRIPT_3P_DIR = "#{JAVASCRIPT_DIR}/3p"
 
