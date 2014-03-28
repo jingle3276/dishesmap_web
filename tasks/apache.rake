@@ -6,14 +6,20 @@ namespace :apache do
 
 
     def apache2ctl(cmd, environment=nil)
-      notice("apache2ctl: #{cmd}")
+      notice("apache2: #{cmd}")
 
       if mac?
           platform='mac'
           exec='/usr/sbin/apachectl'
+      #TECH-DEBT: Make it work for ubuntu(or Linux) by having rake to determine platform in the main rakefile    
+      #else 
+      #    platform='ubuntu'
+      #    exec='apache2ctl'    
+  
       else
-          platform='ubuntu'
-          exec='apache2ctl'
+          platform='cygwin'
+          exec='/usr/sbin/apachectl2'
+
       end
         sh("PLATFORM='#{platform}' ENVIRONMENT='#{environment}' HTTP_PORT='#{HTTP_PORT}' HTTPS_PORT='#{HTTPS_PORT}' #{exec} -f #{CONFIG} -k #{cmd} -d .")
     end
@@ -25,10 +31,12 @@ namespace :apache do
             apache2ctl('start', 'local')
         end
     end
-
+    
     desc "Stop apache."
     task :stop do
-        apache2ctl('stop', 'fqa')
+        apache2ctl('stop', 'local')
     end
+
+
 
 end 
