@@ -9,20 +9,56 @@
    		<script src="javascript/built/dmwa_deps.js"></script>
         
         <link href="stylesheets/3p/bootstrap.min.css" rel="stylesheet">
+        <link href="stylesheets/theme.css" rel="stylesheet">
 	</head>
 	
-	<body>
-		<div id="home">
-		    <div id="todo"></div>
+	<body role="document">
+		<div id="home" class="container theme-showcase text-center">
+			<div class="page-header">
+				<h1>Best Dishes Around you</h1>
+			</div>
+
+			<div class="jumbotron">
+				<div class="row">
+					<div class="col-sm-12">
+			          <div class="list-group">
+				        
+				        <div class="row">
+				            <a href="#" class="list-group-item">
+				              <h2 class="list-group-item-heading">YouTiao Doujiang</h2>
+				              <p class="list-group-item-text">at <span class="label label-default">Da Cha Fan</span></p>
+				              <p class="list-group-item-text">12 loved it | Distance: 0.3 mi</p>
+				            </a>
+				        <div>    
+
+
+			            <a href="#" class="list-group-item">
+			              <h2 class="list-group-item-heading">Feng Zhao</h2>
+			              <p class="list-group-item-text">at <span class="label label-default">Lao Bei Fang</span></p>
+			              <p class="list-group-item-text">16 loved it | Distance: 0.5 mi</p>
+			            </a>
+			            
+			          </div>
+			        </div>
+				</div>
+
+				<div class='row'>
+					<!-- <div class="col-sm-12"> -->
+					      <form class="navbar-form" role="search">
+					        <div class="form-group">
+					          <input type="text" class="form-control">
+					        </div>
+					        <button type="submit" class="btn btn-default">Search</button>
+					      </form>
+					</div>
+				</div>
+			</div>
+			<!-- 
+		    <div id="todo"></div> -->
 		</div>
 
-		<button type="button" class="btn btn-lg btn-success">Primary</button>
-
-
 		<script >
-        	goog.require('wz.dmwa.lib.templates.index'); //global compileTemplates
-        	goog.require('wz.dmwa.core.templates.index');
-
+			
         </script>
 	</body>
 </html>
