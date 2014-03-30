@@ -3,7 +3,6 @@ namespace :apache do
     HTTPS_PORT = ENV['HTTPS_PORT'] || '9000'
     HTTP_PORT = ENV['HTTP_PORT'] || '9001'
 
-
     def apache2ctl(cmd, environment=nil)
       notice("apache2: #{cmd}")
 
@@ -25,7 +24,7 @@ namespace :apache do
         sh("PLATFORM='#{platform}' ENVIRONMENT='#{environment}' HTTP_PORT='#{HTTP_PORT}' HTTPS_PORT='#{HTTPS_PORT}' #{exec} -f #{config} -k #{cmd} -d .")
     end
 
-	  namespace :start do
+    namespace :start do
 
         desc "Start Apache Local"
         task :local do
@@ -38,6 +37,4 @@ namespace :apache do
         apache2ctl('stop', 'local')
     end
 
-
-
-end 
+end
