@@ -27,7 +27,7 @@ namespace :apache do
 
 	  namespace :start do
 
-        desc "Start Apache"
+        desc "Start Apache Local"
         task :local do
             apache2ctl('start', 'local')
         end
