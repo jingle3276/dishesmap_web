@@ -5,7 +5,11 @@
 	padding-bottom: 10px;
 	margin-bottom: 1px;
 }
-#title{
-	font-family: 'Garamond';
+
+.center-block{
+	float:none;
 }
 
+.jmbotron p .small{
+	font-size: 14px;
+}
