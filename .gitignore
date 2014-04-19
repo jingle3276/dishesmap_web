@@ -1,0 +1,8 @@
+*~
+*.komodoproject
+.project
+.pydevproject
+.settings
+*.log
+*.pid
+*.pyc
