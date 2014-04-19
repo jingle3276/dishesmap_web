@@ -1,3 +1,15 @@
-#home{
+.container{
 	padding: 0 0 0 0;
+}
+.page-header{
+	padding-bottom: 10px;
+	margin-bottom: 1px;
+}
+
+.center-block{
+	float:none;
+}
+
+.jmbotron p .small{
+	font-size: 14px;
 }
