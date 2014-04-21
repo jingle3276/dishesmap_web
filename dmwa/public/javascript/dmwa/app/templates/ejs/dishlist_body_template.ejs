@@ -1,0 +1,36 @@
+<div id="dishlist_body">
+    <div id="reminder_list">
+      <% _.each(obj.reminderGroup, function (reminderSection) { %>
+          <div class="content_section"><%= obj.renderReminderSection(reminderSection) %></div>
+      <% }); %>
+    </div>
+</div>
+
+
+<div class="jumbotron col-xs-6 center-block">
+
+	<div class="row">
+		<div class="list-group-item col-xs-12">
+			<h2 class="list-group-item-heading text-primary">YouTiao Doujiang</h2>
+			<p class="list-group-item-text">at <span class="label label label-info">Da Cha Fan</span></p>
+			<p class="list-group-item-text small">12 loved it <span class="glyphicon glyphicon-heart"></span> | 0.3 mi</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="list-group-item col-xs-12 ">
+			<h2 class="list-group-item-heading text-primary">Feng Zhao</h2>
+			<p class="list-group-item-text">at <span class="label label label-info">Lao Bei Fang</span></p>
+			<p class="list-group-item-text small">16 loved it <span class="glyphicon glyphicon-heart"></span> | 0.5 mi</p>
+		</div>
+	</div>
+
+	<div class="col-xs-12 center-block">
+		<form class="navbar-form" role="search">
+			<div class="form-group">
+			  <input type="text" class="form-control">
+			</div>
+			<button type="submit" class="btn btn-primary">Search</button>
+		</form>
+	</div>
+</div>

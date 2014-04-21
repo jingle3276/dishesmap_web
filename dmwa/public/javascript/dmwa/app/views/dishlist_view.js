@@ -4,6 +4,9 @@ goog.require('wz.dmwa.lib.log');
 goog.require('wz.dmwa.lib.templates.renderTemplate');
 goog.require('wz.dmwa.core.views.View');
 
+goog.require('wz.dmwa.app.templates.DishlistTemplate');
+
+
 (function () {
 
   var View = wz.dmwa.core.views.View;

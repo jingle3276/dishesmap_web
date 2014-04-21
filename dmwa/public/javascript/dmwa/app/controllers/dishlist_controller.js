@@ -5,8 +5,9 @@ goog.provide('wz.dmwa.app.controllers.DishlistController');
 
 goog.require('goog.asserts')
 goog.require('wz.dmwa.core.controllers.Controller');
-//goog.require('wz.dmwa.todo.models.Todo');
-//goog.require('wz.dmwa.todo.views.TodoView');
+
+goog.require('wz.dmwa.app.models.DishlistItem');
+goog.require('wz.dmwa.app.views.DishlistView');
 
 
 (function () {

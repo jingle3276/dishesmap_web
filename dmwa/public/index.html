@@ -19,39 +19,17 @@
 				<h2 class="text-danger"><strong>Best Dishes Around you<strong></h2>
 			</div>
 
-			<div class="jumbotron col-xs-6 center-block">
-
-				<div class="row">
-					<div class="list-group-item col-xs-12">
-						<h2 class="list-group-item-heading text-primary">YouTiao Doujiang</h2>
-						<p class="list-group-item-text">at <span class="label label label-info">Da Cha Fan</span></p>
-						<p class="list-group-item-text small">12 loved it <span class="glyphicon glyphicon-heart"></span> | 0.3 mi</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="list-group-item col-xs-12 ">
-						<h2 class="list-group-item-heading text-primary">Feng Zhao</h2>
-						<p class="list-group-item-text">at <span class="label label label-info">Lao Bei Fang</span></p>
-						<p class="list-group-item-text small">16 loved it <span class="glyphicon glyphicon-heart"></span> | 0.5 mi</p>
-					</div>
-				</div>
-
-				<div class="col-xs-12 center-block">
-					<form class="navbar-form" role="search">
-						<div class="form-group">
-						  <input type="text" class="form-control">
-						</div>
-						<button type="submit" class="btn btn-primary">Search</button>
-					</form>
-				</div>
-			</div>
+			<!-- Move to the html file -->
 			<!-- 
 		    <div id="todo"></div> -->
 		</div>
 
 		<script >
-			
+		    goog.require('wz.dmwa.lib.templates.index'); //global compileTemplates
+        	goog.require('wz.dmwa.core.templates.index');
+        	goog.require('wz.dmwa.app.templates.index');
+
+        	goog.require('wz.dmwa.app.controllers.DishlistController');
         </script>
 	</body>
 </html>
