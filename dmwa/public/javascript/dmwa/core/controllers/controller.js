@@ -9,11 +9,11 @@ goog.require('wz.dmwa.lib.Object');
    
     wz.dmwa.core.controllers.Controller = Object.extend({
         
-    	_businessEvents : {},
+        _businessEvents : {},
         _logNamespace : 'Controller',
 
         initialize : function () {
-        	this._log("Controller Initizlized");
+            this._log("Controller Initizlized");
         },
 
         /**
@@ -94,4 +94,4 @@ goog.require('wz.dmwa.lib.Object');
 
     });
 
- }());
+}());

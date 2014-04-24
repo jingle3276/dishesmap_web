@@ -3,7 +3,7 @@
 
 goog.provide('wz.dmwa.app.controllers.DishlistController');
 
-goog.require('goog.asserts')
+goog.require('goog.asserts');
 goog.require('wz.dmwa.core.controllers.Controller');
 
 goog.require('wz.dmwa.app.models.DishlistItem');
@@ -13,8 +13,7 @@ goog.require('wz.dmwa.app.views.DishlistView');
 (function () {
 
     var Controller = wz.dmwa.core.controllers.Controller;
-    //var TodoView = wz.dmwa.todo.views.TodoView;
-    //var Todo = wz.dmwa.todo.models.Todo;
+    var DishlistView = wz.dmwa.app.views.DishlistView;
 
     var asserts = goog.asserts;
 
@@ -23,10 +22,10 @@ goog.require('wz.dmwa.app.views.DishlistView');
         _logNamespace : "DishlistController",
 
         initialize : function (options) {
-            var a = 12;
+            //var a = 12;
             this._log("DishlistController Initialized");
-            asserts.assert(a, "Error msg");
-            //Controller.prototype.initialize.call(this, options);
+            //asserts.assert(a, "Error msg");
+            Controller.prototype.initialize.call(this, options);
         },
 
         start : function () {
@@ -43,22 +42,22 @@ goog.require('wz.dmwa.app.views.DishlistView');
 
         _initializeBusinessEvents : function () {
             //init change content event
-            this._log("TodoController: _initializeBusinessEvents");
-            var EVENTS = TodoView.prototype.EVENTS;
+            this._log("DishlistController: _initializeBusinessEvents");
+            var EVENTS = DishlistView.prototype.EVENTS;
             this._businessEvents[EVENTS.SUBMIT_CHANGE] = this._onSubmitChange;
             Controller.prototype._initializeBusinessEvents.call(this);
-        }
+        },
 /*
         _onSubmitChange : function () {
             this._log("onSubmitChange called");
             var content = this._view.getInput();
             this._view.render(content);
         },
-
+*/
         _getView : function () {
-            return new TodoView();
+            return new DishlistView();
         }
-*/        
+       
 
     });
 

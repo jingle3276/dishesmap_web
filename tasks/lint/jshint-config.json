@@ -33,7 +33,7 @@
 
     "predef": {
         "goog": true,
-        "wgen": true,
+        "wz": true,
         "_":    true,
         "window": true,
         "Backbone": true,

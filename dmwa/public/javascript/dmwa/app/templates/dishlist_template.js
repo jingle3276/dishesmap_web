@@ -10,7 +10,7 @@ goog.require('wz.dmwa.lib.templates.renderTemplate');
 
 (function () {
 
-    var Template = wz.dmwa.core.templates.Template;  
+    var Template = wz.dmwa.core.templates.Template;
     var renderTemplate = wz.dmwa.lib.templates.renderTemplate;
 
     /**
@@ -19,6 +19,7 @@ goog.require('wz.dmwa.lib.templates.renderTemplate');
      */
     wz.dmwa.app.templates.DishlistTemplate = Template.extend({
 
+        template_id: 'dishlist_template',
         
         /**
          * Render header
@@ -31,39 +32,14 @@ goog.require('wz.dmwa.lib.templates.renderTemplate');
          * Body header
          */
         body : function () {
-            return renderTemplate("dishlist_body_template", this);
+            //return renderTemplate("dishlist_body_template", this);
         },
 
         /**
          * Footer header
          */
         footer : function () {
-            return renderTemplate("dishlist_footer_template", this);
-        },
-
-
-
-
-        renderReminderGroup: function (reminderGroup) {
-            var result = _.map(reminderGroup, function (reminderSection) {
-                return this.renderReminderSection(reminderSection);
-            }, this);
-            return result.join(' ');
-        },
-
-        /**
-         * Rendering reminder (one row on reminder page)
-         * @param reminder {Array}
-         */
-        renderReminderSection : function (reminderSection) {
-            return renderTemplate("reminder_item_template", {sections: reminderSection});
-        },
-
-        nextButton : function () {
-            return renderTemplate("next_button_template", {
-                buttonText: this.nextButtonName,
-                additionalClass : "reminder_proceed"
-            });
+            //return renderTemplate("dishlist_footer_template", this);
         }
 
         

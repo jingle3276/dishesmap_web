@@ -7,3 +7,5 @@
 *.log
 *.pid
 *.pyc
+dmwa/public/javascript/target
+dmwa/public/javascript/built

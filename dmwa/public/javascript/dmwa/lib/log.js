@@ -11,15 +11,15 @@ goog.provide('wz.dmwa.lib.log');
 
     wz.dmwa.lib.log = function () {
 
-    	var getFormattedTime = function () {
-    		var date = new Date();
-    		var str = date.getHours() + ":" + date.getMinutes() 
-    			+ ":" + date.getSeconds() + "." + date.getMilliseconds();;
-    		return str;
-		}
+        var getFormattedTime = function () {
+            var date = new Date();
+            var str = date.getHours() + ":" + date.getMinutes() + ":" +
+                      date.getSeconds() + "." + date.getMilliseconds();
+            return str;
+		};
 
         /*jslint devel: true */
-        var args = ['wz.dmwa | ' + getFormattedTime() +' |'];
+        var args = ['wz.dmwa | ' + getFormattedTime() + ' |'];
         _.each(arguments, function (arg) {
             args.push(arg);
         });
