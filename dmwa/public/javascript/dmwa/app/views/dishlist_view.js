@@ -10,6 +10,7 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
 (function () {
 
     var View = wz.dmwa.core.views.View;
+    var DishlistTemplate = wz.dmwa.app.templates.DishlistTemplate;
     var renderTemplate = wz.dmwa.lib.templates.renderTemplate;
 
     wz.dmwa.app.views.DishlistView = View.extend({
@@ -23,19 +24,32 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
             this._domEvents = _.extend({}, this._domEvents, {
                 //"click #change_button" : this._changeButtonClickHandler
             });
+
+            this._initializeTemplate({});
+        },
+        
+        /**
+         * Initialize template
+         * @param options {Object}
+         */
+        _initializeTemplate: function (options) {
+            // set to template all reminders on page
+            this._template = new DishlistTemplate(options);
         },
 
         start: function () {
             //render view
-            this.render("default");
+            // this._template.render();
+            this._render();
             //Set up DOM event handlers
             View.prototype.start.call(this);
         },
 
-        //
-        render: function (item) {
-            var html = renderTemplate('dishlist_header_template', {});
-            this.$el.html(html);
+        _render: function () {
+            var content = this._template.render();
+            this.$el.empty().append(content);
+            //var html = renderTemplate('scrollable_template', {});
+            //this.$el.html(html);
         }
     });
 

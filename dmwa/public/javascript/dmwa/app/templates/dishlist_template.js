@@ -19,8 +19,19 @@ goog.require('wz.dmwa.lib.templates.renderTemplate');
      */
     wz.dmwa.app.templates.DishlistTemplate = Template.extend({
 
-        template_id: 'dishlist_template',
-        
+        // template_id: 'dishlist_template',
+
+        /**
+         * Initialize template
+         * @param options {Object}
+         */
+        initialize : function (options) {
+            Template.prototype.initialize.call(this, options);
+            this._logNamespace = "dishlist_template";
+            //temproary fix
+            this.templateId = "scrollable_template";
+        },
+
         /**
          * Render header
          */
@@ -32,7 +43,7 @@ goog.require('wz.dmwa.lib.templates.renderTemplate');
          * Body header
          */
         body : function () {
-            //return renderTemplate("dishlist_body_template", this);
+            return renderTemplate("dishlist_body_template", this);
         },
 
         /**
@@ -41,7 +52,6 @@ goog.require('wz.dmwa.lib.templates.renderTemplate');
         footer : function () {
             //return renderTemplate("dishlist_footer_template", this);
         }
-
         
     });
 
