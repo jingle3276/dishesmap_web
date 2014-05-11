@@ -22,9 +22,7 @@ goog.require('wz.dmwa.app.views.DishlistView');
         _logNamespace : "DishlistController",
 
         initialize : function (options) {
-            //var a = 12;
             this._log("DishlistController Initialized");
-            //asserts.assert(a, "Error msg");
             Controller.prototype.initialize.call(this, options);
         },
 
@@ -36,7 +34,6 @@ goog.require('wz.dmwa.app.views.DishlistView');
         //TODO
         //Controller init models, view and business events
         _initializeModels : function () {
-            //this.todo = new Todo();
             this._log("TodoController: _initializeModels");
         },
 

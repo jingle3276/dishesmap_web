@@ -19,7 +19,8 @@ goog.require('wz.dmwa.lib.templates.renderTemplate');
      */
     wz.dmwa.app.templates.DishlistTemplate = Template.extend({
 
-        // template_id: 'dishlist_template',
+        //FIXME: Implement scrollable view and template
+        templateId: 'scrollable_template',
 
         /**
          * Initialize template
@@ -28,8 +29,6 @@ goog.require('wz.dmwa.lib.templates.renderTemplate');
         initialize : function (options) {
             Template.prototype.initialize.call(this, options);
             this._logNamespace = "dishlist_template";
-            //temproary fix
-            this.templateId = "scrollable_template";
         },
 
         /**
@@ -50,9 +49,9 @@ goog.require('wz.dmwa.lib.templates.renderTemplate');
          * Footer header
          */
         footer : function () {
-            //return renderTemplate("dishlist_footer_template", this);
+            return renderTemplate("dishlist_footer_template", this);
         }
-        
+
     });
 
 }());

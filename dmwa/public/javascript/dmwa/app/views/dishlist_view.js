@@ -38,18 +38,14 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
         },
 
         start: function () {
-            //render view
-            // this._template.render();
-            this._render();
+            this._render(); //render view
             //Set up DOM event handlers
             View.prototype.start.call(this);
         },
 
         _render: function () {
             var content = this._template.render();
-            this.$el.empty().append(content);
-            //var html = renderTemplate('scrollable_template', {});
-            //this.$el.html(html);
+            this.$el.empty().append(content); //el is #home
         }
     });
 

@@ -1,6 +1,7 @@
 .container{
 	padding: 0 0 0 0;
 }
+
 .page-header{
 	padding-bottom: 10px;
 	margin-bottom: 1px;
@@ -10,6 +11,3 @@
 	float:none;
 }
 
-.jmbotron p .small{
-	font-size: 14px;
-}
