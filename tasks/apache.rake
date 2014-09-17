@@ -21,7 +21,7 @@ namespace :apache do
           exec='/usr/sbin/apachectl2'
 
       end
-        sh("PLATFORM='#{platform}' ENVIRONMENT='#{environment}' HTTP_PORT='#{HTTP_PORT}' HTTPS_PORT='#{HTTPS_PORT}' #{exec} -f #{config} -k #{cmd} -d .")
+        sh("PLATFORM='#{platform}' ENVIRONMENT='#{environment}' DMWA_HOME='#{DMWA_HOME}' HTTP_PORT='#{HTTP_PORT}' HTTPS_PORT='#{HTTPS_PORT}' #{exec} -f #{config} -k #{cmd} -d .")
     end
 
     namespace :start do
