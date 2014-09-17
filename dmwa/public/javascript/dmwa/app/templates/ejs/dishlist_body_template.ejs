@@ -1,19 +1,14 @@
 <div class="jumbotron col-xs-6 center-block">
 
-	<div class="row">
-		<div class="list-group-item col-xs-12">
-			<h2 class="list-group-item-heading text-primary">YouTiao Doujiang</h2>
-			<p class="list-group-item-text">at <span class="label label label-info">Da Cha Fan</span></p>
-			<p class="list-group-item-text small">12 loved it <span class="glyphicon glyphicon-heart"></span> | 0.3 mi</p>
-		</div>
-	</div>
+    <% _.each(obj.dish_list, function(dish) { %>
 
-	<div class="row">
-		<div class="list-group-item col-xs-12 ">
-			<h2 class="list-group-item-heading text-primary">Feng Zhao</h2>
-			<p class="list-group-item-text">at <span class="label label label-info">Lao Bei Fang</span></p>
-			<p class="list-group-item-text small">16 loved it <span class="glyphicon glyphicon-heart"></span> | 0.5 mi</p>
+		<div class="row">
+			<div class="list-group-item col-xs-12">
+				<h2 class="list-group-item-heading text-primary"><%= dish.name %></h2>
+				<p class="list-group-item-text">at <span class="label label label-info"><%= dish.rest %></span></p>
+				<p class="list-group-item-text small">12 loved it <span class="glyphicon glyphicon-heart"></span> | 0.3 mi</p>
+			</div>
 		</div>
-	</div>
+	<% }); %>
 
 </div>

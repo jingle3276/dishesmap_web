@@ -28,7 +28,19 @@ goog.require('wz.dmwa.app.views.DishlistView');
 
         start : function () {
             Controller.prototype.start.call(this);
-            this._view.start();
+            var viewOptions = {};
+            var dish_list = [
+                {
+                    name: "YouTiao Doujiang",
+                    rest: "Da Cha Fan"
+                },
+                {
+                    name: "Feng Zhao",
+                    rest: "Lao Bei Fang"
+                }
+            ];
+            viewOptions.dish_list = dish_list;
+            this._view.start(viewOptions);
         },
 
         //TODO

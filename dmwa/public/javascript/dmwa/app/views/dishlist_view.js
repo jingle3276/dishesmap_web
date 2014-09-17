@@ -20,31 +20,30 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
         _logNamespace : 'DishlistView',
 
         // Called when the view is first created
-        initialize: function () {
+        initialize: function (options) {
             this._domEvents = _.extend({}, this._domEvents, {
                 //"click #change_button" : this._changeButtonClickHandler
             });
-
-            this._initializeTemplate({});
+            View.prototype.initialize.call(this, options);
+            this._logNamespace = "DishlistView";
         },
         
         /**
          * Initialize template
          * @param options {Object}
          */
-        _initializeTemplate: function (options) {
-            // set to template all reminders on page
-            this._template = new DishlistTemplate(options);
+        _createTemplate: function (options) {
+            return new DishlistTemplate(options);
         },
 
-        start: function () {
-            this._render(); //render view
+        start: function (options) {
+            this._render(options); //render view
             //Set up DOM event handlers
             View.prototype.start.call(this);
         },
 
-        _render: function () {
-            var content = this._template.render();
+        _render: function (options) {
+            var content = this._createTemplate(options).render();
             this.$el.empty().append(content); //el is #home
         }
     });

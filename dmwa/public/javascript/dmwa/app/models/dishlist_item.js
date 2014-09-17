@@ -16,7 +16,7 @@ goog.require('wz.dmwa.core.models.Model');
 
         _defaults: {
             dish_name: '',
-            liek_freq: 0
+            like_freq: 0
         },
 
         initialize: function (options) {
