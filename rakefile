@@ -8,6 +8,8 @@ require 'find'
 JAVASCRIPT_DIR="dmwa/public/javascript"
 CODE_DIR='dmwa'
 
+DMWA_HOME=Dir.pwd
+
 # Load other rake tasks
 Dir.glob('tasks/*.rake') {|f| load(f) }
 

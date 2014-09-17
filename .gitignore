@@ -7,5 +7,6 @@
 *.log
 *.pid
 *.pyc
+# target dir
 dmwa/public/javascript/target
 dmwa/public/javascript/built
