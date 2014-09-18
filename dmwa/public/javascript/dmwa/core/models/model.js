@@ -48,9 +48,9 @@ goog.require('wz.dmwa.lib.log');
             var STATES = this.STATES;
 
             // Generate a client side id that should be unique across page loads.
-            this.cid = window.uuid.v1();
-
-            // Add WGen specific fields to the backbone attributes object, so
+            //FIXME: this.cid = window.uuid.v1();
+            this.cid = Math.floor((Math.random() * 1000000) + 1);
+            // Add specific fields to the backbone attributes object, so
             // they're persisted in storage.
             var attrs = {};
             if (attributes) {

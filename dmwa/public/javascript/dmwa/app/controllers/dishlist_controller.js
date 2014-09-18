@@ -1,5 +1,3 @@
-// Controller for assessments
-//
 
 goog.provide('wz.dmwa.app.controllers.DishlistController');
 
@@ -8,12 +6,14 @@ goog.require('wz.dmwa.core.controllers.Controller');
 
 goog.require('wz.dmwa.app.models.DishlistItem');
 goog.require('wz.dmwa.app.views.DishlistView');
+goog.require('wz.dmwa.app.services.DishlistService');
 
 
 (function () {
 
     var Controller = wz.dmwa.core.controllers.Controller;
     var DishlistView = wz.dmwa.app.views.DishlistView;
+    var DishlistService = wz.dmwa.app.services.DishlistService;
 
     var asserts = goog.asserts;
 
@@ -23,24 +23,23 @@ goog.require('wz.dmwa.app.views.DishlistView');
 
         initialize : function (options) {
             this._log("DishlistController Initialized");
+            this._service = new DishlistService();
             Controller.prototype.initialize.call(this, options);
         },
 
         start : function () {
             Controller.prototype.start.call(this);
             var viewOptions = {};
-            var dish_list = [
-                {
-                    name: "YouTiao Doujiang",
-                    rest: "Da Cha Fan"
-                },
-                {
-                    name: "Feng Zhao",
-                    rest: "Lao Bei Fang"
-                }
-            ];
-            viewOptions.dish_list = dish_list;
-            this._view.start(viewOptions);
+            
+            var promise = this._service.fetch();
+            var self = this;
+            promise.done( function () {
+               viewOptions.dish_list = self._service.all();
+               self._view.start(viewOptions); 
+            });
+            
+            //viewOptions.dish_list = dish_list;
+            
         },
 
         //TODO

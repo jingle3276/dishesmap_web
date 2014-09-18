@@ -15,8 +15,8 @@ goog.require('wz.dmwa.core.models.Model');
         }),
 
         _defaults: {
-            dish_name: '',
-            like_freq: 0
+            name: '',
+            rest: ''
         },
 
         initialize: function (options) {
@@ -32,6 +32,16 @@ goog.require('wz.dmwa.core.models.Model');
 
         getLikeFreq: function () {
             return this.get(this.FIELDS.LIKE_FREQ);
+        },
+
+        //temp for testing
+
+        getName: function () {
+            return this.get('name');
+        },
+
+        getRest: function () {
+            return this.get('rest');
         }
 
 	});
