@@ -11,13 +11,11 @@ goog.require('wz.dmwa.core.models.Model');
 
         FIELDS : _.extend({}, Model.prototype.FIELDS, {
             DISH_NAME: 'dish_name',
-            LIKE_FREQ: 'like_freq'
+            REST_NAME: 'restaurant_name',
+            LIKES: 'likes',
+            DISTANCE: 'distance'
         }),
 
-        _defaults: {
-            name: '',
-            rest: ''
-        },
 
         initialize: function (options) {
             options = _.extend({}, this._defaults, options);
@@ -30,18 +28,16 @@ goog.require('wz.dmwa.core.models.Model');
             return this.get(this.FIELDS.DISH_NAME);
         },
 
-        getLikeFreq: function () {
-            return this.get(this.FIELDS.LIKE_FREQ);
+        getRestaurantName: function () {
+            return this.get(this.FIELDS.REST_NAME);
         },
 
-        //temp for testing
-
-        getName: function () {
-            return this.get('name');
+        getLikes: function () {
+            return this.get(this.FIELDS.LIKES);
         },
-
-        getRest: function () {
-            return this.get('rest');
+        
+        getDistance: function () {
+            return this.get(this.FIELDS.DISTANCE);
         }
 
 	});

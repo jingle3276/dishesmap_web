@@ -2,12 +2,25 @@
 	padding: 0 0 0 0;
 }
 
-.page-header{
+.header-col{
 	padding-bottom: 10px;
 	margin-bottom: 1px;
+	text-align: center;
 }
 
-.center-block{
-	float:none;
+.list-group-item{
+	text-align: center;
+
 }
 
+.list-group-item-text{
+	margin-bottom: 5px;
+}
+
+.label-info{
+	font-size: 14px;
+}
+
+.footer-col{
+	text-align: center;
+}

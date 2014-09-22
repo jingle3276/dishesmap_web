@@ -1,21 +1,21 @@
 {
 	"dishes":[
 
-	    {"name":"YouTiao Doujiang", "rest":"Da Cha Fan"}, 
-	    {"name":"Feng Zhao", "rest":"Lao Bei Fang"},
-	    {"name":"Dancing Crab Roll", "rest":"Nao Japanese 91%"},
-	    {"name":"Takoyaki Ball", "rest":"Kahmon"},
-	    {"name":"Beef Udon", "rest":"Nao Japanese 91%"},
-	    {"name":"Miso", "rest":"Jones"},
-	    {"name":"Unagi Donburi", "rest":"Jones"},
-	    {"name":"Karaage", "rest":"Jones"},
-	    {"name":"Ginger Pork Bento Box", "rest":"Kahmon"},
-	    {"name":"Don Don", "rest":"Kahmon"},
-	    {"name":"Chicken Katsu D Set", "rest":"Kahmon"},
-	    {"name":"Banoffee Waffle", "rest":"Superstar Waffles"},
-	    {"name":"Butter Mousse", "rest":"Superstar Waffles"},
-	    {"name":"Strawberry Fields", "rest":"Jones"},
-	    {"name":"Matcha Latte", "rest":"Amy's"},
-	    {"name":"Sweet Milk", "rest":"Superstar Waffles"}
+	    {"dish_name":"YouTiao Doujiang", "restaurant_name":"Da Cha Fan", "likes": 12, "distance": 0.3}, 
+	    {"dish_name":"Feng Zhao", "restaurant_name":"Lao Bei Fang", "likes": 9, "distance": 0.5},
+	    {"dish_name":"Dancing Crab Roll", "restaurant_name":"Nao Japanese", "likes": 2, "distance": 1.0},
+	    {"dish_name":"Takoyaki Ball", "restaurant_name":"Kahmon"},
+	    {"dish_name":"Beef Udon", "restaurant_name":"Nao Japanese 91%"},
+	    {"dish_name":"Miso", "restaurant_name":"Jones"},
+	    {"dish_name":"Unagi Donburi", "restaurant_name":"Jones"},
+	    {"dish_name":"Karaage", "restaurant_name":"Jones"},
+	    {"dish_name":"Ginger Pork Bento Box", "restaurant_name":"Kahmon"},
+	    {"dish_name":"Don Don", "restaurant_name":"Kahmon"},
+	    {"dish_name":"Chicken Katsu D Set", "restaurant_name":"Kahmon"},
+	    {"dish_name":"Banoffee Waffle", "restaurant_name":"Superstar Waffles"},
+	    {"dish_name":"Butter Mousse", "restaurant_name":"Superstar Waffles"},
+	    {"dish_name":"Strawberry Fields", "restaurant_name":"Jones"},
+	    {"dish_name":"Matcha Latte", "restaurant_name":"Amy's"},
+	    {"dish_name":"Sweet Milk", "restaurant_name":"Superstar Waffles"}
 	]
 }
