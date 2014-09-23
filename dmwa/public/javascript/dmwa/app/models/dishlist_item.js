@@ -16,6 +16,12 @@ goog.require('wz.dmwa.core.models.Model');
             DISTANCE: 'distance'
         }),
 
+        defaults: {
+            dish_name: '',
+            restaurant_name: '',
+            likes: 10,
+            distance: 10
+        },
 
         initialize: function (options) {
             options = _.extend({}, this._defaults, options);
