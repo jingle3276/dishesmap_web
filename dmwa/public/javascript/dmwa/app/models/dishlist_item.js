@@ -10,16 +10,16 @@ goog.require('wz.dmwa.core.models.Model');
 	wz.dmwa.app.models.DishlistItem = Model.extend({
 
         FIELDS : _.extend({}, Model.prototype.FIELDS, {
-            DISH_NAME: 'dish_name',
-            REST_NAME: 'restaurant_name',
-            LIKES: 'likes',
+            DISH_NAME: 'foodText',
+            REST_NAME: 'bizID',
+            LIKES: 'freq',
             DISTANCE: 'distance'
         }),
 
         defaults: {
-            dish_name: '',
-            restaurant_name: '',
-            likes: 10,
+        //    dish_name: '',
+        //    restaurant_name: '',
+        //    likes: 10,
             distance: 10
         },
 

@@ -24,6 +24,7 @@ goog.require('wz.dmwa.app.services.DishlistService');
         initialize : function (options) {
             this._log("DishlistController Initialized");
             this._service = new DishlistService();
+            this._asyncServices.push(this._service);
             Controller.prototype.initialize.call(this, options);
         },
 
@@ -31,15 +32,11 @@ goog.require('wz.dmwa.app.services.DishlistService');
             Controller.prototype.start.call(this);
             var viewOptions = {};
             
-            var promise = this._service.fetch();
+            //var promise = this._service.fetch();
             var self = this;
-            promise.done( function () {
-               viewOptions.dish_list = self._service.all();
-               self._view.start(viewOptions); 
-            });
-            
-            //viewOptions.dish_list = dish_list;
-            
+            //viewOptions.dish_list = self._service.all();
+            viewOptions.dish_list = self._service.allDishes();
+            self._view.start(viewOptions); 
         },
 
         //TODO
@@ -65,10 +62,12 @@ goog.require('wz.dmwa.app.services.DishlistService');
         _getView : function () {
             return new DishlistView();
         }
-       
-
     });
 
     var ac = new wz.dmwa.app.controllers.DishlistController();
-    ac.start();
+    var promise = ac.startAsync();
+    promise.done(function (){
+
+    });
+
 }());

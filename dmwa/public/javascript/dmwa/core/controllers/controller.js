@@ -11,6 +11,7 @@ goog.require('wz.dmwa.lib.Object');
         
         _businessEvents : {},
         _logNamespace : 'Controller',
+        _asyncServices : [],
 
         initialize : function () {
             this._log("Controller Initizlized");
@@ -22,12 +23,45 @@ goog.require('wz.dmwa.lib.Object');
          * @this {wz.dmwa.core.controllers.Controller}
          */
         start : function () {
+            _.each(this._asyncServices, function(service){
+                service.doneLoad();
+            });
+
             this._initializeModels();
             if (!this._view) {
                 this._view = this._getView();
             }
             this._initializeBusinessEvents();
             this._bindViewEvents(this._view, this._businessEvents);
+        },
+
+        /**
+         * Start this controller asynchronously and return a promise
+         * that will be resolved when it's completed.
+         */
+        startAsync : function (options) {
+            // ASYNC CONTROLLERS SHOULD NOT OVERRIDE THIS METHOD.
+            var promise = this._loadAsyncServices();
+            var start = _.bind(function () {
+                this.start(options);
+            }, this);
+            promise.done(start);
+            return promise;
+        },
+
+        /**
+         * Return a promise that will be resolved when all of the controller's
+         * async services have been loaded.
+         *
+         * @private
+         */
+        _loadAsyncServices : function () {
+
+            var promises = _.map(this._asyncServices, function (service) {
+                return service.load();
+            });
+
+            return $.when.apply(null, promises);
         },
 
         /**
