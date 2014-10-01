@@ -22,7 +22,6 @@ goog.require('wz.dmwa.app.services.DishlistService');
         _logNamespace : "DishlistController",
 
         initialize : function (options) {
-            this._log("DishlistController Initialized");
             this._service = new DishlistService();
             this._asyncServices.push(this._service);
             Controller.prototype.initialize.call(this, options);
@@ -31,10 +30,7 @@ goog.require('wz.dmwa.app.services.DishlistService');
         start : function () {
             Controller.prototype.start.call(this);
             var viewOptions = {};
-            
-            //var promise = this._service.fetch();
             var self = this;
-            //viewOptions.dish_list = self._service.all();
             viewOptions.dish_list = self._service.allDishes();
             self._view.start(viewOptions); 
         },

@@ -21,19 +21,15 @@ goog.require('wz.dmwa.app.collections.DishlistItemCollection');
         _apiService : apiService,
 
         initialize : function () {
-            this._collection = new DishlistItemCollection();
+            this._dishCollection = new DishlistItemCollection();
             this._asyncServices.push(this._apiService);
             Service.prototype.initialize.call(this);
         },
 
-        doneLoad : function () {
-            //TODO: make this function be called after load promise resolved 
-            var dishes = this._apiService.getDishes();
-            this._collection.reset(dishes);
-        },
-
         allDishes : function () {
-        	return this._collection.models;
+            var dishes = this._apiService.getDishes();
+            this._dishCollection.reset(dishes);         
+        	return this._dishCollection.models;
         }
 
 	});

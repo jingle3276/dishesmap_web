@@ -23,10 +23,6 @@ goog.require('wz.dmwa.lib.Object');
          * @this {wz.dmwa.core.controllers.Controller}
          */
         start : function () {
-            _.each(this._asyncServices, function(service){
-                service.doneLoad();
-            });
-
             this._initializeModels();
             if (!this._view) {
                 this._view = this._getView();
