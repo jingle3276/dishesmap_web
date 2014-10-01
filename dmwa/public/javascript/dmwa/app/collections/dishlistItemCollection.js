@@ -6,8 +6,6 @@ goog.provide('wz.dmwa.app.collections.DishlistItemCollection');
 
 goog.require('wz.dmwa.app.models.DishlistItem');
 
-//goog.require('wz.dmwa.app.collection.DishlistItemCollection');
-
 
 (function () {
 

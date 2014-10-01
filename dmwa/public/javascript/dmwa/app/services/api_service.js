@@ -6,7 +6,7 @@ goog.require('wz.dmwa.core.services.Service');
 
 (function () {
 
-	var Service = wz.dmwa.core.services.Service;
+    var Service = wz.dmwa.core.services.Service;
 
 	wz.dmwa.app.services.APIService = Service.extend({
 
@@ -30,11 +30,11 @@ goog.require('wz.dmwa.core.services.Service');
         },
 
         getDishes : function () {
-            return this._json.dishes;
+            return new Backbone.Collection(this._json.dishes);
         },
 
         getBusinesses: function () {
-            return this._json.businesses;
+            return new Backbone.Collection(this._json.businesses);
         }
 
 	});
