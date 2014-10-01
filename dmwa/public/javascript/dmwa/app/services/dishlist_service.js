@@ -47,5 +47,7 @@ goog.require('wz.dmwa.app.models.DishlistItem');
             this._dishCollection.reset(dishViewModels);
         	return this._dishCollection.models;
         }
+
     });
+
 }());
