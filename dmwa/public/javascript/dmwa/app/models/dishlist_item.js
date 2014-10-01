@@ -8,38 +8,32 @@ goog.require('wz.dmwa.core.models.Model');
 	var Model = wz.dmwa.core.models.Model;
 
 	wz.dmwa.app.models.DishlistItem = Model.extend({
+        
 
-        FIELDS : _.extend({}, Model.prototype.FIELDS, {
-            DISH_NAME: 'foodText',
-            REST_NAME: 'bizID',
-            LIKES: 'freq',
+        FIELDS: _.extend({}, Model.prototype.FIELDS, {
+            FOOT_TEXT: 'foodText',
+            BIZ_NAME: 'bizName',
+            FREQ: 'freq',
             DISTANCE: 'distance'
         }),
 
-        defaults: {
-        //    dish_name: '',
-        //    restaurant_name: '',
-        //    likes: 10,
-            distance: 10
-        },
-
         initialize: function (options) {
-            options = _.extend({}, this._defaults, options);
+            options = _.extend({}, options);
             Model.prototype.initialize.call(this, options);
-            this._logNamespace = 'DishlistItem';
             this.set(options);
+            this._logNamespace = 'DishlistItem';
         },
 
         getDishName: function () {
-            return this.get(this.FIELDS.DISH_NAME);
+            return this.get(this.FIELDS.FOOT_TEXT);
         },
 
         getRestaurantName: function () {
-            return this.get(this.FIELDS.REST_NAME);
+            return this.get(this.FIELDS.BIZ_NAME);
         },
 
         getLikes: function () {
-            return this.get(this.FIELDS.LIKES);
+            return this.get(this.FIELDS.FREQ);
         },
         
         getDistance: function () {
