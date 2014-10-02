@@ -64,6 +64,10 @@ def mac?
   RUBY_PLATFORM.include? 'darwin'
 end
 
+def linux?
+  RUBY_PLATFORM.include? 'linux'
+end
+
 def cygwin?
   RUBY_PLATFORM.include? 'cygwin'
 end

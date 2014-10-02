@@ -10,16 +10,15 @@ namespace :apache do
           config='etc/apache/httpd.dev.conf'
           platform='mac'
           exec='/usr/sbin/apachectl'
-      #TECH-DEBT: Make it work for ubuntu(or Linux) by having rake to determine platform in the main rakefile    
-      #else 
-      #    platform='ubuntu'
-      #    exec='apache2ctl'    
-  
-      else
+      elsif cygwin?
           platform='cygwin'
-          config='etc/apache/platforms/cygwin.conf' #TECH_DEBT: In Cygwin windows use a whole config file instead of including
-          exec='/usr/sbin/apachectl2'
-
+          config='etc/apache/platforms/cygwin.conf'
+      elsif linux?
+          platform='linux'
+          config='etc/apache/apache2.conf'
+          exec='/usr/sbin/apache2ctl'
+      else
+          notice('unkown os')
       end
         sh("PLATFORM='#{platform}' ENVIRONMENT='#{environment}' DMWA_HOME='#{DMWA_HOME}' HTTP_PORT='#{HTTP_PORT}' HTTPS_PORT='#{HTTPS_PORT}' #{exec} -f #{config} -k #{cmd} -d .")
     end
