@@ -19,8 +19,7 @@ goog.require('wz.dmwa.lib.templates.renderTemplate');
      */
     wz.dmwa.app.templates.DishlistTemplate = Template.extend({
 
-        //FIXME: Implement scrollable view and template
-        templateId: 'scrollable_template',
+        templateId: 'dishlist_template',
 
         /**
          * Initialize template
