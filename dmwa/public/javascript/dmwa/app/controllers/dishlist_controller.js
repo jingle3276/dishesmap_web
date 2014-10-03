@@ -60,10 +60,7 @@ goog.require('wz.dmwa.app.services.DishlistService');
         }
     });
 
-    var ac = new wz.dmwa.app.controllers.DishlistController();
-    var promise = ac.startAsync();
-    promise.done(function (){
-
-    });
+    //var ac = new wz.dmwa.app.controllers.DishlistController();
+    //ac.startAsync();
 
 }());
