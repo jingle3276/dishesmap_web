@@ -45,6 +45,6 @@ goog.require('goog.asserts');
     });
 
     var dc = new wz.dmwa.app.controllers.DishdetailController();
-    dc.start();
+    //dc.start();
 
 }());

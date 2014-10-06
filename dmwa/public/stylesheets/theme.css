@@ -8,11 +8,6 @@
 	text-align: center;
 }
 
-.list-group-item{
-	
-
-}
-
 .list-group-item-text{
 	margin-bottom: 5px;
 }
@@ -29,3 +24,16 @@
 	padding-top: 67px;
 	text-align: center;
 }
+
+.dishdetail-header{
+	padding-bottom: 10px;
+	margin-bottom: 1px;
+	text-align: center;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
