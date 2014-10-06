@@ -27,7 +27,6 @@
 
 .dishdetail-header{
 	padding-bottom: 10px;
-	margin-bottom: 1px;
 	text-align: center;
 }
 .vcenter {
@@ -36,4 +35,14 @@
     float: none;
 }
 
+.dishdetail-body{
+	background-color: #f5f5f5;
+}
+
+.panel{
+	margin-top: 15px;
+	text-align: center;
+	border: none;
+	background-color: #ffffff;
+}
 
