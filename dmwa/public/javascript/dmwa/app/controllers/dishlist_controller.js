@@ -61,6 +61,6 @@ goog.require('wz.dmwa.app.services.DishlistService');
     });
 
     var ac = new wz.dmwa.app.controllers.DishlistController();
-    var promise = ac.startAsync();
+    //var promise = ac.startAsync();
 
 }());

@@ -8,17 +8,23 @@ goog.require('wz.dmwa.app.views.DishdetailView');
 // but if not adding, it fails on assert in template.js. 
 // try resolve this once router is implemented.
 goog.require('goog.asserts');
+goog.require('wz.dmwa.app.services.DishlistService');
+
 
 (function () {
 
     var Controller = wz.dmwa.core.controllers.Controller;
     var DishdetailView = wz.dmwa.app.views.DishdetailView;
+    var DishlistService = wz.dmwa.app.services.DishlistService;
+
 
     wz.dmwa.app.controllers.DishdetailController = Controller.extend({
 
         _logNamespace : "DishdetailController",
 
         initialize: function (options) {
+            this._service = options.service;
+            this._asyncServices.push(this._service);
             Controller.prototype.initialize.call(this, options);
         },
 
@@ -31,11 +37,10 @@ goog.require('goog.asserts');
         },
 
         _initializeModels : function () {
-            
+
         },
 
         _initializeBusinessEvents : function () {
-            //var EVENTS = DishlistView.prototype.EVENTS;
             Controller.prototype._initializeBusinessEvents.call(this);
         },
 
@@ -45,6 +50,6 @@ goog.require('goog.asserts');
     });
 
     var dc = new wz.dmwa.app.controllers.DishdetailController();
-    //dc.start();
+    dc.startAsync();
 
 }());
