@@ -50,7 +50,7 @@ goog.require('wz.dmwa.lib.log');
          * @this {wgen.assess.common.views.View}
          */
         stop : function () {
-            this._undelegateDownStateEvents();
+            //this._undelegateDownStateEvents();
             this.$el.empty();
             this.$el.unbind();
         },

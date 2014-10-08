@@ -45,22 +45,21 @@ goog.require('wz.dmwa.app.services.DishlistService');
             //init change content event
             this._log("DishlistController: _initializeBusinessEvents");
             var EVENTS = DishlistView.prototype.EVENTS;
-            this._businessEvents[EVENTS.SUBMIT_CHANGE] = this._onSubmitChange;
+            this._businessEvents[EVENTS.GO_TO_DETAIL] = this._onGoTODetail;
             Controller.prototype._initializeBusinessEvents.call(this);
         },
-/*
-        _onSubmitChange : function () {
-            this._log("onSubmitChange called");
-            var content = this._view.getInput();
-            this._view.render(content);
+
+        _onGoTODetail : function (dishName) {
+            this._view.stop();
+            
         },
-*/
+
         _getView : function () {
             return new DishlistView();
         }
     });
 
     var ac = new wz.dmwa.app.controllers.DishlistController();
-    //var promise = ac.startAsync();
+    var promise = ac.startAsync();
 
 }());

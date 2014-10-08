@@ -23,8 +23,8 @@ goog.require('wz.dmwa.app.services.DishlistService');
         _logNamespace : "DishdetailController",
 
         initialize: function (options) {
-            this._service = options.service;
-            this._asyncServices.push(this._service);
+            //this._service = options.service;
+            //this._asyncServices.push(this._service);
             Controller.prototype.initialize.call(this, options);
         },
 
@@ -50,6 +50,6 @@ goog.require('wz.dmwa.app.services.DishlistService');
     });
 
     var dc = new wz.dmwa.app.controllers.DishdetailController();
-    dc.startAsync();
+    //dc.startAsync();
 
 }());

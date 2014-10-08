@@ -15,14 +15,14 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
 
     wz.dmwa.app.views.DishlistView = View.extend({
 
-        //EVENTS : {SUBMIT_CHANGE: "submit_change"},
+        EVENTS : {GO_TO_DETAIL: "go_to_detail"},
 
         _logNamespace : 'DishlistView',
 
         // Called when the view is first created
         initialize: function (options) {
             this._domEvents = _.extend({}, this._domEvents, {
-                //"click #change_button" : this._changeButtonClickHandler
+                "click .dish-title" : this._clickDishTitleHandler
             });
             View.prototype.initialize.call(this, options);
             this._logNamespace = "DishlistView";
@@ -45,7 +45,13 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
         _render: function (options) {
             var content = this._createTemplate(options).render();
             this.$el.empty().append(content); //el is #home
+        },
+
+        _clickDishTitleHandler: function (ev) {
+            var dishName = ev.currentTarget.textContent;
+            this.trigger(this.EVENTS.GO_TO_DETAIL, dishName);
         }
+
     });
 
 }());
