@@ -50,16 +50,12 @@ goog.require('wz.dmwa.app.services.DishlistService');
         },
 
         _onGoTODetail : function (dishName) {
-            this._view.stop();
-            
+            window.location.href = '#dishdetail/' + dishName;
         },
 
         _getView : function () {
             return new DishlistView();
         }
     });
-
-    var ac = new wz.dmwa.app.controllers.DishlistController();
-    var promise = ac.startAsync();
 
 }());

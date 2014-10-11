@@ -49,7 +49,4 @@ goog.require('wz.dmwa.app.services.DishlistService');
         }
     });
 
-    var dc = new wz.dmwa.app.controllers.DishdetailController();
-    //dc.startAsync();
-
 }());
