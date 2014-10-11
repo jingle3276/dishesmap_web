@@ -8,7 +8,7 @@ goog.require('wz.dmwa.core.services.Service');
 
     var Service = wz.dmwa.core.services.Service;
 
-	wz.dmwa.app.services.APIService = Service.extend({
+	var APIService = Service.extend({
 
 		_logNamespace : 'APIService',
 
@@ -38,5 +38,7 @@ goog.require('wz.dmwa.core.services.Service');
         }
 
 	});
+
+    wz.dmwa.app.services.APIService = new APIService();
 
 }());

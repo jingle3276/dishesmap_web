@@ -15,9 +15,9 @@ goog.require('wz.dmwa.app.models.DishlistItem');
 	var Service = wz.dmwa.core.services.Service;
 	var DishlistItemCollection = wz.dmwa.app.collections.DishlistItemCollection;
     var DishlistItem = wz.dmwa.app.models.DishlistItem;
-    var apiService = new wz.dmwa.app.services.APIService();
+    var apiService = wz.dmwa.app.services.APIService;
 
-	wz.dmwa.app.services.DishlistService = Service.extend({
+	var DishlistService = Service.extend({
 
 		_logNamespace : 'DishlistService',
         _apiService : apiService,
@@ -49,5 +49,7 @@ goog.require('wz.dmwa.app.models.DishlistItem');
         }
 
     });
+
+    wz.dmwa.app.services.DishlistService = new DishlistService();
 
 }());
