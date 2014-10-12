@@ -14,17 +14,21 @@ goog.require('wz.dmwa.app.templates.DishdetailTemplate');
 
     wz.dmwa.app.views.DishdetailView = View.extend({
 
-        //EVENTS : {SUBMIT_CHANGE: "submit_change"},
+        EVENTS : {GO_BACK: "go_back"},
 
         _logNamespace : 'DishlistView',
 
         // Called when the view is first created
         initialize: function (options) {
             this._domEvents = _.extend({}, this._domEvents, {
-                //"click #change_button" : this._changeButtonClickHandler
+                "click #dishdetail-back-button" : this._backButtonClickHandler
             });
             View.prototype.initialize.call(this, options);
             this._logNamespace = "DishlistView";
+        },
+
+        _backButtonClickHandler: function (options) {
+            this.trigger(this.EVENTS.GO_BACK);
         },
         
         /**

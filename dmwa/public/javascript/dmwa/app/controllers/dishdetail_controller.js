@@ -41,12 +41,20 @@ goog.require('wz.dmwa.app.services.DishlistService');
         },
 
         _initializeBusinessEvents : function () {
+            var EVENTS = DishdetailView.prototype.EVENTS;
+            this._businessEvents[EVENTS.GO_BACK] = this._onGoBack;
             Controller.prototype._initializeBusinessEvents.call(this);
         },
 
         _getView : function () {
             return new DishdetailView();
+        },
+
+        _onGoBack : function () {
+            window.location.href = '#dishlist';
         }
+
+
     });
 
 }());
