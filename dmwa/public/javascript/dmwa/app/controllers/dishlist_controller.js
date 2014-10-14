@@ -30,9 +30,8 @@ goog.require('wz.dmwa.app.services.DishlistService');
         start : function () {
             Controller.prototype.start.call(this);
             var viewOptions = {};
-            var self = this;
-            viewOptions.dish_list = self._service.allDishes();
-            self._view.start(viewOptions); 
+            viewOptions.dish_list = this._service.allDishes();
+            this._view.start(viewOptions); 
         },
 
         //TODO

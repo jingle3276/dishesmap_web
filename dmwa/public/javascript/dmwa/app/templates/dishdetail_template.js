@@ -27,6 +27,8 @@ goog.require('wz.dmwa.lib.templates.renderTemplate');
          */
         initialize : function (options) {
             Template.prototype.initialize.call(this, options);
+            this._logNamespace = "dishdetail_template";
+            this.dishDetail = options.dishDetail;
         },
 
         header : function () {

@@ -11,7 +11,7 @@ goog.require('wz.dmwa.core.models.Model');
         
 
         FIELDS: _.extend({}, Model.prototype.FIELDS, {
-            FOOT_TEXT: 'foodText',
+            FOOD_TEXT: 'foodText',
             FREQ: 'freq',
             REVIEWS: 'reviews',
             BIZ_NAME: 'bizName',
@@ -27,8 +27,12 @@ goog.require('wz.dmwa.core.models.Model');
             this._logNamespace = 'Dishdetail';
         },
 
+        getReviews: function () {
+            return this.get(this.FIELDS.REVIEWS);
+        },
+
         getDishName: function () {
-            return this.get(this.FIELDS.FOOT_TEXT);
+            return this.get(this.FIELDS.FOOD_TEXT);
         },
 
         getRestaurantName: function () {

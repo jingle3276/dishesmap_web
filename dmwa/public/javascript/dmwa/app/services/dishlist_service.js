@@ -8,6 +8,7 @@ goog.require('wz.dmwa.core.services.Service');
 goog.require('wz.dmwa.app.services.APIService');
 goog.require('wz.dmwa.app.collections.DishlistItemCollection');
 goog.require('wz.dmwa.app.models.DishlistItem');
+goog.require('wz.dmwa.app.models.Dishdetail');
 
 
 (function () {
@@ -15,6 +16,7 @@ goog.require('wz.dmwa.app.models.DishlistItem');
 	var Service = wz.dmwa.core.services.Service;
 	var DishlistItemCollection = wz.dmwa.app.collections.DishlistItemCollection;
     var DishlistItem = wz.dmwa.app.models.DishlistItem;
+    var Dishdetail = wz.dmwa.app.models.Dishdetail;
     var apiService = wz.dmwa.app.services.APIService;
 
 	var DishlistService = Service.extend({
@@ -28,14 +30,19 @@ goog.require('wz.dmwa.app.models.DishlistItem');
             Service.prototype.initialize.call(this);
         },
 
+        _initializeDishModels : function () {
+
+
+        },
+
         allDishes : function () {
             var rawDishes = this._apiService.getDishes();
             var rawBusinesses = this._apiService.getBusinesses();
-
+            var FIELDS = DishlistItem.prototype.FIELDS;
+            
             var dishViewModels = _.map(rawDishes.models, function(d){
                 var business = _.first(rawBusinesses.where({bizID: d.get('bizID')}));
                 var attrs = {};
-                var FIELDS = DishlistItem.prototype.FIELDS;
                 attrs[FIELDS.BIZ_NAME] = business.get('name');
                 attrs[FIELDS.FOOT_TEXT] = d.get('foodText');
                 attrs[FIELDS.FREQ] = d.get('freq');
@@ -46,7 +53,19 @@ goog.require('wz.dmwa.app.models.DishlistItem');
 
             this._dishCollection.reset(dishViewModels);
         	return this._dishCollection.models;
+        },
+
+        getDishDetail : function (dishName) {
+            var attrs = {};
+            var FIELDS =  Dishdetail.prototype.FIELDS;
+            attrs[FIELDS.FOOD_TEXT] = dishName;
+            var reviews = _.first(this._apiService.getDishes().where({foodText: dishName}));
+            attrs[FIELDS.REVIEWS] = _.map(reviews.get('reviews'), function (r) {
+                return r.text;
+            });
+            return new Dishdetail(attrs);
         }
+
 
     });
 

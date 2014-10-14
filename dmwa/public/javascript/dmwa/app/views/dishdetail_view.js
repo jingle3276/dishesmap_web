@@ -46,7 +46,8 @@ goog.require('wz.dmwa.app.templates.DishdetailTemplate');
         },
 
         _render: function (options) {
-            var content = this._createTemplate(options).render();
+            var template = this._createTemplate(options);
+            var content = template.render();
             this.$el.empty().append(content); //el is #home
         }
     });

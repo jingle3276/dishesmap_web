@@ -2,6 +2,7 @@ goog.provide('wz.dmwa.app.routers.AppRouter');
 
 goog.require('wz.dmwa.app.controllers.DishlistController');
 goog.require('wz.dmwa.app.controllers.DishdetailController');
+goog.require('goog.asserts');
 
 (function () {
 
