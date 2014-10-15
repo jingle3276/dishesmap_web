@@ -59,10 +59,16 @@ goog.require('wz.dmwa.app.models.Dishdetail');
             var attrs = {};
             var FIELDS =  Dishdetail.prototype.FIELDS;
             attrs[FIELDS.FOOD_TEXT] = dishName;
-            var reviews = _.first(this._apiService.getDishes().where({foodText: dishName}));
-            attrs[FIELDS.REVIEWS] = _.map(reviews.get('reviews'), function (r) {
+            var dish = _.first(this._apiService.getDishes().where({foodText: dishName}));
+            attrs[FIELDS.REVIEWS] = _.map(dish.get('reviews'), function (r) {
                 return r.text;
             });
+
+            var rest = _.first(this._apiService.getBusinesses().where({bizID: dish.get('bizID')}));
+            attrs[FIELDS.BIZ_NAME] = rest.get('name');
+            attrs[FIELDS.BIZ_ADDR] = rest.get('address');
+            attrs[FIELDS.BIZ_TEL] = rest.get('phone');
+
             return new Dishdetail(attrs);
         }
 

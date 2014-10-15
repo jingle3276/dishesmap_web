@@ -42,9 +42,15 @@ goog.require('wz.dmwa.core.models.Model');
         getLikes: function () {
             return this.get(this.FIELDS.FREQ);
         },
-        
-        getDistance: function () {
-            return this.get(this.FIELDS.DISTANCE);
+
+        getRestaurantAddr: function (){
+            return this.get(this.FIELDS.BIZ_ADDR);
+        },
+
+        getRestaurantTel: function (){
+            var tel_str = this.get(this.FIELDS.BIZ_TEL);
+            return '(' + tel_str.slice(0, 3) + ') ' + 
+                tel_str.slice(3, 6) + '-' + tel_str.slice(6,10);
         }
 
 	});
