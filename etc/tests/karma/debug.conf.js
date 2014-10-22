@@ -12,13 +12,12 @@ module.exports = function(config) {
     // - Firefox
     // - Opera
     // - Safari (only Mac)
-    // - PhantomJS
+    //browsers: ['PhantomJS'],
     // - IE (only Windows)
     browsers: ['Chrome'],
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
     singleRun: false
-
   });
 };
