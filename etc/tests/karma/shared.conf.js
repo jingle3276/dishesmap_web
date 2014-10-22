@@ -27,14 +27,16 @@ module.exports = function(config) {
       'dmwa/public/javascript/3p/goog/base.js',
       // note: this must be right after base.js
       {pattern: 'dmwa/public/javascript/3p/goog/**/*.js', included: false},
-      // load dependency tree file, tests, and helpers
-      'dmwa/public/javascript/built/dmwa_deps.js',
 
       // source files - served and linked through dmwa.js, but not executed
       // unless they're needed in a test via a call to goog.require
       // includes all tests
       {pattern: 'dmwa/public/javascript/dmwa/**/*.js', included: false},
       {pattern: 'dmwa/public/javascript/target/**/*.js', included: false},
+
+      // load dependency tree file, tests, and helpers
+      'dmwa/public/javascript/built/dmwa_deps.js',
+
       // all json files
       {pattern: 'dmwa/public/javascript/**/*.json', included: false},
       // need to explicitly add goog.require compiled templates, as nothing else will require them.

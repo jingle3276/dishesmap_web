@@ -6,4 +6,3 @@ goog.require('wz.dmwa.core.templates.index');
 goog.require('wz.dmwa.app.templates.index');
 
 goog.require('wz.dmwa.app.routers.AppRouter');
-//tests

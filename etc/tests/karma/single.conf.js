@@ -10,7 +10,7 @@ module.exports = function(config) {
     files: [
       'dmwa/public/javascript/tests/**/*.js'
     ],
-    
+
     // Start these browsers, currently available:
     // - Chrome
     // - ChromeCanary
