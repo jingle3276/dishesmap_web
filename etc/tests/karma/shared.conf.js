@@ -43,7 +43,7 @@ module.exports = function(config) {
       'etc/tests/karma/require_goog_load.js',
 
       //test sources included in the specific conf files
-      'dmwa/public/javascript/tests/**/*.js'
+      {pattern: 'dmwa/public/javascript/tests/**/*.js'}
     ],
 
 

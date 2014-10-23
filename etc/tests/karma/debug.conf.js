@@ -6,6 +6,7 @@ module.exports = function(config) {
   sharedConfig(config);
 
   config.set({
+    autoWatch: true,
     // Start these browsers, currently available:
     // - Chrome
     // - ChromeCanary
