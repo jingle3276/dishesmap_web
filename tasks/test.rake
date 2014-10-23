@@ -19,13 +19,11 @@ namespace :test do
     desc "Run all karma unit tests using PhantomJS"
     task :all => [:build] do
         sh "./node_modules/karma/bin/karma start #{ALL_CONFIG}"
-        notice("Karma tests have run.")
     end
 
     desc "Run single unit test"
     task :single => [:build] do
         sh "./node_modules/karma/bin/karma start #{SINGLE_CONFIG}"
-        notice("single test have run.")
     end    
 
     desc "Debug unit tests using Chrome browser"
