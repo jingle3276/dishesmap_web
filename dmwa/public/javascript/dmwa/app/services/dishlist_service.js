@@ -9,6 +9,7 @@ goog.require('wz.dmwa.app.services.APIService');
 goog.require('wz.dmwa.app.collections.DishlistItemCollection');
 goog.require('wz.dmwa.app.models.DishlistItem');
 goog.require('wz.dmwa.app.models.Dishdetail');
+goog.require('wz.dmwa.app.services.LocationService');
 
 
 (function () {
@@ -18,6 +19,7 @@ goog.require('wz.dmwa.app.models.Dishdetail');
     var DishlistItem = wz.dmwa.app.models.DishlistItem;
     var Dishdetail = wz.dmwa.app.models.Dishdetail;
     var apiService = wz.dmwa.app.services.APIService;
+    var locationService = wz.dmwa.app.services.LocationService;
 
 	var DishlistService = Service.extend({
 
@@ -27,10 +29,11 @@ goog.require('wz.dmwa.app.models.Dishdetail');
         initialize : function () {
             this._dishCollection = new DishlistItemCollection();
             this._asyncServices.push(this._apiService);
+            this._asyncServices.push(locationService);
             Service.prototype.initialize.call(this);
         },
 
-        _initializeDishModels : function () {
+        _initializeModels : function () {
 
 
         },
@@ -46,8 +49,8 @@ goog.require('wz.dmwa.app.models.Dishdetail');
                 attrs[FIELDS.BIZ_NAME] = business.get('name');
                 attrs[FIELDS.FOOT_TEXT] = d.get('foodText');
                 attrs[FIELDS.FREQ] = d.get('freq');
-                //FIXME: hardcoded value
-                attrs[FIELDS.DISTANCE] = 0.6;
+                attrs[FIELDS.DISTANCE] = locationService.getDistanceFromLatLonInMi(
+                    business.get('lat'), business.get('lon'));
                 return new DishlistItem(attrs);
             });
 
