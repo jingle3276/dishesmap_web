@@ -19,18 +19,28 @@ goog.require('wz.dmwa.core.services.Service');
 
         load : function () {
             var self = this;
-            var promise = this.queryCurrentLocation().done(function (pos) {
-                self._lat = pos.coords.latitude;
-                self._lon = pos.coords.longitude;
-                self._log("current latitude: " + this._lat + ", longitude: " + self._lon);
+            var promise = this._queryCurrentLocation().done(function (pos) {
+                self._pos = pos;
             });
             return promise;
         },
 
-        queryCurrentLocation : function () {
+        get_lat : function(){
+            return this._pos.coords.latitude;
+        },
+
+        get_lon : function(){
+            return this._pos.coords.longitude;
+        },
+
+        _queryCurrentLocation : function () {
             var d = $.Deferred();
 
-            if (navigator.geolocation) {
+            //don't query position twice
+            if (this._pos) {
+                d.resolve(this._pos);
+            }
+            else if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (pos){
                     d.resolve(pos);
                 });
@@ -46,11 +56,11 @@ goog.require('wz.dmwa.core.services.Service');
                 return deg * (Math.PI/180);
             }
             var R = 3959; // Radius of the earth in Mile
-            var dLat = deg2rad(lat2-this._lat);  // deg2rad below
-            var dLon = deg2rad(lon2-this._lon); 
+            var dLat = deg2rad(lat2-this.get_lat());  // deg2rad below
+            var dLon = deg2rad(lon2-this.get_lon()); 
             var a = 
                 Math.sin(dLat/2) * Math.sin(dLat/2) +
-                Math.cos(deg2rad(this._lat)) * Math.cos(deg2rad(this._lon)) * 
+                Math.cos(deg2rad(this.get_lat())) * Math.cos(deg2rad(this.get_lon())) * 
                 Math.sin(dLon/2) * Math.sin(dLon/2); 
             var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
             var d = R * c; // Distance in Mi
