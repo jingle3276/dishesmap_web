@@ -1,0 +1,18 @@
+{
+  "name": "dmwa",
+  "version": "0.0.1",
+  "private": true,
+
+  "dependencies": {
+
+  },
+
+  "devDependencies": {
+    "jshint": "2.5.8",
+    "sinon": "1.1.1",
+    "karma": "~0.10",
+    "karma-qunit": "~0.1",
+    "karma-coverage": "~0.1"
+  }
+
+}
