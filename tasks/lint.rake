@@ -9,12 +9,12 @@ task :all => [:executables, :jshint]
 
 
 desc "Check that no files are executable"
-	task :executables do
-    	executables = `find #{CODE_DIR} -type f -perm +111`
-    	if executables.length > 0
-        	puts "Error - The following files are executable: \n"
-        	puts executables
-        	raise highlight("Files are executable")
+    task :executables do
+        executables = `find #{CODE_DIR} -type f -perm +111`
+        if executables.length > 0
+            puts "Error - The following files are executable: \n"
+            puts executables
+            raise highlight("Files are executable")
     end
 end
 
@@ -24,7 +24,7 @@ desc "Run the jshint analysis tool"
 
         dirs = ["#{CODE_DIR}/public/javascript/dmwa"]
 
-        sh "jshint --config #{config} #{dirs.join(' ')}"
+        sh "#{NODE_MODULE_DIR}/jshint/bin/jshint --config #{config} #{dirs.join(' ')}"
 
         dirs.each do |dir|
             # Assert we're not using windows line endings
