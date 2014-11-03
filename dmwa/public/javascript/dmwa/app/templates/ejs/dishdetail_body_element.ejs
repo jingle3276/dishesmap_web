@@ -1,24 +1,22 @@
-<div class="dishdetail-body row">
+<div id="dd-body-container">
 
-	<div class="panel panel-Info col-md-10">
+	<div class="col-md-10 panel-info dd-panel-group">
 		<div class="panel-heading">
-	    	<h3 class="panel-title"><%= obj.dishDetail.getDishName() %> Reviews</h3>
+	    	<h3 class="panel-title"><%= obj.dishDetail.getDishName() %> </h3>
 		</div>
 
-		<div class="panel-body">
-			<ul class="list-group">
-				<% _.each(obj.dishDetail.getReviews(), function(r) { %>
-					<li class="list-group-item">
-						<span class="glyphicon glyphicon-comment"></span>
-						<span><%= r %></span>
-					</li>
-				<% }); %>
-			</ul>
-		</div>
+		<ul class="list-group panel-body">
+			<% _.each(obj.dishDetail.getReviews(), function(r) { %>
+				<li class="list-group-item">
+					<span class="glyphicon glyphicon-comment"></span>
+					<span><%= r %></span>
+				</li>
+			<% }); %>
+		</ul>
 	</div>
 
 
-	<div class="panel panel-info col-md-10">
+	<div class="col-md-10 panel-info dd-panel-group">
 		<div class="panel-heading">
 		    <h3 class="panel-title"><%= obj.dishDetail.getRestaurantName() %></h3>
 		</div>
@@ -26,9 +24,6 @@
 		<div class="panel-body">
 		    <p><%= obj.dishDetail.getRestaurantAddr() %></p>
 		    <p><%= obj.dishDetail.getRestaurantTel() %></p>
-		    <p>Yelp Review: 
-		    	<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-		    </p>
 		</div>
 	</div>
 
