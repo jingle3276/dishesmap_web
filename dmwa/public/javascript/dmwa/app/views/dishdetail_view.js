@@ -21,7 +21,7 @@ goog.require('wz.dmwa.app.templates.DishdetailTemplate');
         // Called when the view is first created
         initialize: function (options) {
             this._domEvents = _.extend({}, this._domEvents, {
-                "click #dishdetail-back-button" : this._backButtonClickHandler
+                "click .dd-header-bk-button" : this._backButtonClickHandler
             });
             View.prototype.initialize.call(this, options);
             this._logNamespace = "DishlistView";

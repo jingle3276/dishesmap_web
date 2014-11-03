@@ -22,7 +22,7 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
         // Called when the view is first created
         initialize: function (options) {
             this._domEvents = _.extend({}, this._domEvents, {
-                "click .dish-title" : this._clickDishTitleHandler
+                "click .dl-item-title" : this._clickDishTitleHandler
             });
             View.prototype.initialize.call(this, options);
             this._logNamespace = "DishlistView";
