@@ -1,0 +1,1828 @@
+{
+  "dishes": [
+    {
+      "foodText": "seafood mac n cheese",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "That Seafood Mac n Cheese......... #official"
+        },
+        {
+          "text": "The zingers are great! But, I'd stay away from the seafood Mac n cheese! Way to salty for my taste!"
+        }
+      ],
+      "bizID": "513502cbe4b0feed3fa72299"
+    },
+    {
+      "foodText": "calamari",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "For starters/appetizers get the calamari. Freakingly delicous!"
+        }
+      ],
+      "bizID": "513502cbe4b0feed3fa72299"
+    },
+    {
+      "foodText": "fried calamari",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Try the fried calamari"
+        }
+      ],
+      "bizID": "513502cbe4b0feed3fa72299"
+    },
+    {
+      "foodText": "monday ribs special",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Their Monday ribs special is one of, if not their best cooked dishes. Half off appetizers from 10pm. Flatbread.pizza..highly recommended"
+        }
+      ],
+      "bizID": "513502cbe4b0feed3fa72299"
+    },
+    {
+      "foodText": "apple walnut salad",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The Apple Walnut Salad is awesome!"
+        }
+      ],
+      "bizID": "513502cbe4b0feed3fa72299"
+    },
+    {
+      "foodText": "spicy chicken",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Try the zingers, you won't be disappointed. If you like spicy chicken get the Mount St. Helen's sauce on them, you'll thank me later."
+        }
+      ],
+      "bizID": "513502cbe4b0feed3fa72299"
+    },
+    {
+      "foodText": "fried food",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Place just gets worse and worse with every visit! All I wanted was a healthy meal which last few times I tried getting got half. I don't want to order fried food! Kitchen needs improvement!"
+        }
+      ],
+      "bizID": "513502cbe4b0feed3fa72299"
+    },
+    {
+      "foodText": "crab cakes",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "The best crab cakes and housewine!!! Awesome place!!!!"
+        },
+        {
+          "text": "Two word... Crab Cakes"
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "honey sauce",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "Try the Chicken breast with Honey Sauce and Broccoli, very tasty"
+        },
+        {
+          "text": "The Chicken Breast with Honey Sauce and Broccoli, highly reconmend. Very tasty."
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "italian cuisine",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "Great classics Italian cuisine...when ur in the restaurant u feel like ur not on the middle of queens!"
+        },
+        {
+          "text": "I travel a lot for business. This was possible the best Italian cuisine I have had in years. Friendly service and reasonable prices. Highly recommended!"
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "chicken breast",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "Try the Chicken breast with Honey Sauce and Broccoli, very tasty"
+        },
+        {
+          "text": "The Chicken Breast with Honey Sauce and Broccoli, highly reconmend. Very tasty."
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "olive oil red pepper toast",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "My favorite restaurant in NY...hands down ...Maybe even my favorite restaurant EVER..Best Chicken Cacciatore on the planet!!, best house wine , best (free bruschetta), best olive oil red pepper toast"
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "italian food",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Hidden Queens gem! Great Italian food, excellent service & feeling like I'm a Goodfella. Ask for the server, Epi. Helluva guy. Fuhgedaboudit!"
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "homemade red wine",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Homemade red wine and motz and cortza and stuffed artichoke a must"
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "red wine",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Everything is good here. Some of my favorites include the complimentary bruschetta, the homemade red wine (get the bottle), and the T-bone steak ala Tony <Peter Luger quality, get it medium rare."
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "italian restaurants",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Fantastic food.  It's one of the best Italian restaurants I've been to in New York city.  Friendly staff."
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "steak ala tony",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Everything is good here. Some of my favorites include the complimentary bruschetta, the homemade red wine (get the bottle), and the T-bone steak ala Tony <Peter Luger quality, get it medium rare."
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "red sauce",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Highly popular Italian-American fine dining restaurant with decent red sauce cuisine in enormous portions. Come for the scene as much, if not more, than the food."
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "shrimp oregonata",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Amazing mushroom ravioli and shrimp Oregonata"
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "bread basket",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Try the Bread Basket - Great. That meaty bread is intense."
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "chicken cacciatore",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "My favorite restaurant in NY...hands down ...Maybe even my favorite restaurant EVER..Best Chicken Cacciatore on the planet!!, best house wine , best (free bruschetta), best olive oil red pepper toast"
+        }
+      ],
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "foodText": "italian ice",
+      "freq": 3,
+      "reviews": [
+        {
+          "text": "Best Italian Ice in Queens!"
+        },
+        {
+          "text": "Don't drop your Italian ice."
+        },
+        {
+          "text": "Go to the Lemon Ice King of Corona and have a peanutbutter Italian ice, then walk over to the Queens Museum of Art and see the Panorama of the City of New York."
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "lemon ice",
+      "freq": 3,
+      "reviews": [
+        {
+          "text": "Lemon Ice!"
+        },
+        {
+          "text": "The Lemon Ice is PERFECTION!! So refreshing, classic, and a must-try! (Also an excellent \\\"palate cleanser\\\" when trying other flavors!) :D"
+        },
+        {
+          "text": "Best lemon ice!"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "coconut",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "Don't get the coconut flavor, tastes like watered down coconut water with shaved coconut :( shame because I had such high expectations"
+        },
+        {
+          "text": "Love the coconut!!!"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "lemon ice king",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "My absolute favorite is vanilla chocolate-chip. My dad always picks some up when he's in the neighborhood. You can't get any better than The Lemon Ice King!"
+        },
+        {
+          "text": "Go to the Lemon Ice King of Corona and have a peanutbutter Italian ice, then walk over to the Queens Museum of Art and see the Panorama of the City of New York."
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "ice cream",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "This is not ice cream, but ice. Disappointing."
+        },
+        {
+          "text": "yuhuuu i need ice cream"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "vanilla chocolate chip",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "The peanut butter ice coupled with vanilla chocolate chip is my summer favorite. Squisito!"
+        },
+        {
+          "text": "Easily the best Ices on the planet. My personal favorite is the classic vanilla chocolate chip. Give it a try!"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "peanut butter ice",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "The Peanut Butter Ice is NOT TO BE MISSED! Sounds like the most unappealing thing ever, but it's actually PRETTY DAMN AMAZING!! There's really no accurate way to describe or explain it--TRY IT! :9"
+        },
+        {
+          "text": "The peanut butter ice is delicious! Skip the coffe flavor, unless you enjoy the taste of burnt espresso and saccarin."
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "cherry vanilla",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "Try the Cherry Vanilla,the Peanut Butter flavors.Very Tasty"
+        },
+        {
+          "text": "Excellent ices, try the cherry vanilla"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "peanut butter ices",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "The Peanut Butter Ices and Coconut Candy Apples are very tasty"
+        },
+        {
+          "text": "Try the Peanut Butter Ices"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "chocolate ices",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "best chocolate ices :)"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "cherry ice",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The Cherry Ice is DELISH!! Classic cherry ice flavor with bits of maraschino cherries! Sweet and lovely! YUM! :)"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "peanut butter ice coupled",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The peanut butter ice coupled with vanilla chocolate chip is my summer favorite. Squisito!"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "cherry fruit",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Cherry Flavor has real cherry fruit inside yummy in my tummy lol"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "coconut candy apples",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The Peanut Butter Ices and Coconut Candy Apples are very tasty"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "coconut flavor",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Don't get the coconut flavor, tastes like watered down coconut water with shaved coconut :( shame because I had such high expectations"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "coconut water",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Don't get the coconut flavor, tastes like watered down coconut water with shaved coconut :( shame because I had such high expectations"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "orange & vanilla flavor",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Remember dreamicles when you were a kid? Get the Orange & Vanilla flavor -- it's a dream(sicle) come true!"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "italian ices",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "World Famous Italian Ices.  My son's personal favorite."
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "butter ice",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "I go to lemon ice king corona and I get a peanut butter ice, was delicious oh my god the best place ever."
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "mango",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Mango + Tangerine. Nuff said"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "red white",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Rainbow is red white and blue like a firecracker popsicles."
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "peanut butter flavors",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Try the Cherry Vanilla,the Peanut Butter flavors.Very Tasty"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "cherry ice flavor",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The Cherry Ice is DELISH!! Classic cherry ice flavor with bits of maraschino cherries! Sweet and lovely! YUM! :)"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "lemon ice rocks",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The Lemon Ice Rocks! the best ever in all of NYC!! Hit this place after a Met Game!"
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "chocolate reminds",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Love this place so much. Pistachio is amazing, has real nuts in it. Chocolate reminds me of childhood. Watermelon ... tastes like gum flavoring."
+        }
+      ],
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "foodText": "shrimp tacos",
+      "freq": 13,
+      "reviews": [
+        {
+          "text": "Shrimp tacos!"
+        },
+        {
+          "text": "Shrimp tacos and chicken tortilla soup is delicious. Fast service..."
+        },
+        {
+          "text": "Bring your appetite. Must try the shrimp tacos , sangria! Food is A+ as well as the customer service. Come early or wait in line outside :("
+        },
+        {
+          "text": "This place was awesome! Loved the skirt steak and shrimp tacos"
+        },
+        {
+          "text": "The shrimp tacos are amazing"
+        },
+        {
+          "text": "Get the shrimp tacos. And how ever many you're hungry for, order double the amount. They're small and so good I promise you, you're gonna want more!"
+        },
+        {
+          "text": "These shrimp tacos are AMAZING!!"
+        },
+        {
+          "text": "Tastiest shrimp tacos I've ever had, and the horchata was yummy, too!"
+        },
+        {
+          "text": "Al pastor and shrimp tacos are delicious."
+        },
+        {
+          "text": "Shrimp tacos are unbelievable!"
+        },
+        {
+          "text": "Shrimp Tacos are phenomenal!!"
+        },
+        {
+          "text": "Shrimp tacos outstanding. Lamb so good as well."
+        },
+        {
+          "text": "I love love love the shrimp tacos! They don't have it by a set sadly, its $2.75 per taco. Definitely try that!"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "nachos",
+      "freq": 5,
+      "reviews": [
+        {
+          "text": "The nachos... The Nachos... THE NACHOS!! So GOOD! So FRESH! Their nachos are LEGIT. :)"
+        },
+        {
+          "text": "The nachos... The Nachos... THE NACHOS!! So GOOD! So FRESH! Their nachos are LEGIT. :)"
+        },
+        {
+          "text": "The nachos... The Nachos... THE NACHOS!! So GOOD! So FRESH! Their nachos are LEGIT. :)"
+        },
+        {
+          "text": "The nachos... The Nachos... THE NACHOS!! So GOOD! So FRESH! Their nachos are LEGIT. :)"
+        },
+        {
+          "text": "A tortilla factory that makes masa from freshly Nixtamalized corn. Fresh tortillas, masa, and pozole available for takeout; good nachos and some decent tacos and tamales for dine-in."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "fish tacos",
+      "freq": 4,
+      "reviews": [
+        {
+          "text": "Fresh n tasty fish tacos, small venue, they make a great michelada!!"
+        },
+        {
+          "text": "Definitely start off with the guacamole. The fish tacos are amazing. Check out the tortilla machine!"
+        },
+        {
+          "text": "Nixtamal's tortillas made from fresh masa add dimension to all the dishes they touch. Humble chips & salsa become elevated to awesome, fish tacos have great flavor & texture, pozole is hearty & meaty."
+        },
+        {
+          "text": "This place is delicious. Be sure to get the fish tacos, all the tamales (but especially the chicken mole and Italian ones), and horchata."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "tortilla soup",
+      "freq": 3,
+      "reviews": [
+        {
+          "text": "Get the tortilla soup. It will change your life"
+        },
+        {
+          "text": "Tortilla soup. Enough said."
+        },
+        {
+          "text": "Delicious tortilla soup and tamales. Mexican coke!"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "mexican food",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "I tried several things at Nixtamal, and they were all delicious. The chipotle tamale, fish taco, chicken mole enchiladas and flan were all some of the best I've had. If you want real Mexican food, go"
+        },
+        {
+          "text": "Amazingly delicious Mexican food. Make sure to try the pozole, guacamole and the carnitas and al pastor tacos!"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "tortilla",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "A tortilla factory that makes masa from freshly Nixtamalized corn. Fresh tortillas, masa, and pozole available for takeout; good nachos and some decent tacos and tamales for dine-in."
+        },
+        {
+          "text": "Bring your Key to the City and make your own tortilla in the kitchen."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "chicken mole enchiladas",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "Try the chicken mole enchiladas, the fried skate tacos, or the never-dry tamales. Many Mexican food snobs say that this is the best taqueria in NYC. [Eater 38 Member]"
+        },
+        {
+          "text": "I tried several things at Nixtamal, and they were all delicious. The chipotle tamale, fish taco, chicken mole enchiladas and flan were all some of the best I've had. If you want real Mexican food, go"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "fish taco",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "WOW I HAVE FOUND THE BEST FISH TACO SPOT IN ALL OF NYC. SEE YA!"
+        },
+        {
+          "text": "I tried several things at Nixtamal, and they were all delicious. The chipotle tamale, fish taco, chicken mole enchiladas and flan were all some of the best I've had. If you want real Mexican food, go"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "soups",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "Try the soups!  Lots of depth and flavor!"
+        },
+        {
+          "text": "Absolutely delicious food! Try the Mexican nachos, al pastor taco and any of the soups! Then top it off with an ice cold Corona!"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "fried plantains",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "guac, fried plantains, skate tacos #holytrinity"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "tortilla machine",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Definitely start off with the guacamole. The fish tacos are amazing. Check out the tortilla machine!"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "lamb so",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Shrimp tacos outstanding. Lamb so good as well."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "tacos al pastor",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Great hangover cure. Recommend: Horchatas (tallest glass for $2!), tacos al pastor (Saturdays & Sundays only) & duhh guac."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "corn flavor",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Tamales from other places often have a gross feet smell and taste that squigs me out. The tamales here, though, are SO GOOD. Fresh corn flavor, with just the right amount of filling."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "chicken tortilla soup",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Shrimp tacos and chicken tortilla soup is delicious. Fast service..."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "chicken mole enchilada",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Chicken mole enchilada is sooo gooood!"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "veggie things",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Delicious tacos with awesome tortilla de masa, slow service, mediocre horchata. We tried all the veggie things    on the menu-- would come back only for the tacos."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "tortilla de",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Delicious tacos with awesome tortilla de masa, slow service, mediocre horchata. We tried all the veggie things    on the menu-- would come back only for the tacos."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "italian ones",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "This place is delicious. Be sure to get the fish tacos, all the tamales (but especially the chicken mole and Italian ones), and horchata."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "bagel bites",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Let me be the first to say this place sucked! $7 for \\\"fresh authentic\\\" taco's? They were the size of bagel bites. I'd rather go right down the block to 103rd and buy from the Taco Stand/Truck"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "steak platter",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The steak platter was good the tacos were alright nothing mind blowing.  The taco trucks in Astoria taste better especially the one in front of rite aid!"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "chili releno",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Their Chili Releno with Tuna and Mole Tostadas (Crispy Tortillas with a chili sauce, chicken, and cheese) were featured dishes at Choice Eats!"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "tuna",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Their Chili Releno with Tuna and Mole Tostadas (Crispy Tortillas with a chili sauce, chicken, and cheese) were featured dishes at Choice Eats!"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "fried skate tacos",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Try the chicken mole enchiladas, the fried skate tacos, or the never-dry tamales. Many Mexican food snobs say that this is the best taqueria in NYC. [Eater 38 Member]"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "chicken mole enchilladas",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "chicken mole enchilladas -- new york mag 2009"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "steak tacos",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Skirt steak tacos are the best. And the green tamales are amazing."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "chili sauce",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Their Chili Releno with Tuna and Mole Tostadas (Crispy Tortillas with a chili sauce, chicken, and cheese) were featured dishes at Choice Eats!"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "shrimp taco",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Shrimp taco is so yummy!"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "chicken mole",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "This place is delicious. Be sure to get the fish tacos, all the tamales (but especially the chicken mole and Italian ones), and horchata."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "mexican coke",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Delicious tortilla soup and tamales. Mexican coke!"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "mexican nachos",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Absolutely delicious food! Try the Mexican nachos, al pastor taco and any of the soups! Then top it off with an ice cold Corona!"
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "fresh corn tortillas",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Best fresh corn tortillas in town."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "tortilla chips",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The tamales are excellent... if you are buying to take home for later get them frozen. Otherwise you will wait a long time for them to be steamed to order.  The tortilla chips and tortillas are great."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "white onion",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Guy liked the sweet and savory taco al pastor with pineapple, topped with white onion, cilantro and lime. The hearty pozole Guy found comforting and soothing."
+        }
+      ],
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "foodText": "argentine cuisine",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "For over 30 years, Mario has served only the best Argentine cuisine, fresh grain fed meats, handmade pasta, sausages and deserts. Make sure to look at the souvenier section and pic up authentic Mate!"
+        }
+      ],
+      "bizID": "4c01956d1747a593a2c25dca"
+    },
+    {
+      "foodText": "sandwich w cheese lettuce",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "steak (medium well) sandwich w cheese lettuce tomato mayo. add two tablespoons of chimichurri. perfection!"
+        }
+      ],
+      "bizID": "4c01956d1747a593a2c25dca"
+    },
+    {
+      "foodText": "fetuchinni alfredo",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "I have been eating here for many years have the half entrana with spinach saltaeda and fetuchinni alfredo excellent good house wine"
+        }
+      ],
+      "bizID": "4c01956d1747a593a2c25dca"
+    },
+    {
+      "foodText": "entranas sandwich",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The best entranas sandwich so yummy"
+        }
+      ],
+      "bizID": "4c01956d1747a593a2c25dca"
+    },
+    {
+      "foodText": "spinach saltaeda",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "I have been eating here for many years have the half entrana with spinach saltaeda and fetuchinni alfredo excellent good house wine"
+        }
+      ],
+      "bizID": "4c01956d1747a593a2c25dca"
+    },
+    {
+      "foodText": "tomato mayo",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "steak (medium well) sandwich w cheese lettuce tomato mayo. add two tablespoons of chimichurri. perfection!"
+        }
+      ],
+      "bizID": "4c01956d1747a593a2c25dca"
+    },
+    {
+      "foodText": "milanesa steak",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "I ordered the Milanesa steak. Milanesa steak was good but it should've been hotter in temperature, I also ordered yellow rice that came almost cold.  I defenitely would not go there again."
+        }
+      ],
+      "bizID": "4c01956d1747a593a2c25dca"
+    },
+    {
+      "foodText": "calamari",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Huge calamari"
+        }
+      ],
+      "bizID": "4bcb3f9ccc8cd13aa0f2becf"
+    },
+    {
+      "foodText": "italian food",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Awesome place for some cheaply priced good Italian food especially if catching a game at citifield"
+        }
+      ],
+      "bizID": "4bcb3f9ccc8cd13aa0f2becf"
+    },
+    {
+      "foodText": "mozzarella",
+      "freq": 3,
+      "reviews": [
+        {
+          "text": "Get the maduro y mozzarella empanada  ($1.75). \\\"Somehow the sweet plantains & mozzarella work wonderfully well together, creating a sweet, creamy, cheesy center surrounded by a crisp, crunchy shell.\\"
+        },
+        {
+          "text": "Get the maduro y mozzarella empanada  ($1.75). \\\"Somehow the sweet plantains & mozzarella work wonderfully well together, creating a sweet, creamy, cheesy center surrounded by a crisp, crunchy shell.\\"
+        },
+        {
+          "text": "Try the sweet plantain with mozzarella, they're ridiculous!"
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "banana w",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "cod - more potato than cod.  tuna - not fresh, tasted like it was from a tuna can and probably is.  cheese - yum.  veggie - yum.  banana w/ Nutella - yummiee."
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "chocolates",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "They are better than a box of chocolates: and if you order a plater, you will be glad that you never know what you get."
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "chicken w",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Everything on the menu is delicious, but my favorite is the chicken w/ corn flour"
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "cream ice cream",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Love love the chicken empanadas in white flour. And their strawberry & cream ice cream"
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "cheese empanada",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Great Ham N Cheese Empanada"
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "ice cream",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Best whole grain empanadas and home made ice cream!"
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "beef w",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Best empanadas in the city. You really can't go wrong. Sweet plantain (maduro) & cheese, corn flour - cheese, pesto, tomato & mozz, and ground beef w/ cheese are my fav. Gotta get cafe con leche too."
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "turkey",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "So good. Ground turkey and cheese. Real worth it. Authentic"
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "chocolate banana white flour",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The Chocolate Banana White Flour empanadas are incredible. It's a must have treat!"
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "corn flour",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Best empanadas in the city. You really can't go wrong. Sweet plantain (maduro) & cheese, corn flour - cheese, pesto, tomato & mozz, and ground beef w/ cheese are my fav. Gotta get cafe con leche too."
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "\\/ corn flour",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Everything on the menu is delicious, but my favorite is the chicken w/ corn flour"
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "chicken empanadas",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Best beef and chicken empanadas I've ever had! Small place but the food is awesome so who cares. Take everything to go!"
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "cheese empanadas",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Ham & cheese empanadas are delish."
+        }
+      ],
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "foodText": "calamari",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The owner Mario will treat you like fam...try calamari fritti w homemade spicy sauce"
+        }
+      ],
+      "bizID": "4ea2fc90cc2102b34d3d8dc7"
+    },
+    {
+      "foodText": "fettuccini alfredo",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The pasta is homemade and fresh, must try the Fettuccini Alfredo and the Italian Custard."
+        }
+      ],
+      "bizID": "4ea2fc90cc2102b34d3d8dc7"
+    },
+    {
+      "foodText": "italian food",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Best Italian food for a reasonable price!!"
+        }
+      ],
+      "bizID": "4ea2fc90cc2102b34d3d8dc7"
+    },
+    {
+      "foodText": "vegetables",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Try the Porterhouse with vegetables on the side. Ridiculously good!"
+        }
+      ],
+      "bizID": "4ea2fc90cc2102b34d3d8dc7"
+    },
+    {
+      "foodText": "italian custard",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The pasta is homemade and fresh, must try the Fettuccini Alfredo and the Italian Custard."
+        }
+      ],
+      "bizID": "4ea2fc90cc2102b34d3d8dc7"
+    },
+    {
+      "foodText": "steak",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "the tacu tacu was amazing. though the rice was slightly soggy, the steak and thinly sliced onions balance it out."
+        }
+      ],
+      "bizID": "4e4d0d30bd413c4cc66e4177"
+    },
+    {
+      "foodText": "rice",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "the tacu tacu was amazing. though the rice was slightly soggy, the steak and thinly sliced onions balance it out."
+        }
+      ],
+      "bizID": "4e4d0d30bd413c4cc66e4177"
+    },
+    {
+      "foodText": "fried chicken",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Spanish style fried chicken very well seasoned"
+        }
+      ],
+      "bizID": "4b6dc57ff964a520548e2ce3"
+    },
+    {
+      "foodText": "pizza",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Just real pizza"
+        }
+      ],
+      "bizID": "4bb62fe946d4a593e1d3c5c0"
+    },
+    {
+      "foodText": "chicken tostadas",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "mmmm.. chicken tostadas"
+        }
+      ],
+      "bizID": "4d601233b19fa143c524f0c8"
+    },
+    {
+      "foodText": "tacos",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Great tacos"
+        }
+      ],
+      "bizID": "4d601233b19fa143c524f0c8"
+    },
+    {
+      "foodText": "rice",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Best peruvian rice around new york. Chifa de pollo and pollo solo. With an inca cola. Oh yeah this is cash only.  This is a local crowd and not packed like pio pio"
+        }
+      ],
+      "bizID": "4d9d1b69a1ec8cfac057fc49"
+    },
+    {
+      "foodText": "hot sauce",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Unlike any empanada I've ever had. Don't forget their hot sauce!"
+        }
+      ],
+      "bizID": "4bc485c9abf49521461ec593"
+    },
+    {
+      "foodText": "breakfast",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Best place to eat breakfast"
+        }
+      ],
+      "bizID": "4bc485c9abf49521461ec593"
+    },
+    {
+      "foodText": "cheese empanadas",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Cheese empanadas. Das it."
+        }
+      ],
+      "bizID": "4bc485c9abf49521461ec593"
+    },
+    {
+      "foodText": "pizza",
+      "freq": 3,
+      "reviews": [
+        {
+          "text": "Amazing pizza. Def go for the primavera pizza"
+        },
+        {
+          "text": "Amazing pizza. Def go for the primavera pizza"
+        },
+        {
+          "text": "The best pizza and pasta in town!!!!and the owners amazing people!!!!!you should definetely go to that restaurant"
+        }
+      ],
+      "bizID": "51bc9e02498e9339a49048c0"
+    },
+    {
+      "foodText": "pasta",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The best pizza and pasta in town!!!!and the owners amazing people!!!!!you should definetely go to that restaurant"
+        }
+      ],
+      "bizID": "51bc9e02498e9339a49048c0"
+    },
+    {
+      "foodText": "sandwiches",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "Tremendas facturas vigilantes, sandwiches de miga, y alfajores de maizena. Hacen de todo aca. 10 puntos para esta panaderia!"
+        },
+        {
+          "text": "Ricas facturas y sandwiches de miga."
+        }
+      ],
+      "bizID": "4d4f12a194398cfa5c3ca3c8"
+    },
+    {
+      "foodText": "cheese",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Get the quesadillas. Made with real cheese. Some of the competition is fake. Go with this. Highly recommend."
+        }
+      ],
+      "bizID": "4cb7ebde7148f04d0e21ccab"
+    },
+    {
+      "foodText": "mozzarella",
+      "freq": 5,
+      "reviews": [
+        {
+          "text": "Mamas has been a pillar landmark of Corona for many years. This place is a jewel with a variety of different meats and cheeses. I had Pastrami and Fresh mozzarella and it was delicious."
+        },
+        {
+          "text": "Found a huge brown hair, more than a foot long in the middle of my fresh mozzarella, yuck"
+        },
+        {
+          "text": "Unbelievable mozzarella, they make it fresh everyday and if your lucky you can see them stretching out the mozzarella in the back."
+        },
+        {
+          "text": "Unbelievable mozzarella, they make it fresh everyday and if your lucky you can see them stretching out the mozzarella in the back."
+        },
+        {
+          "text": "\\\"Mama's Special\\\" lives on: a hero fabricated from assorted cold cuts, the store's freshly made mozzarella, and pickled mushrooms and chile peppers"
+        }
+      ],
+      "bizID": "3fd66200f964a52073f11ee3"
+    },
+    {
+      "foodText": "meatball sandwich",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "All we can say is try the Mama?s Special ? their famous meatball sandwich that we can?t stop thinking about.  Grab a delicious sandwich on your way to a Mets game."
+        }
+      ],
+      "bizID": "3fd66200f964a52073f11ee3"
+    },
+    {
+      "foodText": "tomato sauce",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Get the eggplant parm-Seeds ooze out the sides, tomato sauce laps at the edges, cheese gums up the works, and the eggplant itself has dissolved into something unidentifiable deep in the sandwich. Mmm."
+        }
+      ],
+      "bizID": "3fd66200f964a52073f11ee3"
+    },
+    {
+      "foodText": "turkey tuesdays",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Fresh turkey Tuesdays!"
+        }
+      ],
+      "bizID": "3fd66200f964a52073f11ee3"
+    },
+    {
+      "foodText": "roast beef",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Roast Beef"
+        }
+      ],
+      "bizID": "3fd66200f964a52073f11ee3"
+    },
+    {
+      "foodText": "cheese gums",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Get the eggplant parm-Seeds ooze out the sides, tomato sauce laps at the edges, cheese gums up the works, and the eggplant itself has dissolved into something unidentifiable deep in the sandwich. Mmm."
+        }
+      ],
+      "bizID": "3fd66200f964a52073f11ee3"
+    },
+    {
+      "foodText": "fresh mozzarella",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Excellent fresh mozzarella put to good use in hero sandwiches. Don't miss the cannoli either."
+        }
+      ],
+      "bizID": "3fd66200f964a52073f11ee3"
+    },
+    {
+      "foodText": "bagel",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Best everything bagel I ever had love it"
+        }
+      ],
+      "bizID": "4c80d2b8d92ea09346cd3a72"
+    },
+    {
+      "foodText": "iced coffee",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "$1 any sized Iced Coffee from McCaf?? in French Vanilla (sugar-free or regular), Hazelnut, or Caramel. A la carte only. Price and participation may vary."
+        },
+        {
+          "text": "$1 any size Iced Coffee! Available in French Vanilla (sugar-free or regular), Hazelnut, or Caramel. A la carte only. Price and participation may vary."
+        }
+      ],
+      "bizID": "4d93686ff10ea09328c0281e"
+    },
+    {
+      "foodText": "caramel",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "$1 any sized Iced Coffee from McCaf?? in French Vanilla (sugar-free or regular), Hazelnut, or Caramel. A la carte only. Price and participation may vary."
+        },
+        {
+          "text": "$1 any size Iced Coffee! Available in French Vanilla (sugar-free or regular), Hazelnut, or Caramel. A la carte only. Price and participation may vary."
+        }
+      ],
+      "bizID": "4d93686ff10ea09328c0281e"
+    },
+    {
+      "foodText": "texas toast",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Get the big and tasty! egg sandwich on texas toast! got to love it"
+        }
+      ],
+      "bizID": "4c2950ebfe6e2d7fd5b8543c"
+    },
+    {
+      "foodText": "egg sandwich",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Get the big and tasty! egg sandwich on texas toast! got to love it"
+        }
+      ],
+      "bizID": "4c2950ebfe6e2d7fd5b8543c"
+    },
+    {
+      "foodText": "iced coffee",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "$1 any sized Iced Coffee from McCaf?? in French Vanilla (sugar-free or regular), Hazelnut, or Caramel. A la carte only. Price and participation may vary."
+        },
+        {
+          "text": "$1 any size Iced Coffee! Available in French Vanilla (sugar-free or regular), Hazelnut, or Caramel. A la carte only. Price and participation may vary."
+        }
+      ],
+      "bizID": "4c936fa71221b1f7f3f619e2"
+    },
+    {
+      "foodText": "caramel",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "$1 any sized Iced Coffee from McCaf?? in French Vanilla (sugar-free or regular), Hazelnut, or Caramel. A la carte only. Price and participation may vary."
+        },
+        {
+          "text": "$1 any size Iced Coffee! Available in French Vanilla (sugar-free or regular), Hazelnut, or Caramel. A la carte only. Price and participation may vary."
+        }
+      ],
+      "bizID": "4c936fa71221b1f7f3f619e2"
+    },
+    {
+      "foodText": "iced mocha latte",
+      "freq": 2,
+      "reviews": [
+        {
+          "text": "Iced mocha latte with extra mocha. Have them turn it upside down and mix it well."
+        },
+        {
+          "text": "Try the iced mocha latte with extra Mocha. Go all the way with regular milk. (I skip the whipped cream, but you may like that, too. )"
+        }
+      ],
+      "bizID": "4bfde68ef7c82d7f6bf28e04"
+    },
+    {
+      "foodText": "ice cream cakes",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Place is nice. Wide selection of Ice cream cakes. They have at least three refrigerators of ice cream delicacies. They have parking available for guests. (2 of 4 petals via Fondu)"
+        }
+      ],
+      "bizID": "4bfde68ef7c82d7f6bf28e04"
+    },
+    {
+      "foodText": "ice cream",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Place is nice. Wide selection of Ice cream cakes. They have at least three refrigerators of ice cream delicacies. They have parking available for guests. (2 of 4 petals via Fondu)"
+        }
+      ],
+      "bizID": "4bfde68ef7c82d7f6bf28e04"
+    },
+    {
+      "foodText": "latte",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Only person who knows how to make a great latte is Calvin!!! Two others made it wrong and when asked the way I wanted he made it like all the other DDs!"
+        }
+      ],
+      "bizID": "4de09019fa76425c541ce0bd"
+    },
+    {
+      "foodText": "chicken sandwiches",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "All the chicken sandwiches taste the same!"
+        }
+      ],
+      "bizID": "4b8d2f91f964a52025ec32e3"
+    },
+    {
+      "foodText": "white chocolate",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "White chocolate iced coffee. GET IT! No sugar or milk!"
+        }
+      ],
+      "bizID": "4b8d2f91f964a52025ec32e3"
+    },
+    {
+      "foodText": "iced coffee",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "White chocolate iced coffee. GET IT! No sugar or milk!"
+        }
+      ],
+      "bizID": "4b8d2f91f964a52025ec32e3"
+    },
+    {
+      "foodText": "turkey bacon",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "Turkey bacon is like cardboard. Definitely has the been cooked with regular bacon taste. Eggs are super runny when I asked for poached not sunny side up. Toast was good. But how can you mess that up?"
+        }
+      ],
+      "bizID": "4b8d2f91f964a52025ec32e3"
+    },
+    {
+      "foodText": "bread",
+      "freq": 1,
+      "reviews": [
+        {
+          "text": "The bread here is epic!"
+        }
+      ],
+      "bizID": "4e5285b418381362f72fbcb3"
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Miller's Ale House",
+      "lat": "40.733584049936574",
+      "lon": "-73.86413097381592",
+      "address": "61-35 Junction Blvd (Rego Center), Rego Park, NY",
+      "phone": "7187601090",
+      "bizID": "513502cbe4b0feed3fa72299"
+    },
+    {
+      "name": "Park Side Restaurant",
+      "lat": "40.743843062346414",
+      "lon": "-73.85608434677124",
+      "address": "107-01 Corona Ave, Corona, NY",
+      "phone": "7182719321",
+      "bizID": "4b808501f964a5207b7930e3"
+    },
+    {
+      "name": "The Lemon Ice King of Corona",
+      "lat": "40.74319684003477",
+      "lon": "-73.85505706071854",
+      "address": "52-02 108th St, Corona, NY",
+      "phone": "7186995133",
+      "bizID": "4a46a4f6f964a52039a91fe3"
+    },
+    {
+      "name": "Tortilleria Nixtamal",
+      "lat": "40.74598896309129",
+      "lon": "-73.85919570922852",
+      "address": "104-05 47th Ave, Corona, NY",
+      "phone": "7186992434",
+      "bizID": "4a62128af964a520f9c21fe3"
+    },
+    {
+      "name": "El Gauchito",
+      "lat": "40.74218391666667",
+      "lon": "-73.8680362701416",
+      "address": "94-60 Corona Ave, Elmhurst, NY",
+      "phone": "7182718198",
+      "bizID": "4c01956d1747a593a2c25dca"
+    },
+    {
+      "name": "Tony's Pizzeria & Restaurant",
+      "lat": "40.74644574995542",
+      "lon": "-73.85998831268716",
+      "address": "4518 104 street, Corona, NY",
+      "bizID": "4bcb3f9ccc8cd13aa0f2becf"
+    },
+    {
+      "name": "Empanadas Cafe",
+      "lat": "40.74014696347826",
+      "lon": "-73.8533840053097",
+      "address": "5627 Van Doren St, Corona, NY",
+      "phone": "7185927288",
+      "bizID": "4b592147f964a520217e28e3"
+    },
+    {
+      "name": "Il Triangolo Ristorante",
+      "lat": "40.74223104665114",
+      "lon": "-73.86745952691574",
+      "address": "96-01 Corona Ave, Corona, NY",
+      "phone": "7182711250",
+      "bizID": "4ea2fc90cc2102b34d3d8dc7"
+    },
+    {
+      "name": "Don Alex Restaurant",
+      "lat": "40.74356430018418",
+      "lon": "-73.8562669563142",
+      "address": "10626 Corona Ave, Corona, NY",
+      "phone": "7182718687",
+      "bizID": "4e4d0d30bd413c4cc66e4177"
+    },
+    {
+      "name": "Pollo Campero",
+      "lat": "40.7497766340658",
+      "lon": "-73.86195302009583",
+      "address": "10316 Roosevelt Ave, Corona, NY",
+      "phone": "7182056943",
+      "bizID": "4b6dc57ff964a520548e2ce3"
+    },
+    {
+      "name": "Corona Pizza (Il Forno)",
+      "lat": "40.74345695543095",
+      "lon": "-73.85475933551788",
+      "address": "51-23 108th St, Corona, NY",
+      "phone": "7182713736",
+      "bizID": "4bb62fe946d4a593e1d3c5c0"
+    },
+    {
+      "name": "Tulcingo",
+      "lat": "40.74876531863006",
+      "lon": "-73.86306067575521",
+      "address": "4036 National St, Flushing, NY",
+      "phone": "7186398800",
+      "bizID": "4d601233b19fa143c524f0c8"
+    },
+    {
+      "name": "Costa Verde",
+      "lat": "40.742112907417514",
+      "lon": "-73.86797635674623",
+      "address": "94-59 Corona Ave, Elmhurst, NY",
+      "phone": "7182710900",
+      "bizID": "4d9d1b69a1ec8cfac057fc49"
+    },
+    {
+      "name": "El Palacio De Las Empanadas",
+      "lat": "40.742644512504896",
+      "lon": "-73.85442922350141",
+      "address": "53-02 108th St, Corona, NY",
+      "bizID": "4bc485c9abf49521461ec593"
+    },
+    {
+      "name": "Cucino Amodo Mio - Ristorante, Pizzeria E Bar",
+      "lat": "40.7438682831015",
+      "lon": "-73.85521026204358",
+      "address": "51-01 108 Street, Corona, NY",
+      "phone": "7182714300",
+      "bizID": "51bc9e02498e9339a49048c0"
+    },
+    {
+      "name": "Rio De La Plata Bakery",
+      "lat": "40.74211970401095",
+      "lon": "-73.86763754623315",
+      "address": "55-65 Junction Blvd, Corona, NY",
+      "phone": "7182715422",
+      "bizID": "4d4f12a194398cfa5c3ca3c8"
+    },
+    {
+      "name": "Tacos El Idolo Truck Corona Plaza",
+      "lat": "40.750037317781775",
+      "lon": "-73.86179153720612",
+      "address": "104-02 Roosevelt Ave, Corona, NY",
+      "bizID": "4cb7ebde7148f04d0e21ccab"
+    },
+    {
+      "name": "Leo's Latticini",
+      "lat": "40.74598896309129",
+      "lon": "-73.86005401611328",
+      "address": "46-02 104th St, Corona, NY",
+      "phone": "7188986069",
+      "bizID": "3fd66200f964a52073f11ee3"
+    },
+    {
+      "name": "Dunkin Donuts",
+      "lat": "40.74234980308073",
+      "lon": "-73.85424544927639",
+      "address": "5401 108th St, Corona, NY",
+      "phone": "7182718061",
+      "bizID": "4c80d2b8d92ea09346cd3a72"
+    },
+    {
+      "name": "McDonald's",
+      "lat": "40.736754595115876",
+      "lon": "-73.86537551879883",
+      "address": "9507 57th Ave, Corona, NY",
+      "phone": "7187609606",
+      "bizID": "4d93686ff10ea09328c0281e"
+    },
+    {
+      "name": "Dunkin Donuts",
+      "lat": "40.74994",
+      "lon": "-73.86281641",
+      "address": "10227 Roosevelt Ave, Corona, NY",
+      "phone": "--",
+      "bizID": "4c2950ebfe6e2d7fd5b8543c"
+    },
+    {
+      "name": "McDonald's",
+      "lat": "40.74961602995792",
+      "lon": "-73.86279651184572",
+      "address": "40-12 National St, Corona, NY",
+      "phone": "7184245106",
+      "bizID": "4c936fa71221b1f7f3f619e2"
+    },
+    {
+      "name": "Dunkin' Donuts",
+      "lat": "40.73654",
+      "lon": "-73.85759687",
+      "address": "9925 Horace Harding Expy, Flushing, NY",
+      "phone": "7182719222",
+      "bizID": "4bfde68ef7c82d7f6bf28e04"
+    },
+    {
+      "name": "Dunkin' Donuts",
+      "lat": "40.74265316483055",
+      "lon": "-73.87000920754521",
+      "address": "9403 Corona Ave, Elmhurst, NY",
+      "phone": "9173964635",
+      "bizID": "4de09019fa76425c541ce0bd"
+    },
+    {
+      "name": "Silver Spoon Diner",
+      "lat": "40.73530648895757",
+      "lon": "-73.86508209217605",
+      "address": "58-21 Junction Blvd, Elmhurst, NY",
+      "phone": "7183933000",
+      "bizID": "4b8d2f91f964a52025ec32e3"
+    },
+    {
+      "name": "Nutripan Colombian Restaurant",
+      "lat": "40.737022814871736",
+      "lon": "-73.86554724471563",
+      "address": "56-09 junction blvd, Elmhurst, NY",
+      "bizID": "4e5285b418381362f72fbcb3"
+    }
+  ]
+}

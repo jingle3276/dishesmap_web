@@ -31,4 +31,17 @@ namespace :test do
         sh "./node_modules/karma/bin/karma start #{DEBUG_CONFIG}"
     end
 
+    desc "Start test server using node"
+    task :start_node => [:stop_node] do 
+        sh "./node_modules/forever/bin/forever start " \
+           "-a -o /opt/wz/log/dmwa/test_server.log " \
+           "--minUptime 1000 --spinSleepTime 2000 " \
+           "etc/tests/node/test_server.js"
+    end
+
+    desc "Stop test server"
+    task :stop_node do 
+        sh "./node_modules/forever/bin/forever stopall"
+    end
+
 end
