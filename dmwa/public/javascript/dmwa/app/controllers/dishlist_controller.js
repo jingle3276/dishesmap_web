@@ -14,7 +14,6 @@ goog.require('wz.dmwa.app.services.DishlistService');
     var Controller = wz.dmwa.core.controllers.Controller;
     var DishlistView = wz.dmwa.app.views.DishlistView;
     var DishlistService = wz.dmwa.app.services.DishlistService;
-
     var asserts = goog.asserts;
 
     wz.dmwa.app.controllers.DishlistController = Controller.extend({
@@ -31,7 +30,7 @@ goog.require('wz.dmwa.app.services.DishlistService');
             Controller.prototype.start.call(this);
             var viewOptions = {};
             viewOptions.dish_list = this._service.allDishes();
-            this._view.start(viewOptions); 
+            this._view.start(viewOptions);
         },
 
         //TODO
