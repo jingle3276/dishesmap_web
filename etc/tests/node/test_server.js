@@ -1,12 +1,25 @@
-var http = require('http');
+//var http = require('http');
+var express = require('express');
+var app = express();
 
-var mock_json = require('./fixtures/mock_api_response.json');
 
-var app = http.createServer(function(req,res){
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(mock_json));
+var dishlist_json = require('./fixtures/mock_api_response.json');
+var rest_json = require('./fixtures/mock_api_rest.json');
+
+app.get('/', function(req, res){
+	res.send("test server root");
 });
 
-app.listen(3000, function(){
-	console.log('test server running at http://localhost:' + app.address().port);
+app.get('/food', function(req, res){
+	res.json(dishlist_json);
+});
+
+app.get('/restaurant', function(req, res){
+	res.json(rest_json);
+});
+
+var server = app.listen(3000, function(){
+	var host = server.address().address;
+	var port = server.address().port;
+	console.log("Test server running at http://%s:%s", host, port);
 });
