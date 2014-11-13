@@ -78,8 +78,9 @@
 	float: none;
 }
 
+
 @media(min-width:992px){
-	.col-md-10, .col-md-4 {
+	.col-md-10, .col-md-4, .col-md-12{
 		float:none;
 	}
 }
