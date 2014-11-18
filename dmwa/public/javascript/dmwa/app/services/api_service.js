@@ -20,9 +20,18 @@ goog.require('wz.dmwa.core.services.Service');
         load : function () {
         	//mock fetch by loading from a JSON file
         	var self = this;
-        	return $.getJSON("javascript/dmwa/app/services/mock_api_response.json", function (json) {
+        	return $.getJSON("http://localhost:3000/foodlist/where/?lat=1&lon=2", function (json) {
         		self._json = json;
         	});
+
+            //return $.ajax({
+            //    type: "GET",
+            //    url: "http://localhost:3000/foodlist/where/?lat=1&lon=2",
+            //    dataType: "json",
+            //    success: function (data){
+            //        self._json = data;
+            //    }
+            //});
         },
 
         getJSON : function () {

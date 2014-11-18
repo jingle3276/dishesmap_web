@@ -8,6 +8,14 @@ var dishlist_json = require('./fixtures/mock_api_response.json');
 var app = express();
 var log = bunyan.createLogger({name: "test-api"});
 
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
 app.get('/', function(req, res){
 	res.send("test server root");
 });

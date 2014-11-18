@@ -46,11 +46,14 @@ goog.require('wz.dmwa.app.services.LocationService');
             var dishViewModels = _.map(rawDishes.models, function(d){
                 var business = _.first(rawBusinesses.where({bizID: d.get('bizID')}));
                 var attrs = {};
-                attrs[FIELDS.BIZ_NAME] = business.get('name');
+                
                 attrs[FIELDS.FOOT_TEXT] = d.get('foodText');
                 attrs[FIELDS.FREQ] = d.get('freq');
-                attrs[FIELDS.DISTANCE] = locationService.getDistanceFromLatLonInMi(
-                    business.get('lat'), business.get('lon'));
+                if (business){
+                    attrs[FIELDS.BIZ_NAME] = business.get('name');
+                    attrs[FIELDS.DISTANCE] = locationService.getDistanceFromLatLonInMi(
+                        business.get('lat'), business.get('lon'));
+                }
                 return new DishlistItem(attrs);
             });
 
