@@ -11,6 +11,7 @@ goog.require('wz.dmwa.core.models.Model');
         
 
         FIELDS: _.extend({}, Model.prototype.FIELDS, {
+            ID: 'id',
             FOOT_TEXT: 'foodText',
             BIZ_NAME: 'bizName',
             FREQ: 'freq',
@@ -18,10 +19,14 @@ goog.require('wz.dmwa.core.models.Model');
         }),
 
         initialize: function (options) {
-            options = _.extend({}, options);
             Model.prototype.initialize.call(this, options);
+            options = _.extend({}, options);
             this.set(options);
             this._logNamespace = 'DishlistItem';
+        },
+
+        getFoodId: function () {
+            return this.get(this.FIELDS.ID);
         },
 
         getDishName: function () {

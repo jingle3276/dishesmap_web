@@ -1,7 +1,7 @@
 {
   "dishes": [
     {
-      "foodId": "f0001",
+      "id": "f0001",
       "foodText": "pho",
       "freq": 7,
       "reviews": [
@@ -30,7 +30,7 @@
       "bizID": "goodfood_biz_FourSquare__4accf7c9f964a5204dca20e3"
     },
     {
-      "foodId": "f0002",
+      "id": "f0002",
       "foodText": "spring rolls",
       "freq": 5,
       "reviews": [
@@ -53,7 +53,7 @@
       "bizID": "goodfood_biz_FourSquare__4accf7c9f964a5204dca20e3"
     },
     {
-      "foodId": "f0004",
+      "id": "f0004",
       "foodText": "pork belly",
       "freq": 4,
       "reviews": [
@@ -73,7 +73,7 @@
       "bizID": "goodfood_biz_FourSquare__4e0f605462e1d5a30d0ab7ff"
     },
     {
-      "foodId": "f0005",
+      "id": "f0005",
       "foodText": "lamb dumplings",
       "freq": 5,
       "reviews": [
@@ -96,7 +96,7 @@
       "bizID": "goodfood_biz_FourSquare__4d974e1661a3a1cd4465b142"
     },
     {
-      "foodId": "f0006",
+      "id": "f0006",
       "foodText": "dumplings",
       "freq": 9,
       "reviews": [
@@ -131,7 +131,7 @@
       "bizID": "goodfood_biz_FourSquare__4eaf0752d3e30d448393b841"
     },
     {
-      "foodId": "f0007",
+      "id": "f0007",
       "foodText": "pancakes",
       "freq": 6,
       "reviews": [

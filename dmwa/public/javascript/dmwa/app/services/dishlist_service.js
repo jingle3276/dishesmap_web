@@ -46,7 +46,7 @@ goog.require('wz.dmwa.app.services.LocationService');
             var dishViewModels = _.map(rawDishes.models, function(d){
                 var business = _.first(rawBusinesses.where({bizID: d.get('bizID')}));
                 var attrs = {};
-                
+                attrs[FIELDS.ID] = d.get('id');
                 attrs[FIELDS.FOOT_TEXT] = d.get('foodText');
                 attrs[FIELDS.FREQ] = d.get('freq');
                 if (business){
@@ -58,6 +58,9 @@ goog.require('wz.dmwa.app.services.LocationService');
             });
 
             this._dishCollection.reset(dishViewModels);
+            _.each(dishViewModels, function(item){
+                item.save();
+            });
         	return this._dishCollection.models;
         },
 
