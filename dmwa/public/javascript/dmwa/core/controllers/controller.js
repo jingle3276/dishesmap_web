@@ -11,9 +11,9 @@ goog.require('wz.dmwa.lib.Object');
         
         _businessEvents : {},
         _logNamespace : 'Controller',
-        _asyncServices : [],
 
         initialize : function () {
+            this._asyncServices = [];
             this._log("Controller Initizlized");
         },
 
@@ -67,6 +67,9 @@ goog.require('wz.dmwa.lib.Object');
             if (this._view) {
                 this._view.unbind();
                 this._view.stop();
+            }
+            if (this._asyncServices) {
+                this._asyncServices = [];
             }
         },
 

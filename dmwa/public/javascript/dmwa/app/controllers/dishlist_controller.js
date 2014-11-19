@@ -21,9 +21,9 @@ goog.require('wz.dmwa.app.services.DishlistService');
         _logNamespace : "DishlistController",
 
         initialize : function (options) {
+            Controller.prototype.initialize.call(this, options);
             this._service = DishlistService;
             this._asyncServices.push(this._service);
-            Controller.prototype.initialize.call(this, options);
         },
 
         start : function () {
