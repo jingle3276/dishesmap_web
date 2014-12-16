@@ -39,29 +39,10 @@ goog.require('wz.dmwa.app.services.LocationService');
         },
 
         allDishes : function () {
-            var rawDishes = this._apiService.getDishes();
-            var rawBusinesses = this._apiService.getBusinesses();
-            var FIELDS = DishlistItem.prototype.FIELDS;
-            
-            var dishViewModels = _.map(rawDishes.models, function(d){
-                var business = _.first(rawBusinesses.where({bizID: d.get('bizID')}));
-                var attrs = {};
-                attrs[FIELDS.ID] = d.get('id');
-                attrs[FIELDS.FOOT_TEXT] = d.get('foodText');
-                attrs[FIELDS.FREQ] = d.get('freq');
-                if (business){
-                    attrs[FIELDS.BIZ_NAME] = business.get('name');
-                    attrs[FIELDS.DISTANCE] = locationService.getDistanceFromLatLonInMi(
-                        business.get('lat'), business.get('lon'));
-                }
-                return new DishlistItem(attrs);
-            });
-
-            this._dishCollection.reset(dishViewModels);
-            _.each(dishViewModels, function(item){
-                item.save();
-            });
-        	return this._dishCollection.models;
+            //using fetch() here couldn't fetch all the models. Not sure why.
+            var models = this._dishCollection.localStorage.findAll();
+            this._dishCollection.reset(models);
+            return this._dishCollection.models;
         },
 
         getDishDetail : function (dishName) {

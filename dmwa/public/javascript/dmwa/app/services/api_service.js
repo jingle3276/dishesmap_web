@@ -11,6 +11,7 @@ goog.require('wz.dmwa.app.models.DishlistItem');
     var Service = wz.dmwa.core.services.Service;
     var DishlistItemCollection = wz.dmwa.app.collections.DishlistItemCollection;
     var DishlistItem = wz.dmwa.app.models.DishlistItem;
+    var FIELDS = DishlistItem.prototype.FIELDS;
 
 	var APIService = Service.extend({
 
@@ -22,42 +23,50 @@ goog.require('wz.dmwa.app.models.DishlistItem');
         },
 
         load : function () {
-        	//mock fetch by loading from a JSON file
             var d = $.Deferred();
 
         	var self = this;
-        	//return $.getJSON("http://localhost:3000/foodlist/where/?lat=1&lon=2", function (json) {
-        	//	self._json = json;
-        	//});
-            if (this._is_collection_loaded()){
-                d.resolve();
-            }
-            else {
+
+            if (this._is_first_time_load()){
                 $.getJSON("http://localhost:3000/foodlist/where/?lat=1&lon=2", function (json) {
-                    //load collection into localStorage   
-                    self._load_dishes(json);
+                    self._save_data(json);
                     d.resolve();
                 });
             }
-
-            // if DishlistItemCollection is non-0,  resolve immediately 
-            // else(inital load), query the json and call a function to persistent into
-            // localStorage via collection
-            // this method will translate the raw json into business models  
+            else {
+                d.resolve();
+            }
         },
 
-        _is_collection_loaded : function (){
-            //FIXME: not able to fetch models from localStorage
+        _is_first_time_load : function (){
             var dishList = new DishlistItemCollection();
-            dishList.fetch();
-            return dishList.length > 1;
+            return _.isEmpty(dishList.localStorage.records);
         },
 
-        _load_dishes: function (json){
+
+        _mapRawToDishlistItem: function (rawDish, bizName){
+            var attrs = {};
+            attrs[FIELDS.ID] = rawDish.id;
+            attrs[FIELDS.FOOT_TEXT] = rawDish.foodText;
+            attrs[FIELDS.FREQ] = rawDish.freq;
+            //if (business){
+            //    attrs[FIELDS.BIZ_NAME] = business.get('name');
+            //    attrs[FIELDS.DISTANCE] = locationService.getDistanceFromLatLonInMi(
+            //    business.get('lat'), business.get('lon'));
+            //}
+            attrs[FIELDS.BIZ_NAME] = bizName;
+            var model = new DishlistItem(attrs);
+            return model;
+        },
+
+        /**
+         * save raw json data into local storage 
+         */
+        _save_data: function (json){
             var rawDishes = json.dishes;
             var rawBusinesses = json.businesses;
-            var FIELDS = DishlistItem.prototype.FIELDS;
             
+            /*
             var dishViewModels = _.map(rawDishes, function(d){
                 //var business = _.first(rawBusinesses.where({bizID: d.get('bizID')}));
                 var attrs = {};
@@ -71,10 +80,15 @@ goog.require('wz.dmwa.app.models.DishlistItem');
                 //}
                 return new DishlistItem(attrs);
             });
+            */ 
+            var self = this;
+            var dishListItems = _.map(rawDishes, function(rawDish){
+                var rawBiz = _.findWhere(rawBusinesses, {bizID: rawDish.bizID});
+                return self._mapRawToDishlistItem(rawDish, rawBiz.name);
+            });
+
             var dishList = new DishlistItemCollection();
-            //dishList.fetch();
-            //dishList.reset(dishViewModels);
-            _.each(dishViewModels, function(item){
+            _.each(dishListItems, function(item){
                 dishList.add(item);
                 item.save();
             });

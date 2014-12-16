@@ -1,3 +1,5 @@
+// a view model for Dishlist Item displayed in dishlist page
+
 goog.provide('wz.dmwa.app.models.DishlistItem');
 
 goog.require('wz.dmwa.core.models.Model');

@@ -25,4 +25,6 @@ goog.require('wz.dmwa.app.models.DishlistItem');
 
 	});
 
+	//make it static to fix the fetch issue ?
+
 }());
