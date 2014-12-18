@@ -1,14 +1,17 @@
-
+//make request to remote API, map raw json into models and persistent 
+//them into localStorage via collections 
 goog.provide('wz.dmwa.app.services.APIService');
 
 goog.require('wz.dmwa.core.services.Service');
 goog.require('wz.dmwa.app.collections.DishlistItemCollection');
 goog.require('wz.dmwa.app.models.DishlistItem');
+goog.require('wz.dmwa.app.services.LocationService');
 
 
 (function () {
 
     var Service = wz.dmwa.core.services.Service;
+    var locationService = wz.dmwa.app.services.LocationService;
     var DishlistItemCollection = wz.dmwa.app.collections.DishlistItemCollection;
     var DishlistItem = wz.dmwa.app.models.DishlistItem;
     var FIELDS = DishlistItem.prototype.FIELDS;
@@ -18,7 +21,6 @@ goog.require('wz.dmwa.app.models.DishlistItem');
 		_logNamespace : 'APIService',
 
         initialize : function () {
-            this._json = {};
             Service.prototype.initialize.call(this);
         },
 
@@ -26,12 +28,22 @@ goog.require('wz.dmwa.app.models.DishlistItem');
             var d = $.Deferred();
 
         	var self = this;
-
             if (this._is_first_time_load()){
-                $.getJSON("http://localhost:3000/foodlist/where/?lat=1&lon=2", function (json) {
-                    self._save_data(json);
-                    d.resolve();
+                //this service must wait locationService resolved and then 
+                //send ajax request. $.when().then() make sure when something
+                //is done, then do some other thing
+                $.when(locationService.load()).then(function(){
+                    var lat = locationService.get_lat();
+                    var lon = locationService.get_lon();
+                    var request_url = "http://localhost:3000/foodlist/where/?lat=" + lat + "&lon=" + lon; 
+                    var promise2 = $.getJSON(request_url, function (json) {
+                        //when got the response json, load into localStorage 
+                        //and resolve the promise so dishlistcontroller can start
+                        self._save_data(json);
+                        d.resolve();
+                    });
                 });
+                return d.promise();
             }
             else {
                 d.resolve();
@@ -92,10 +104,6 @@ goog.require('wz.dmwa.app.models.DishlistItem');
                 dishList.add(item);
                 item.save();
             });
-        },
-
-        getJSON : function () {
-        	return this._json;
         },
 
         getDishes : function () {

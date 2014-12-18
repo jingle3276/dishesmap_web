@@ -51,7 +51,7 @@ goog.require('wz.dmwa.core.services.Service');
             return d.promise();
         },
 
-        getDistanceFromLatLonInMi : function (lat2,lon2) {
+        getDistanceFromLatLonInMi : function (lat2, lon2) {
             function deg2rad(deg) {
                 return deg * (Math.PI/180);
             }

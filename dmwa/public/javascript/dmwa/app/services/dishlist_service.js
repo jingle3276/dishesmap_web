@@ -9,7 +9,6 @@ goog.require('wz.dmwa.app.services.APIService');
 goog.require('wz.dmwa.app.collections.DishlistItemCollection');
 goog.require('wz.dmwa.app.models.DishlistItem');
 goog.require('wz.dmwa.app.models.Dishdetail');
-goog.require('wz.dmwa.app.services.LocationService');
 
 
 (function () {
@@ -19,7 +18,7 @@ goog.require('wz.dmwa.app.services.LocationService');
     var DishlistItem = wz.dmwa.app.models.DishlistItem;
     var Dishdetail = wz.dmwa.app.models.Dishdetail;
     var apiService = wz.dmwa.app.services.APIService;
-    var locationService = wz.dmwa.app.services.LocationService;
+    
 
 	var DishlistService = Service.extend({
 
@@ -29,7 +28,7 @@ goog.require('wz.dmwa.app.services.LocationService');
         initialize : function () {
             this._dishCollection = new DishlistItemCollection();
             this._asyncServices.push(this._apiService);
-            this._asyncServices.push(locationService);
+            //this._asyncServices.push(locationService);
             Service.prototype.initialize.call(this);
         },
 

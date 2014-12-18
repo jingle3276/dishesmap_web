@@ -17,7 +17,6 @@ goog.require('wz.dmwa.core.models.Model');
             BIZ_NAME: 'bizName',
             BIZ_ADDR: 'bizAddr',
             BIZ_TEL: 'bizTel'
-
         }),
 
         initialize: function (options) {
