@@ -49,8 +49,8 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
         },
 
         _clickDishTitleHandler: function (ev) {
-            var dishName = ev.currentTarget.textContent;
-            this.trigger(this.EVENTS.GO_TO_DETAIL, dishName);
+            var dishId = ev.currentTarget.getAttribute('dishid');
+            this.trigger(this.EVENTS.GO_TO_DETAIL, dishId);
         }
 
     });

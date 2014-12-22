@@ -47,8 +47,8 @@ goog.require('wz.dmwa.app.services.DishlistService');
             Controller.prototype._initializeBusinessEvents.call(this);
         },
 
-        _onGoTODetail : function (dishName) {
-            window.location.href = '#dishdetail/' + dishName;
+        _onGoTODetail : function (dishId) {
+            window.location.href = '#dishdetail/' + dishId;
         },
 
         _getView : function () {

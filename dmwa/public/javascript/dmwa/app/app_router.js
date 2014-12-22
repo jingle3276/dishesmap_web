@@ -17,7 +17,7 @@ goog.require('goog.asserts');
 
         routes: {
         	"dishlist": "runDishlistController",
-        	"dishdetail/:dishName": "runDishdetailController"
+        	"dishdetail/:dishId": "runDishdetailController"
         },
 
         runDishlistController: function (params){

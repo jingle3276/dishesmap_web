@@ -4,7 +4,9 @@ goog.provide('wz.dmwa.app.services.APIService');
 
 goog.require('wz.dmwa.core.services.Service');
 goog.require('wz.dmwa.app.collections.DishlistItemCollection');
+goog.require('wz.dmwa.app.collections.DishdetailCollection');
 goog.require('wz.dmwa.app.models.DishlistItem');
+goog.require('wz.dmwa.app.models.Dishdetail');
 goog.require('wz.dmwa.app.services.LocationService');
 
 
@@ -13,8 +15,9 @@ goog.require('wz.dmwa.app.services.LocationService');
     var Service = wz.dmwa.core.services.Service;
     var locationService = wz.dmwa.app.services.LocationService;
     var DishlistItemCollection = wz.dmwa.app.collections.DishlistItemCollection;
+    var DishdetailCollection = wz.dmwa.app.collections.DishdetailCollection;
+    var Dishdetail = wz.dmwa.app.models.Dishdetail;
     var DishlistItem = wz.dmwa.app.models.DishlistItem;
-    var FIELDS = DishlistItem.prototype.FIELDS;
 
 	var APIService = Service.extend({
 
@@ -58,6 +61,7 @@ goog.require('wz.dmwa.app.services.LocationService');
 
         _mapRawToDishlistItem: function (rawDish, bizName, lat, lon){
             var attrs = {};
+            var FIELDS = DishlistItem.prototype.FIELDS;
             attrs[FIELDS.ID] = rawDish.id;
             attrs[FIELDS.FOOT_TEXT] = rawDish.foodText;
             attrs[FIELDS.FREQ] = rawDish.freq;
@@ -87,6 +91,30 @@ goog.require('wz.dmwa.app.services.LocationService');
                 dishList.add(item);
                 item.save();
             });
+
+            var dishDetails = _.map(rawDishes, function(rawDish){
+                var rawBiz = _.findWhere(rawBusinesses, {bizID: rawDish.bizID});
+                return self._mapRawToDishdetail(rawDish, rawBiz);
+            });
+            var dishDetailsLocalStorage = new DishdetailCollection();
+            _.each(dishDetails, function(item){
+                dishDetailsLocalStorage.add(item);
+                item.save();
+            });
+        },
+
+        _mapRawToDishdetail: function(rawDish, rawBiz){
+            var attrs = {};
+            var FIELDS = Dishdetail.prototype.FIELDS;
+            var foodId = rawDish.id;
+            attrs[FIELDS.FOOD_ID] = foodId;
+            attrs[FIELDS.FOOD_TEXT] = rawDish.foodText;
+            attrs[FIELDS.FREQ] = rawDish.freq;
+            attrs[FIELDS.REVIEWS] = rawDish.reviews;
+            attrs[FIELDS.BIZ_NAME] = rawBiz.name;
+            attrs[FIELDS.BIZ_ADDR] = rawBiz.address;
+            attrs[FIELDS.BIZ_TEL] = rawBiz.phone;
+            return new Dishdetail(attrs);
         },
 
         getDishes : function () {

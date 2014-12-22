@@ -27,7 +27,7 @@ goog.require('wz.dmwa.core.models.Model');
             this._logNamespace = 'DishlistItem';
         },
 
-        getFoodId: function () {
+        getDishId: function () {
             return this.get(this.FIELDS.ID);
         },
 
