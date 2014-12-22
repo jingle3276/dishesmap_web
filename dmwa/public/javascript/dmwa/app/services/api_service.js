@@ -56,16 +56,14 @@ goog.require('wz.dmwa.app.services.LocationService');
         },
 
 
-        _mapRawToDishlistItem: function (rawDish, bizName){
+        _mapRawToDishlistItem: function (rawDish, bizName, lat, lon){
             var attrs = {};
             attrs[FIELDS.ID] = rawDish.id;
             attrs[FIELDS.FOOT_TEXT] = rawDish.foodText;
             attrs[FIELDS.FREQ] = rawDish.freq;
-            //if (business){
-            //    attrs[FIELDS.BIZ_NAME] = business.get('name');
-            //    attrs[FIELDS.DISTANCE] = locationService.getDistanceFromLatLonInMi(
-            //    business.get('lat'), business.get('lon'));
-            //}
+
+            var distance = locationService.getDistanceFromLatLonInMi(lat, lon);
+            attrs[FIELDS.DISTANCE] = distance;
             attrs[FIELDS.BIZ_NAME] = bizName;
             var model = new DishlistItem(attrs);
             return model;
@@ -77,26 +75,11 @@ goog.require('wz.dmwa.app.services.LocationService');
         _save_data: function (json){
             var rawDishes = json.dishes;
             var rawBusinesses = json.businesses;
-            
-            /*
-            var dishViewModels = _.map(rawDishes, function(d){
-                //var business = _.first(rawBusinesses.where({bizID: d.get('bizID')}));
-                var attrs = {};
-                attrs[FIELDS.ID] = d.id;
-                attrs[FIELDS.FOOT_TEXT] = d.foodText;
-                attrs[FIELDS.FREQ] = d.freq;
-                //if (business){
-                //    attrs[FIELDS.BIZ_NAME] = business.get('name');
-                //    attrs[FIELDS.DISTANCE] = locationService.getDistanceFromLatLonInMi(
-                //        business.get('lat'), business.get('lon'));
-                //}
-                return new DishlistItem(attrs);
-            });
-            */ 
+
             var self = this;
             var dishListItems = _.map(rawDishes, function(rawDish){
                 var rawBiz = _.findWhere(rawBusinesses, {bizID: rawDish.bizID});
-                return self._mapRawToDishlistItem(rawDish, rawBiz.name);
+                return self._mapRawToDishlistItem(rawDish, rawBiz.name, rawBiz.lat, rawBiz.lon);
             });
 
             var dishList = new DishlistItemCollection();
