@@ -39,7 +39,8 @@ module.exports = function(config) {
       'dmwa/public/javascript/built/dmwa_deps.js',
 
       // all json files
-      {pattern: 'dmwa/public/javascript/**/*.json', included: false},
+      //TODO: remove json files
+      //{pattern: 'dmwa/public/javascript/**/*.json', included: false},
       // need to explicitly add goog.require compiled templates, as nothing else will require them.
       'etc/tests/karma/require_goog_load.js',
 

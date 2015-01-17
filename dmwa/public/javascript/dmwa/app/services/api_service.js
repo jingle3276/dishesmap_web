@@ -39,11 +39,13 @@ goog.require('wz.dmwa.app.services.LocationService');
                     var lat = locationService.get_lat();
                     var lon = locationService.get_lon();
                     var request_url = "http://localhost:3000/foodlist/where/?lat=" + lat + "&lon=" + lon; 
+                    //var request_url = "http://192.241.173.181:8080/food/where/?lat=" + lat + "&lon=" + lon + "&version=2";
+
                     var promise2 = $.getJSON(request_url, function (json) {
                         //when got the response json, load into localStorage 
                         //and resolve the promise so dishlistcontroller can start
-                        self._save_data(json);
-                        d.resolve();
+                       self._save_data(json);
+                       d.resolve();
                     });
                 });
                 return d.promise();
