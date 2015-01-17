@@ -1,7 +1,7 @@
 {
   "dishes": [
     {
-      "foodId": "f0001",
+      "id": "f0001",
       "foodText": "pho",
       "freq": 7,
       "reviews": [
@@ -30,7 +30,7 @@
       "bizID": "goodfood_biz_FourSquare__4accf7c9f964a5204dca20e3"
     },
     {
-      "foodId": "f0002",
+      "id": "f0002",
       "foodText": "spring rolls",
       "freq": 5,
       "reviews": [
@@ -53,45 +53,7 @@
       "bizID": "goodfood_biz_FourSquare__4accf7c9f964a5204dca20e3"
     },
     {
-      "foodId": "f0003",
-      "foodText": "pho",
-      "freq": 10,
-      "reviews": [
-        {
-          "text": "Have tried pho from 6 places in Saigon and pho bang in ELMHURST has one of the best! (@ via FourSquare)"
-        },
-        {
-          "text": "Have tried pho from 6 places in Saigon and pho bang in ELMHURST has one of the best! (@ via FourSquare)"
-        },
-        {
-          "text": "Amazing pho! (@ via FourSquare)"
-        },
-        {
-          "text": "Be dure to order The Spring rolls..they are The best! Also The Pho With meatballs is great The specialty of The House. ( Vietnamese rice noodle in beef broth...You have to try it!) (@ via FourSquare)"
-        },
-        {
-          "text": "Best Pho in Elmhurst.. (@ via FourSquare)"
-        },
-        {
-          "text": "Pho: \\This huge bowl of fragrant, aromatic soup is a strong contender for best pho in the city, and a great way to finish up a day of exploring the Elmhurst neighborhood.\\ (@ via FourSquare)"
-        },
-        {
-          "text": "Pho: \\This huge bowl of fragrant, aromatic soup is a strong contender for best pho in the city, and a great way to finish up a day of exploring the Elmhurst neighborhood.\\ (@ via FourSquare)"
-        },
-        {
-          "text": "The older gentleman that waits tables is so sweet and friendly! Their pho is considered one of the first/original in the area. Their spring rolls are homemade and you can taste the difference. Love! (@ via FourSquare)"
-        },
-        {
-          "text": "You can always Phol Bac on this place for consistenly great Pho. Also love their pork chops and smooth vietnamese coffee... (@ via FourSquare)"
-        },
-        {
-          "text": "Great pho + strong vietnamese coffee! (@ via FourSquare)"
-        }
-      ],
-      "bizID": "goodfood_biz_FourSquare__4af78566f964a520af0922e3"
-    },
-    {
-      "foodId": "f0004",
+      "id": "f0004",
       "foodText": "pork belly",
       "freq": 4,
       "reviews": [
@@ -111,7 +73,7 @@
       "bizID": "goodfood_biz_FourSquare__4e0f605462e1d5a30d0ab7ff"
     },
     {
-      "foodId": "f0005",
+      "id": "f0005",
       "foodText": "lamb dumplings",
       "freq": 5,
       "reviews": [
@@ -134,7 +96,7 @@
       "bizID": "goodfood_biz_FourSquare__4d974e1661a3a1cd4465b142"
     },
     {
-      "foodId": "f0006",
+      "id": "f0006",
       "foodText": "dumplings",
       "freq": 9,
       "reviews": [
@@ -169,7 +131,7 @@
       "bizID": "goodfood_biz_FourSquare__4eaf0752d3e30d448393b841"
     },
     {
-      "foodId": "f0007",
+      "id": "f0007",
       "foodText": "pancakes",
       "freq": 6,
       "reviews": [
@@ -193,44 +155,6 @@
         }
       ],
       "bizID": "goodfood_biz_FourSquare__4eaf0752d3e30d448393b841"
-    },
-    {
-      "foodId": "f0008",
-      "foodText": "pho",
-      "freq": 10,
-      "reviews": [
-        {
-          "text": "By far one of the best PHO places that I\u0027ve been to in queens...food is ready in an instant...not sure if that\u0027s a good thing...lol... (@ via FourSquare)"
-        },
-        {
-          "text": "Enjoyed the Pho although not as good as in Little Saigon in California. Service very good. (@ via FourSquare)"
-        },
-        {
-          "text": "One of the best pho tis I\u0027ve had in the NYC area! Your sinuses will clear up after having a bowl. Love it w/ lime! ;9p (@ via FourSquare)"
-        },
-        {
-          "text": "Try #1 pho! Excellent and authentic menu. (@ via FourSquare)"
-        },
-        {
-          "text": "Their #1 pho combo does not include tripe. Also, no jalapeno or any other chili in their accompaniments. (@ via FourSquare)"
-        },
-        {
-          "text": "The pho is phenomenal like always! (@ via FourSquare)"
-        },
-        {
-          "text": "If you think you\u0027ve had good summer rolls elsewhere this is your epiphany. The peanut sauce is also divine. Both this location and Chinatown serve a great bowl of Pho! (@ via FourSquare)"
-        },
-        {
-          "text": "Pho, spring rolls, and fried calamari are delicious! Try the pickled carrots and radishes under the calamari - great palate cleanser. (@ via FourSquare)"
-        },
-        {
-          "text": "Lots of great Vietnamese dishes. Pho is decent! (@ via FourSquare)"
-        },
-        {
-          "text": "Best pho that I\u0027ve found in Queens. Cha Gio is decent as well. (@ via FourSquare)"
-        }
-      ],
-      "bizID": "goodfood_biz_FourSquare__4b4d2b63f964a52032cd26e3"
     }
   ],
   "businesses": [
@@ -281,6 +205,14 @@
       "address": "40-10 74th St, Elmhurst, NY",
       "phone": "7184766805",
       "bizID": "goodfood_biz_FourSquare__4b4d2b63f964a52032cd26e3"
+    },
+    {
+      "name": "Lao Bei Fang",
+      "lat": "40.746234",
+      "lon": "-73.891319",
+      "address": "40-10 74th St, Elmhurst, NY",
+      "phone": "7184766805",
+      "bizID": "goodfood_biz_FourSquare__4eaf0752d3e30d448393b841"
     }
   ]
 }

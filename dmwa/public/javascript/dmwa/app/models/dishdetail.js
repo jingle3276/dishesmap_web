@@ -11,13 +11,13 @@ goog.require('wz.dmwa.core.models.Model');
         
 
         FIELDS: _.extend({}, Model.prototype.FIELDS, {
+            FOOD_ID: 'id',
             FOOD_TEXT: 'foodText',
             FREQ: 'freq',
             REVIEWS: 'reviews',
             BIZ_NAME: 'bizName',
             BIZ_ADDR: 'bizAddr',
             BIZ_TEL: 'bizTel'
-
         }),
 
         initialize: function (options) {
@@ -27,8 +27,16 @@ goog.require('wz.dmwa.core.models.Model');
             this._logNamespace = 'Dishdetail';
         },
 
+        getFoodId: function () {
+            return this.get(this.FIELDS.FOOD_ID);
+        },
+
         getReviews: function () {
-            return this.get(this.FIELDS.REVIEWS);
+            var objArr = this.get(this.FIELDS.REVIEWS);
+            var textArr = _.map(objArr, function(obj){
+                return obj.text;
+            });
+            return textArr;
         },
 
         getDishName: function () {

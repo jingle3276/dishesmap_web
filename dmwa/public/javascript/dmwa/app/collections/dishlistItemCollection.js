@@ -17,6 +17,8 @@ goog.require('wz.dmwa.app.models.DishlistItem');
 
 		model : DishlistItem,
 
+		localStorage: new Backbone.LocalStorage('DishlistItemCollection'),
+
 		comparator : function(item){
 			return -item.get(FIELDS.FREQ);
 		}

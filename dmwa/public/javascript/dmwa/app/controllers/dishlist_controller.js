@@ -21,9 +21,9 @@ goog.require('wz.dmwa.app.services.DishlistService');
         _logNamespace : "DishlistController",
 
         initialize : function (options) {
+            Controller.prototype.initialize.call(this, options);
             this._service = DishlistService;
             this._asyncServices.push(this._service);
-            Controller.prototype.initialize.call(this, options);
         },
 
         start : function () {
@@ -47,8 +47,8 @@ goog.require('wz.dmwa.app.services.DishlistService');
             Controller.prototype._initializeBusinessEvents.call(this);
         },
 
-        _onGoTODetail : function (dishName) {
-            window.location.href = '#dishdetail/' + dishName;
+        _onGoTODetail : function (dishId) {
+            window.location.href = '#dishdetail/' + dishId;
         },
 
         _getView : function () {

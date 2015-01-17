@@ -1,7 +1,7 @@
 <div id="dl-body-container">
 	<% _.each(obj.dish_list, function(d) { %>
 		<div class="list-group-item col-md-12 dl-item-group">
-			<h3 class="list-group-item-heading text-primary dl-item-title"><%= d.getDishName() %></h3>
+			<h3 class="list-group-item-heading text-primary dl-item-title" dishid="<%= d.getDishId() %>"><%= d.getDishName() %></h3>
 			<p class="list-group-item-text dl-item-text"><span class="label label-info"><%= d.getRestaurantName() %></span></p>
 			<p class="list-group-item-text"><%= d.getLikes() %> loved it <span class="glyphicon glyphicon-heart"></span> | <%= d.getDistance() %> mi</p>
 		</div>

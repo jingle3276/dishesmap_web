@@ -1,3 +1,5 @@
+// a view model for Dishlist Item displayed in dishlist page
+
 goog.provide('wz.dmwa.app.models.DishlistItem');
 
 goog.require('wz.dmwa.core.models.Model');
@@ -11,6 +13,7 @@ goog.require('wz.dmwa.core.models.Model');
         
 
         FIELDS: _.extend({}, Model.prototype.FIELDS, {
+            ID: 'id',
             FOOT_TEXT: 'foodText',
             BIZ_NAME: 'bizName',
             FREQ: 'freq',
@@ -18,10 +21,14 @@ goog.require('wz.dmwa.core.models.Model');
         }),
 
         initialize: function (options) {
-            options = _.extend({}, options);
             Model.prototype.initialize.call(this, options);
+            options = _.extend({}, options);
             this.set(options);
             this._logNamespace = 'DishlistItem';
+        },
+
+        getDishId: function () {
+            return this.get(this.FIELDS.ID);
         },
 
         getDishName: function () {
