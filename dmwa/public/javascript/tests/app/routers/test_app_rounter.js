@@ -6,7 +6,7 @@ goog.provide('wz.dmwa.tests.app.routers.TestAppRouter');
 
 	QUnit.module( "wz.dmwa.tests.app.routers.TestAppRouter", {
 		setup: function() {
-			this._router = new AppRouter();
+			this._router = AppRouter;
 			var spy = sinon.spy();
 		},
 		teardown: function() {
