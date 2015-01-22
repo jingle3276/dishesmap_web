@@ -50,5 +50,5 @@ goog.require('goog.asserts');
 
     var app_router = new wz.dmwa.app.routers.AppRouter();
     Backbone.history.start();
-
+    window.location.href = '#dishlist';
 }());
