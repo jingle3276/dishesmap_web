@@ -25,13 +25,14 @@ goog.require('wz.dmwa.app.services.LocationService');
 
         initialize : function () {
             Service.prototype.initialize.call(this);
+            this._is_first_load = true;
         },
 
         load : function () {
             var d = $.Deferred();
 
         	var self = this;
-            if (this._is_first_time_load()){
+            if (this._is_first_load){
                 //this service must wait locationService resolved and then 
                 //send ajax request. $.when().then() make sure when something
                 //is done, then do some other thing
@@ -39,12 +40,15 @@ goog.require('wz.dmwa.app.services.LocationService');
                     var lat = locationService.get_lat();
                     var lon = locationService.get_lon();
                     //var request_url = "http://localhost:3000/foodlist/where/?lat=" + lat + "&lon=" + lon; 
-                    var request_url = "http://192.241.173.181:8080/food/where/?lat=" + lat + "&lon=" + lon + "&version=2";
+                    var request_url = "http://192.241.173.181:8080/food/where/?lat=" + 
+                        lat + "&lon=" + lon + "&version=2";
 
                     var promise2 = $.getJSON(request_url, function (json) {
                         //when got the response json, load into localStorage 
                         //and resolve the promise so dishlistcontroller can start
+                       self._clear_local_storage();
                        self._save_data(json);
+                       self._is_first_load = false;
                        d.resolve();
                     });
                 });
@@ -54,12 +58,6 @@ goog.require('wz.dmwa.app.services.LocationService');
                 d.resolve();
             }
         },
-
-        _is_first_time_load : function (){
-            var dishList = new DishlistItemCollection();
-            return _.isEmpty(dishList.localStorage.records);
-        },
-
 
         _mapRawToDishlistItem: function (rawDish, bizName, lat, lon){
             var attrs = {};
@@ -75,10 +73,14 @@ goog.require('wz.dmwa.app.services.LocationService');
             return model;
         },
 
+        _clear_local_storage: function(){
+            window.localStorage.clear();
+        },
         /**
          * save raw json data into local storage 
          */
         _save_data: function (json){
+            //TODO: refactor out the localStorageService which is the sole object to access the localStorage
             var rawDishes = json.dishes;
             var rawBusinesses = json.businesses;
 
@@ -128,7 +130,7 @@ goog.require('wz.dmwa.app.services.LocationService');
         }
 
 	});
-
+    //singleton
     wz.dmwa.app.services.APIService = new APIService();
 
 }());

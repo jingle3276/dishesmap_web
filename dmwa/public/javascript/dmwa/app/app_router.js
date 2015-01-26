@@ -49,5 +49,4 @@ goog.require('goog.asserts');
     wz.dmwa.app.routers.AppRouter = new AppRouter();
     Backbone.history.start();
 
-
 }());
