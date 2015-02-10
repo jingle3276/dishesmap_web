@@ -1,1 +1,0 @@
-this project contains source code that will be copied to phonegap build project by rake tasks

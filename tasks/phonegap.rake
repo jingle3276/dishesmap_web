@@ -10,7 +10,7 @@ namespace :phonegap do
     # end
     PROJECT_NAME = 'phonegap_build'
     PG_BUILD_HOME = "#{DMWA_HOME}/#{PROJECT_NAME}"
-    PG_SRC_DIR = "#{CODE_DIR}/phonegap"
+    PG_SRC_DIR = "#{CODE_DIR}/phonegap_src"
 
     def run(cmd)
         Dir.chdir("#{PROJECT_NAME}/") do
@@ -25,6 +25,7 @@ namespace :phonegap do
             Dir.chdir("#{PROJECT_NAME}/") do
                 sh("cordova platform add android")
                 sh("cordova platform add browser")
+                #FIXME: 2015-2-9. Phonegap's gelocation has bug and cannot be used
                 #sh("cordova plugin add org.apache.cordova.geolocation")
             end
             notice("Successfully install phonegap android build project")
@@ -40,7 +41,7 @@ namespace :phonegap do
     namespace :android do
 
         def copy_files()
-            sh("cp -r #{PG_SRC_DIR}/* #{PG_BUILD_HOME}/www")
+            sh("cp -r #{PG_SRC_DIR}/* #{PG_BUILD_HOME}")
             sh("cp -r #{JAVASCRIPT_DIR} #{PG_BUILD_HOME}/www")
             sh("cp -r #{CSS_DIR} #{PG_BUILD_HOME}/www")
         end
