@@ -16,7 +16,9 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        window.location.href = '#dishlist';
+        //Backbone.history.start();
+        //window.location.href = '#dishlist';
+        wz.dmwa.app.routers.AppRouter.runDishlistController();
     }
 };
 

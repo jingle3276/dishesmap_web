@@ -19,19 +19,21 @@ namespace :phonegap do
     end
 
     namespace :setup do
-        desc "Create the phonegap build project"
-        task :create do
+        desc "Create the phonegap android build project"
+        task :android do
             sh("cordova create #{PROJECT_NAME} wz.dmwa DishesMap")
             Dir.chdir("#{PROJECT_NAME}/") do
                 sh("cordova platform add android")
                 sh("cordova platform add browser")
-                sh("cordova plugin add org.apache.cordova.geolocation")
+                #sh("cordova plugin add org.apache.cordova.geolocation")
             end
+            notice("Successfully install phonegap android build project")
         end
 
         desc "Remove the phonegap build project"
         task :remove do
             rm_rf PG_BUILD_HOME
+            notice("Successfully removed phonegap build project")
         end
     end
 
@@ -43,16 +45,28 @@ namespace :phonegap do
             sh("cp -r #{CSS_DIR} #{PG_BUILD_HOME}/www")
         end
 
-        desc "build android apk: device must be plugin"
-        task :run do
+        desc "build android apk and deploy to the device"
+        task :run_device => [:clean, 'test:all'] do
             copy_files()
             run('cordova run android')
-            # TODO build
+        end
+
+        desc "build android apk and run in browser"
+        task :run_browser => [:clean, 'test:all'] do
+            copy_files()
+            run('cordova run browser --debug')
+        end
+
+        desc "build android apk for release"
+        task :release => [:clean, 'test:all'] do
+            copy_files()
+            run('cordova build android --release')
         end
 
         desc "clean android build artifacts"
         task :clean do
             sh("rm -rf #{PG_BUILD_HOME}/www/*")
+            notice("removed android build artifacts")
         end
     end
 

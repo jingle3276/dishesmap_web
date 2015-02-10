@@ -40,13 +40,18 @@ goog.require('wz.dmwa.core.services.Service');
             if (this._pos) {
                 d.resolve(this._pos);
             }
-            else if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (pos){
-                    d.resolve(pos);
-                });
-            }
             else{
-                d.reject();
+                navigator.geolocation.getCurrentPosition(
+                    function (pos){
+                        d.resolve(pos);
+                    },
+                    function (error){
+                        /* jshint devel:true */
+                        alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+                    },
+                    //phonegap needs this
+                    {enableHighAccuracy: true, timeout: 15000, maximumAge: 30000}
+                );
             }
             return d.promise();
         },
