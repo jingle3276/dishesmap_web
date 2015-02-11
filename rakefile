@@ -6,6 +6,7 @@ require 'find'
 
 # Global variables
 JAVASCRIPT_DIR="dmwa/public/javascript"
+CSS_DIR="dmwa/public/stylesheets"
 CODE_DIR='dmwa'
 NODE_MODULE_DIR="node_modules"
 DMWA_HOME=Dir.pwd

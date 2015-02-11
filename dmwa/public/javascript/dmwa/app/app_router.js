@@ -6,12 +6,9 @@ goog.require('goog.asserts');
 
 (function () {
 
-    //var DishlistController = wz.dmwa.app.controllers.DishlistController;
-    //var DishdetailController = wz.dmwa.app.controllers.DishdetailController;
-
     var _currentController = null;
 
-    wz.dmwa.app.routers.AppRouter = Backbone.Router.extend({
+    var AppRouter = Backbone.Router.extend({
 
         _logNamespace : "AppRouter",
 
@@ -48,7 +45,8 @@ goog.require('goog.asserts');
 
     });
 
-    var app_router = new wz.dmwa.app.routers.AppRouter();
+    //singlton
+    wz.dmwa.app.routers.AppRouter = new AppRouter();
     Backbone.history.start();
-    window.location.href = '#dishlist';
+
 }());
