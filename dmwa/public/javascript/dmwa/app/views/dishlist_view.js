@@ -36,6 +36,15 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
             return new DishlistTemplate(options);
         },
 
+        startLoading: function () {
+            var html = renderTemplate("dishlist_loading");
+            this.$el.empty().append(html);
+        },
+
+        stopLoading: function () {
+            this.$el.empty();
+        },
+
         start: function (options) {
             this._render(options); //render view
             //Set up DOM event handlers
