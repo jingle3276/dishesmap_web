@@ -33,7 +33,7 @@ goog.require('wz.dmwa.app.services.DishlistService');
             var viewOptions = {};
             viewOptions.dish_list = this._service.allDishes();
             //stop loading pop
-            this._view.startLoadingSpinner();
+            this._view.stopLoadingSpinner();
             this._view.start(viewOptions);
         },
 
