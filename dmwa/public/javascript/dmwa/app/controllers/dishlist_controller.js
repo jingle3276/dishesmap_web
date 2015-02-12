@@ -25,7 +25,7 @@ goog.require('wz.dmwa.app.services.DishlistService');
             this._service = DishlistService;
             this._asyncServices.push(this._service);
             this._view = this._getView();
-            this._view.startLoading();
+            this._view.startLoadingSpinner();
         },
 
         start : function () {
@@ -33,7 +33,7 @@ goog.require('wz.dmwa.app.services.DishlistService');
             var viewOptions = {};
             viewOptions.dish_list = this._service.allDishes();
             //stop loading pop
-            this._view.stopLoading();
+            this._view.startLoadingSpinner();
             this._view.start(viewOptions);
         },
 
