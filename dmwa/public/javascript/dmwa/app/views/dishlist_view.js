@@ -22,7 +22,7 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
         // Called when the view is first created
         initialize: function (options) {
             this._domEvents = _.extend({}, this._domEvents, {
-                "click .dl-item-title" : this._clickDishTitleHandler
+                "click .dl-item-group" : this._clickDishTitleHandler
             });
             View.prototype.initialize.call(this, options);
             this._logNamespace = "DishlistView";
@@ -58,7 +58,8 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
         },
 
         _clickDishTitleHandler: function (ev) {
-            var dishId = ev.currentTarget.getAttribute('dishid');
+            var divNode = ev.currentTarget;
+            var dishId = divNode.getElementsByClassName('dl-item-title')[0].getAttribute('dishid');
             this.trigger(this.EVENTS.GO_TO_DETAIL, dishId);
         }
 
