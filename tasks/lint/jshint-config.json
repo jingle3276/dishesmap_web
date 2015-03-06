@@ -57,6 +57,7 @@
         "_gaq": true,
         "Crypto": true,
         "CryptoJS": true,
-        "DOMException": true
+        "DOMException": true,
+        "Spinner": true
     }
 }
