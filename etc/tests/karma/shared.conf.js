@@ -23,6 +23,7 @@ module.exports = function(config) {
       'dmwa/public/javascript/3p/backbone.js',
       'dmwa/public/javascript/3p/backbone.localStorage.js',
       'dmwa/public/javascript/3p/bootstrap.js',
+      'dmwa/public/javascript/3p/spin.min.js',
 
       // goog closure lib base
       'dmwa/public/javascript/3p/goog/base.js',

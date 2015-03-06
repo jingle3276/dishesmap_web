@@ -22,18 +22,44 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
         // Called when the view is first created
         initialize: function (options) {
             this._domEvents = _.extend({}, this._domEvents, {
-                "click .dl-item-title" : this._clickDishTitleHandler
+                "click .dl-item-group" : this._clickDishTitleHandler
             });
             View.prototype.initialize.call(this, options);
             this._logNamespace = "DishlistView";
+
+            this._spinner = this._get_spinner();
         },
         
+        _get_spinner: function () {
+            //init spinner
+            var opts = {
+                lines: 13, // The number of lines to draw
+                length: 20, // The length of each line
+                width: 10, // The line thickness
+                radius: 30, // The radius of the inner circle
+                trail: 60, // Afterglow percentage
+                className: 'spinner', // The CSS class to assign to the spinner
+                top: '50%', // Top position relative to parent
+                left: '50%' // Left position relative to parent
+            };
+            return new Spinner(opts);
+        },
+
         /**
          * Initialize template
          * @param options {Object}
          */
         _createTemplate: function (options) {
             return new DishlistTemplate(options);
+        },
+
+        startLoadingSpinner: function () {
+            var target = document.getElementById('home');
+            this._spinner.spin(target);
+        },
+
+        stopLoadingSpinner: function () {
+            this._spinner.stop();
         },
 
         start: function (options) {
@@ -49,7 +75,8 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
         },
 
         _clickDishTitleHandler: function (ev) {
-            var dishId = ev.currentTarget.getAttribute('dishid');
+            var divNode = ev.currentTarget;
+            var dishId = divNode.getElementsByClassName('dl-item-title')[0].getAttribute('dishid');
             this.trigger(this.EVENTS.GO_TO_DETAIL, dishId);
         }
 
