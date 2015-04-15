@@ -48,5 +48,6 @@ goog.require('goog.asserts');
     //singlton
     wz.dmwa.app.routers.AppRouter = new AppRouter();
     Backbone.history.start();
+    wz.dmwa.app.routers.AppRouter.runDishlistController();
 
 }());
