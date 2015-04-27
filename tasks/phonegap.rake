@@ -25,8 +25,7 @@ namespace :phonegap do
             Dir.chdir("#{PROJECT_NAME}/") do
                 sh("cordova platform add android")
                 sh("cordova platform add browser")
-                #FIXME: 2015-2-9. Phonegap's gelocation has bug and cannot be used
-                #sh("cordova plugin add org.apache.cordova.geolocation")
+                sh("cordova plugin add org.apache.cordova.geolocation")
             end
             notice("Successfully install phonegap android build project")
         end
@@ -70,6 +69,5 @@ namespace :phonegap do
             notice("removed android build artifacts")
         end
     end
-
 
 end
