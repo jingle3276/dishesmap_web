@@ -20,7 +20,7 @@ namespace :phonegap do
 
     namespace :setup do
         desc "Create the phonegap android build project"
-        task :android do
+        task :init do
             sh("cordova create #{PROJECT_NAME} wz.dmwa DishesMap")
             Dir.chdir("#{PROJECT_NAME}/") do
                 sh("cordova platform add android")
@@ -34,6 +34,14 @@ namespace :phonegap do
         task :remove do
             rm_rf PG_BUILD_HOME
             notice("Successfully removed phonegap build project")
+        end
+
+        desc "deploy phonegap_build branch to github"
+        task :phonegap_build do
+            run('git init')
+            run ('git add .')
+            run ('git commit -m "phonegap build"')
+            run ('git push -u --force git@github.com:jingle3276/wisefoody_build.git master')
         end
     end
 
