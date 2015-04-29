@@ -21,7 +21,7 @@ goog.require('wz.dmwa.lib.log');
 
         /**
          * Create an instance of the object.
-         * @this {wgen.assess.lib.Object}
+         * @this {wz.dmwa.lib.Object}
          */
         initialize : function () {},
 

@@ -26,28 +26,25 @@ goog.require('wz.dmwa.lib.log');
         _logNamespace : 'View',
 
         /**
-         * Create a new wgen View.
-         * @this {wgen.assess.common.views.View}
+         * Create a new View.
+         * @this {wz.dmwa.core.views.View}
          */
         initialize : function (options) {
             options = options || {};
-            //this._i18n = options.i18n || wgen.assess.lib.i18n;
-
             if (options.cssClass) {
                 this.$el.attr('class', options.cssClass);
             }
         },
 
         /**
-         * @this {wgen.assess.common.views.View}
+         * @this {wz.dmwa.core.views.View}
          */
-        //start : wgen.assess.abstractMethod,
         start : function () {
             this.delegateEvents(this._domEvents);
         },
 
         /**
-         * @this {wgen.assess.common.views.View}
+         * @this {wz.dmwa.core.views.View}
          */
         stop : function () {
             //this._undelegateDownStateEvents();
@@ -56,7 +53,7 @@ goog.require('wz.dmwa.lib.log');
         },
 
         /**
-         * @this {wgen.assess.common.views.View}
+         * @this {wz.dmwa.core.views.View}
          */
         delegateEvents : function (events) {
             this.toBeUndelegated = [];

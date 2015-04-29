@@ -15,7 +15,7 @@ goog.require('wz.dmwa.lib.templates.renderTemplate');
 
     /**
      * @constructor
-     * @extends {wgen.assess.core.templates.ResultTemplate}
+     * @extends {wz.dmwa.core.templates.Template}
      */
     wz.dmwa.app.templates.DishlistTemplate = Template.extend({
 
