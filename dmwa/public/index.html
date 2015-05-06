@@ -5,7 +5,9 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- Use this setting for high resolution screens on android devices
+        http://stackoverflow.com/questions/15194940/phonegap-application-text-and-layout-too-small  -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
 
         <!-- load javascript files for the html5 application -->
 	    <script src="javascript/3p/jquery.js"></script>
@@ -23,7 +25,6 @@
 
         <title>DishesMap</title>
 	</head>
-
  
 	<body role="document">
         <div id="home" class="container-fluid">
