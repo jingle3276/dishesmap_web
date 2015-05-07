@@ -16,10 +16,11 @@
         <script src="javascript/3p/backbone.localStorage.js"></script>
         <script src="javascript/3p/bootstrap.js"></script>
         <script src="javascript/3p/spin.min.js"></script>
-
    		<script src="javascript/3p/goog/base.js"></script>
-   		<script src="javascript/built/dmwa_deps.js"></script>
-        
+        <script type='application/javascript' src="javascript/3p/fastclick.js"></script>
+
+        <script src="javascript/built/dmwa_deps.js"></script>
+ 
         <link href="stylesheets/3p/bootstrap.min.css" rel="stylesheet">
         <link href="stylesheets/theme.css" rel="stylesheet">
 
@@ -42,10 +43,14 @@
         <!-- TODO: use template engine to automatically append the bellow statements -->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-
         <!-- start the app here -->
         <script>
+            //start app
             wz.dmwa.app.routers.AppRouter.runDishlistController();
+            //fastclick
+            window.addEventListener('load', function() {
+                new FastClick(document.body);
+            }, false);
         </script>
 	</body>
 </html>

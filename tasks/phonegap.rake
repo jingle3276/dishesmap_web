@@ -49,6 +49,7 @@ namespace :phonegap do
 
         def copy_files()
             sh("cp -r #{PG_SRC_DIR}/* #{PG_BUILD_HOME}")
+            sh("cp #{INDEX_HTML} #{PG_BUILD_HOME}/www")
             sh("cp -r #{JAVASCRIPT_DIR} #{PG_BUILD_HOME}/www")
             sh("cp -r #{CSS_DIR} #{PG_BUILD_HOME}/www")
         end
