@@ -28,59 +28,58 @@ namespace :phonegap do
         sh("cp -r #{CSS_DIR} #{PG_BUILD_HOME_WWW}")
     end
 
-    namespace :setup do
-        desc "Create the phonegap android build project"
-        task :init do
-            sh("cordova create #{PROJECT_NAME} wz.dmwa DishesMap")
-            Dir.chdir("#{PROJECT_NAME}/") do
-                sh("cordova platform add android")
-                sh("cordova platform add browser")
-                sh("cordova plugin add org.apache.cordova.geolocation")
-            end
-            notice("Successfully install phonegap android build project")
+    desc "Create the phonegap build project"
+    task :init do
+        sh("cordova create #{PROJECT_NAME} wz.dmwa DishesMap")
+        Dir.chdir("#{PROJECT_NAME}/") do
+            sh("cordova platform add android")
+            sh("cordova platform add browser")
+            sh("cordova plugin add org.apache.cordova.geolocation")
         end
-
-        desc "Remove the phonegap build project"
-        task :remove do
-            rm_rf PG_BUILD_HOME
-            notice("Successfully removed phonegap build project")
-        end
-
-        desc "deploy phonegap_build branch to github"
-        task :phonegap_build do
-            copy_files()
-            sh("cp -r #{PGB_CONFIG_FILES} #{PG_BUILD_HOME_WWW}")
-            run('git init', "#{PG_BUILD_HOME_WWW}")
-            run('git add .', "#{PG_BUILD_HOME_WWW}")
-            run('git commit -m "phonegap build"', "#{PG_BUILD_HOME_WWW}")
-            run('git push -u --force git@github.com:jingle3276/wisefoody_build.git master', "#{PG_BUILD_HOME_WWW}")
-        end
+        notice("Successfully install phonegap build project")
     end
+
+    desc "Remove the phonegap build project"
+    task :remove do
+        rm_rf PG_BUILD_HOME
+        notice("Successfully deleted phonegap build project")
+    end
+
+    desc "Delete all build artifacts in www dir"
+    task :clean do
+        sh("rm -rf #{PG_BUILD_HOME_WWW}/*")
+        notice("removed all files (build artifacts) in www")
+    end
+
+    desc "Push phonegap_build branch to github for phonegap build"
+    task :push_build => :clean do
+        copy_files()
+        sh("cp -r #{PGB_CONFIG_FILES} #{PG_BUILD_HOME_WWW}")
+        run('git init', "#{PG_BUILD_HOME_WWW}")
+        run('git add .', "#{PG_BUILD_HOME_WWW}")
+        run('git commit -m "phonegap build"', "#{PG_BUILD_HOME_WWW}")
+        run('git push -u --force git@github.com:jingle3276/wisefoody_build.git master', "#{PG_BUILD_HOME_WWW}")
+    end
+
 
     namespace :android do
 
-        desc "build android apk and deploy to the device"
+        desc "Build android apk and deploy to the device"
         task :run_device => [:clean, 'test:all'] do
             copy_files()
             run('cordova run android')
         end
 
-        desc "build android apk and run in browser"
+        desc "Build android apk and run in browser in debug mode"
         task :run_browser => [:clean, 'test:all'] do
             copy_files()
             run('cordova run browser --debug')
         end
 
-        desc "build android apk for release"
+        desc "Build android apk for release"
         task :release => [:clean, 'test:all'] do
             copy_files()
             run('cordova build android --release')
-        end
-
-        desc "clean android build artifacts"
-        task :clean do
-            sh("rm -rf #{PG_BUILD_HOME_WWW}/*")
-            notice("removed android build artifacts")
         end
     end
 
