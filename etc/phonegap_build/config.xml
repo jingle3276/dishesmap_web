@@ -11,7 +11,7 @@
     <description>
         Find top reviewed dishes around you.
     </description>
-
+    <icon src="icon.png" />
     <preference name="phonegap-version" value="3.6.3" />
     <preference name="fullscreen" value="true" />
 

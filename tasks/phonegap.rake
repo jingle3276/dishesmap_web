@@ -12,7 +12,7 @@ namespace :phonegap do
     PG_BUILD_HOME = "#{DMWA_HOME}/#{PROJECT_NAME}"
     PG_BUILD_HOME_WWW = "#{PG_BUILD_HOME}/www/"
     PG_SRC_DIR = "#{CODE_DIR}/phonegap_src"
-    PGB_CONFIG_FILE = "etc/phonegap_build/config.xml"
+    PGB_CONFIG_FILES = "etc/phonegap_build/"
 
     def run(cmd, dir="#{PROJECT_NAME}/")
         Dir.chdir(dir) do
@@ -49,7 +49,7 @@ namespace :phonegap do
         desc "deploy phonegap_build branch to github"
         task :phonegap_build do
             copy_files()
-            sh("cp #{PGB_CONFIG_FILE} #{PG_BUILD_HOME_WWW}")
+            sh("cp -r #{PGB_CONFIG_FILES} #{PG_BUILD_HOME_WWW}")
             run('git init', "#{PG_BUILD_HOME_WWW}")
             run('git add .', "#{PG_BUILD_HOME_WWW}")
             run('git commit -m "phonegap build"', "#{PG_BUILD_HOME_WWW}")
