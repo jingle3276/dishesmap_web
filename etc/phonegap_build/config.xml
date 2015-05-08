@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.example"
+        versionCode = "10" 
+        version     = "0.0.2" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Wise Foody</name>
+    <description>
+        Find top reviewed dishes around you.
+    </description>
+
+    <preference name="phonegap-version" value="3.6.3" />
+    <preference name="fullscreen" value="true" />
+
+    <preference name="android-minSdkVersion" value="10" />
+    <preference name="android-targetSdkVersion" value="19" />
+</widget>

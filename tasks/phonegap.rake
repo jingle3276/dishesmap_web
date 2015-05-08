@@ -10,12 +10,22 @@ namespace :phonegap do
     # end
     PROJECT_NAME = 'phonegap_build'
     PG_BUILD_HOME = "#{DMWA_HOME}/#{PROJECT_NAME}"
+    PG_BUILD_HOME_WWW = "#{PG_BUILD_HOME}/www/"
     PG_SRC_DIR = "#{CODE_DIR}/phonegap_src"
+    PGB_CONFIG_FILE = "etc/phonegap_build/config.xml"
 
-    def run(cmd)
-        Dir.chdir("#{PROJECT_NAME}/") do
+    def run(cmd, dir="#{PROJECT_NAME}/")
+        Dir.chdir(dir) do
             sh(cmd)
         end
+    end
+
+    # copy all resource files (html, js, css) to target dir
+    def copy_files()
+        sh("cp -r #{PG_SRC_DIR}/* #{PG_BUILD_HOME}")
+        sh("cp #{INDEX_HTML} #{PG_BUILD_HOME_WWW}")
+        sh("cp -r #{JAVASCRIPT_DIR} #{PG_BUILD_HOME_WWW}")
+        sh("cp -r #{CSS_DIR} #{PG_BUILD_HOME_WWW}")
     end
 
     namespace :setup do
@@ -38,21 +48,16 @@ namespace :phonegap do
 
         desc "deploy phonegap_build branch to github"
         task :phonegap_build do
-            run('git init')
-            run ('git add .')
-            run ('git commit -m "phonegap build"')
-            run ('git push -u --force git@github.com:jingle3276/wisefoody_build.git master')
+            copy_files()
+            sh("cp #{PGB_CONFIG_FILE} #{PG_BUILD_HOME_WWW}")
+            run('git init', "#{PG_BUILD_HOME_WWW}")
+            run('git add .', "#{PG_BUILD_HOME_WWW}")
+            run('git commit -m "phonegap build"', "#{PG_BUILD_HOME_WWW}")
+            run('git push -u --force git@github.com:jingle3276/wisefoody_build.git master', "#{PG_BUILD_HOME_WWW}")
         end
     end
 
     namespace :android do
-
-        def copy_files()
-            sh("cp -r #{PG_SRC_DIR}/* #{PG_BUILD_HOME}")
-            sh("cp #{INDEX_HTML} #{PG_BUILD_HOME}/www")
-            sh("cp -r #{JAVASCRIPT_DIR} #{PG_BUILD_HOME}/www")
-            sh("cp -r #{CSS_DIR} #{PG_BUILD_HOME}/www")
-        end
 
         desc "build android apk and deploy to the device"
         task :run_device => [:clean, 'test:all'] do
@@ -74,7 +79,7 @@ namespace :phonegap do
 
         desc "clean android build artifacts"
         task :clean do
-            sh("rm -rf #{PG_BUILD_HOME}/www/*")
+            sh("rm -rf #{PG_BUILD_HOME_WWW}/*")
             notice("removed android build artifacts")
         end
     end
