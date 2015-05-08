@@ -17,4 +17,8 @@
 
     <preference name="android-minSdkVersion" value="10" />
     <preference name="android-targetSdkVersion" value="19" />
+
+    <!-- http://stackoverflow.com/questions/23387007/phonegap-build-permissions-in-android -->
+    <preference name="permissions" value="none"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation" />
 </widget>
