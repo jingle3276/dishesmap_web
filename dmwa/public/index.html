@@ -42,15 +42,15 @@
         <!-- for phonegap to work; if dev in browser mode, these files will not load -->
         <!-- TODO: use template engine to automatically append the bellow statements -->
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
         <!-- start the app here -->
         <script>
-            //start app
-            wz.dmwa.app.routers.AppRouter.runDishlistController();
             //fastclick
             window.addEventListener('load', function() {
                 new FastClick(document.body);
             }, false);
+
+            //start app
+            wz.dmwa.app.routers.AppRouter.runDishlistController();
         </script>
 	</body>
 </html>
