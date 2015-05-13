@@ -14,7 +14,7 @@ namespace :test do
         sh cmds.join(" ")
     end
 
-    task :build => ['javascript:build']
+    task :build => ['setup:node:init', 'javascript:build', 'setup:index_html:dev']
 
     desc "Run all karma unit tests using PhantomJS"
     task :all => [:build] do
@@ -32,12 +32,12 @@ namespace :test do
     end
 
     desc "Start test API server in debug mode"
-    task :start_debug => [:stop_node] do 
+    task :start_debug => [:build, :stop_node] do
         sh "node etc/tests/node/test_server.js | ./node_modules/bunyan/bin/bunyan -o short"
     end
 
     desc "Start test server using node"
-    task :start_node => [:stop_node] do 
+    task :start_node => [:build, :stop_node] do
         sh "./node_modules/forever/bin/forever start " \
            "-a -o /opt/wz/log/dmwa/test_api.log " \
            "--minUptime 1000 --spinSleepTime 2000 " \

@@ -2,23 +2,26 @@
 # Setup tasks
 #
 namespace "setup" do
-    file "node_modules" => 'package.json' do
-        exec = 'npm install'
-        sh(exec)
+
+    desc "Remove all the built files"
+    task :clean => ['phonegap:clean', 'javascript:clean', 'index_html:clean']
+
+
+    namespace "node" do 
+        file "node_modules" => 'package.json' do
+            sh('npm install')
+        end
+
+        task :remove do
+            rm_rf "node_modules"
+        end
+
+        desc "setup node modules"
+        task :init => "node_modules"
     end
 
-    desc "Remove all the development built files"
-    task :clean => [:remove, 'phonegap:remove', 'javascript:clean', 'index_html:clean']
-
-    task :remove do
-        rm_rf "node_modules"
-    end
-
-    desc "setup node modules"
-	task :init => "node_modules"
-    
     namespace "index_html" do
-        file INDEX_HTML, [:arg1, :arg2] => 'etc/html/index.html.ejs' do |t, args|
+        file INDEX_HTML, [:arg1, :arg2] => ['node:init', 'etc/html/index.html.ejs'] do |t, args|
             cmds =  ["phantomjs tasks/compile_index_html.js"]
             cmds << "#{t.prerequisites[0]}"
             cmds << "#{args.arg1}"
