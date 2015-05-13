@@ -2,11 +2,20 @@
 # Setup tasks
 #
 namespace "setup" do
+    file "node_modules" => 'package.json' do
+        exec = 'npm install'
+        sh(exec)
+    end
+
+    desc "Remove all the development built files"
+    task :clean => [:remove, 'phonegap:remove', 'javascript:clean', 'index_html:clean']
+
+    task :remove do
+        rm_rf "node_modules"
+    end
+
     desc "setup node modules"
-	task :node_modules do
-    	exec = 'npm install'
-    	sh(exec)
-	end
+	task :init => "node_modules"
     
     namespace "index_html" do
         file INDEX_HTML, [:arg1, :arg2] => 'etc/html/index.html.ejs' do |t, args|
