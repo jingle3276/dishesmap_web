@@ -74,7 +74,7 @@ namespace :mobile do
         end
 
         desc "Build android apk for release"
-        task :release => [:init, :clean, 'setup:index_html:phonegap', BUILD_HOME_WWW] do
+        task :release => [:init, :clean, 'setup:index_html:prod', BUILD_HOME_WWW, BUILD_HOME_WWW_MINIFIED_JS] do
             run('cordova build android --release')
         end
     end
