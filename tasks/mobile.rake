@@ -1,13 +1,5 @@
 namespace :mobile do
 
-    # HTTPS_PORT = ENV['HTTPS_PORT'] || '9000'
-
-    # def apache2ctl(cmd, environment=nil)
-    #   notice("apache2: #{cmd}")
-
-    #   end
-    #     sh("PLATFORM='#{platform}' ENVIRONMENT='#{environment}' DMWA_HOME='#{DMWA_HOME}' HTTP_PORT='#{HTTP_PORT}' HTTPS_PORT='#{HTTPS_PORT}' #{exec} -f #{config} -k #{cmd} -d .")
-    # end
     PROJECT_NAME = 'mobile_build'
     BUILD_HOME = "#{DMWA_HOME}/#{PROJECT_NAME}"
     BUILD_HOME_WWW = "#{BUILD_HOME}/www/"
@@ -21,13 +13,6 @@ namespace :mobile do
             sh(cmd)
         end
     end
-
-    # copy all resource files (html, js, css) to target dir
-    # def copy_files()
-    #     sh("cp #{INDEX_HTML} #{BUILD_HOME_WWW}")
-    #     sh("cp -r #{JAVASCRIPT_DIR} #{BUILD_HOME_WWW}")
-    #     sh("cp -r #{CSS_DIR} #{BUILD_HOME_WWW}")
-    # end
 
     file BUILD_HOME_WWW => [INDEX_HTML, JAVASCRIPT_DIR, CSS_DIR] do
         sh("cp #{INDEX_HTML} #{BUILD_HOME_WWW}")
