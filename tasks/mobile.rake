@@ -14,7 +14,7 @@ namespace :mobile do
         end
     end
 
-    file BUILD_HOME_WWW => [INDEX_HTML, JAVASCRIPT_DIR, CSS_DIR] do
+    file BUILD_HOME_WWW => ['javascript:build', INDEX_HTML, JAVASCRIPT_DIR, CSS_DIR] do
         sh("cp #{INDEX_HTML} #{BUILD_HOME_WWW}")
         sh("cp -r #{JAVASCRIPT_DIR} #{BUILD_HOME_WWW}")
         sh("cp -r #{CSS_DIR} #{BUILD_HOME_WWW}")
