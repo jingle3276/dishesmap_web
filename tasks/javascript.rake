@@ -17,7 +17,6 @@ namespace :javascript do
     task :clean do
         rm_rf COMPILED_TEMPLATES_DIR
         rm_rf OUTPUT_FILE_DIR
-        mkdir_p OUTPUT_FILE_DIR
     end
 
     def generate_deps()
@@ -27,6 +26,7 @@ namespace :javascript do
         cmds << "--root_with_prefix '#{JAVASCRIPT_DIR}/dmwa ../../dmwa'"
         cmds << "--root_with_prefix '#{JAVASCRIPT_DIR}/target/templates ../../target/templates'"
         cmds << "--output_file #{OUTPUT_FILE_JS_DEPS}"
+        mkdir_p OUTPUT_FILE_DIR
         sh cmds.join(" ")
     end
 

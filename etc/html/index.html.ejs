@@ -1,12 +1,6 @@
 <html lang="en">
-    <% if (minifyMode) { %>
-    <!--  Production Mode -->
-    <% } else { %>
-    <!--  Development Mode --> 
-    <% } 
-    if (phonegapMode) { %>
-    <!--  Phonegap Mode -->
-    <% } %>
+    <% if (minifyMode) { %> <!--  Production Mode --> <% } else { %> <!--  Development Mode --> <% }
+       if (phonegapMode) { %> <!--  Phonegap Mode --> <% } %>
     <head>
        <!--  For phonegap -->
         <meta charset="utf-8" />

@@ -45,6 +45,10 @@ namespace "setup" do
         task :prod => :clean do
             Rake::Task[INDEX_HTML].invoke(1, 1)
         end
+
+        task :web => :clean do
+            Rake::Task[INDEX_HTML].invoke(1, 0)
+        end
     end
 
 end
