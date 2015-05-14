@@ -1,59 +1,51 @@
 namespace :javascript do
 
-    OUTPUT_FILE_DIR = "#{JAVASCRIPT_DIR}/built"
-    COMPILED_TEMPLATES_DIR = "#{JAVASCRIPT_DIR}/target/templates"
-    OUTPUT_FILE_JS_DEPS = "#{OUTPUT_FILE_DIR}/dmwa_deps.js" # for development
-    OUTPUT_FILE_JS_ALL = "#{OUTPUT_FILE_DIR}/dmwa_all.js" # for production
-    REQUIRE_FILE = "#{JAVASCRIPT_DIR}/dmwa/app/require_file.js"
-    TASKS_JAVASCRIPT_DIR = "tasks/javascript"
+    JAVASCRIPT_DMWA_DIR = "#{JAVASCRIPT_DIR}/dmwa"
+    JAVASCRIPT_BUILT_DIR = "#{JAVASCRIPT_DIR}/built"
+    JAVASCRIPT_TARGET_TEMPLATES_DIR = "#{JAVASCRIPT_DIR}/target/templates"
     JAVASCRIPT_3P_DIR = "#{JAVASCRIPT_DIR}/3p"
-
-    desc "Compile all ejs templates into javascript"
-    task :compile_ejs do
-        sh "phantomjs tasks/compile_ejs_templates.js"
-    end
+    JS_DEPS_FLE = "#{JAVASCRIPT_BUILT_DIR}/dmwa_deps.js" # for development
+    MINIFED_JS_FLIE = "#{JAVASCRIPT_BUILT_DIR}/dmwa.js" # for production
+    REQUIRE_FILE = "#{JAVASCRIPT_DIR}/dmwa/app/require_file.js"
+    TASKS_JAVASCRIPT_DIR = "tasks/javascript"    
 
     desc "Clean all compiled javascript"
     task :clean do
-        rm_rf COMPILED_TEMPLATES_DIR
-        rm_rf OUTPUT_FILE_DIR
+        rm_rf JAVASCRIPT_TARGET_TEMPLATES_DIR
+        rm_rf JAVASCRIPT_BUILT_DIR
     end
 
-    def generate_deps()
+    file JAVASCRIPT_TARGET_TEMPLATES_DIR => JAVASCRIPT_DMWA_DIR do
+        sh "phantomjs tasks/compile_ejs_templates.js"
+    end
+    
+    file JS_DEPS_FLE => [JAVASCRIPT_3P_DIR, JAVASCRIPT_DMWA_DIR, JAVASCRIPT_TARGET_TEMPLATES_DIR] do |t|
         cmds = ["python #{TASKS_JAVASCRIPT_DIR}/3p/depswriter.py"]
-        #cmds << "--root_with_prefix '#{JAVASCRIPT_1P_DIR} ../../1p/'"
         cmds << "--root_with_prefix '#{JAVASCRIPT_3P_DIR} ../'"
-        cmds << "--root_with_prefix '#{JAVASCRIPT_DIR}/dmwa ../../dmwa'"
-        cmds << "--root_with_prefix '#{JAVASCRIPT_DIR}/target/templates ../../target/templates'"
-        cmds << "--output_file #{OUTPUT_FILE_JS_DEPS}"
-        mkdir_p OUTPUT_FILE_DIR
+        cmds << "--root_with_prefix '#{JAVASCRIPT_DMWA_DIR} ../../dmwa'"
+        cmds << "--root_with_prefix '#{JAVASCRIPT_TARGET_TEMPLATES_DIR} ../../target/templates'"
+        cmds << "--output_file #{t.name}"
+        mkdir_p JAVASCRIPT_BUILT_DIR
         sh cmds.join(" ")
     end
 
-    def generate_minified_js()
-        # TODO: make this take in an argument and optionally minify(simple and advance) or combine only
+    file MINIFED_JS_FLIE => [:build, JAVASCRIPT_3P_DIR, JAVASCRIPT_DMWA_DIR,
+                             JAVASCRIPT_TARGET_TEMPLATES_DIR, REQUIRE_FILE] do |t|
         cmds = ["python #{TASKS_JAVASCRIPT_DIR}/3p/closurebuilder.py"]
-        cmds << "--root=#{JAVASCRIPT_DIR}/3p"
-        cmds << "--root=#{JAVASCRIPT_DIR}/dmwa"
-        cmds << "--root=#{JAVASCRIPT_DIR}/target"
+        cmds << "--root=#{JAVASCRIPT_3P_DIR}"
+        cmds << "--root=#{JAVASCRIPT_DMWA_DIR}"
+        cmds << "--root=#{JAVASCRIPT_TARGET_TEMPLATES_DIR}"
         cmds << "--input=#{REQUIRE_FILE}"
         cmds << "--output_mode=compiled"
         cmds << "--compiler_jar=#{TASKS_JAVASCRIPT_DIR}/3p/compiler.jar"
-        cmds << "--output_file=#{OUTPUT_FILE_JS_ALL}"
+        cmds << "--output_file=#{t.name}"
         sh cmds.join(" ")
-    end
-    
-    desc "Scan all js sources and generate a depedency js file for development mode"
-    task :generate_deps do
-        generate_deps()
     end
 
     desc "Build all javascript sources in development mode."
-    task :build => [:clean, :compile_ejs, :generate_deps]
+    task :build => [:clean, JAVASCRIPT_TARGET_TEMPLATES_DIR, JS_DEPS_FLE]
 
     desc "Build production minified javascript file"
-    task :minify => :build do
-        generate_minified_js()
-    end
+    task :minify => MINIFED_JS_FLIE
 
 end

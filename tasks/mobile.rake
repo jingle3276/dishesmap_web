@@ -25,7 +25,7 @@ namespace :mobile do
         mkdir_p "#{BUILD_HOME_WWW}javascript/built/"
         mkdir_p "#{BUILD_HOME_WWW}javascript/3p/"
         sh("cp -r 'dmwa/public/javascript/3p/' #{BUILD_HOME_WWW}javascript/3p/")
-        sh("cp -r 'dmwa/public/javascript/built/dmwa_all.js' #{BUILD_HOME_WWW_MINIFIED_JS}")
+        sh("cp -r 'dmwa/public/javascript/built/dmwa.js' #{BUILD_HOME_WWW_MINIFIED_JS}")
     end
 
     file BUILD_HOME do

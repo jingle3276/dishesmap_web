@@ -4,8 +4,7 @@
 namespace "setup" do
 
     desc "Remove all the built files"
-    task :clean => ['phonegap:clean', 'javascript:clean', 'index_html:clean']
-
+    task :clean => ['mobile:clean', 'javascript:clean', 'index_html:clean']
 
     namespace "node" do 
         file "node_modules" => 'package.json' do
