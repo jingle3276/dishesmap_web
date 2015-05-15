@@ -74,14 +74,14 @@ function generateTemplateIndex (path, indexPath, prefixString) {
 }
 
 // get app directories
+// right now, only build templates in app dir
+var buildDirs = ['app']
 var keys = [];
 var children = fs.list(jsDir);
-//console.log("jsDir " + children);
 for (var i = 0; i < children.length; i++) {
     var child = children[i];
-    //console.log("dir " + child);
     var path = jsDir + sep + child;
-    if (fs.isDirectory(path) && child[0] !== "." && child !== "common" && child !== "lib") {
+    if (fs.isDirectory(path) && (buildDirs.indexOf(child) > -1)) {
         keys.push(child)
     }
 }
