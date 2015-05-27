@@ -4,9 +4,10 @@ namespace :javascript do
     directory JAVASCRIPT_3P_DIR = "#{JAVASCRIPT_DIR}/3p"
     directory TASKS_JAVASCRIPT_DIR = "tasks/javascript"    
     directory JAVASCRIPT_BUILT_DIR = "#{JAVASCRIPT_DIR}/built"
-    directory JAVASCRIPT_TARGET_TEMPLATES_DIR = "#{JAVASCRIPT_DIR}/target/templates"
+    directory JAVASCRIPT_TARGET_DIR = "#{JAVASCRIPT_DIR}/target"
+    directory JAVASCRIPT_TARGET_TEMPLATES_DIR = "#{JAVASCRIPT_TARGET_DIR}/templates"
 
-    file TARGET_JS_DEPS_FILE = "#{JAVASCRIPT_BUILT_DIR}/dmwa_deps.js" # for development
+    file TARGET_JS_DEPS_FILE = "#{JAVASCRIPT_TARGET_DIR}/dmwa_deps.js" # for development
     file TARGET_EJS_INDEX_FILE = "#{JAVASCRIPT_TARGET_TEMPLATES_DIR}/app_template_index.js" # for development
     file TARGET_MINIFIED_JS_FLIE = "#{JAVASCRIPT_BUILT_DIR}/dmwa.js" # for production
     file SRC_REQUIRE_FILE = "#{JAVASCRIPT_DIR}/dmwa/app/require_file.js"
@@ -14,7 +15,7 @@ namespace :javascript do
 
     desc "Clean all compiled javascript"
     task :clean do
-        rm_rf JAVASCRIPT_TARGET_TEMPLATES_DIR
+        rm_rf JAVASCRIPT_TARGET_DIR
         rm_rf JAVASCRIPT_BUILT_DIR
     end
 
@@ -25,7 +26,7 @@ namespace :javascript do
         sh "phantomjs tasks/compile_ejs_templates.js"
     end
     
-    file TARGET_JS_DEPS_FILE => [JAVASCRIPT_3P_DIR, TARGET_EJS_INDEX_FILE, JAVASCRIPT_BUILT_DIR] do |t|
+    file TARGET_JS_DEPS_FILE => [JAVASCRIPT_3P_DIR, TARGET_EJS_INDEX_FILE, JAVASCRIPT_TARGET_DIR] do |t|
         cmds = ["python #{TASKS_JAVASCRIPT_DIR}/3p/depswriter.py"]
         cmds << "--root_with_prefix '#{JAVASCRIPT_3P_DIR} ../'"
         cmds << "--root_with_prefix '#{JAVASCRIPT_DMWA_DIR} ../../dmwa'"
@@ -39,11 +40,11 @@ namespace :javascript do
         file TARGET_MINIFIED_JS_FLIE => src
     end
 
-    file TARGET_MINIFIED_JS_FLIE => [:build, TARGET_EJS_INDEX_FILE, SRC_REQUIRE_FILE] do |t|
+    file TARGET_MINIFIED_JS_FLIE => [:build, TARGET_EJS_INDEX_FILE, SRC_REQUIRE_FILE, JAVASCRIPT_BUILT_DIR] do |t|
         cmds = ["python #{TASKS_JAVASCRIPT_DIR}/3p/closurebuilder.py"]
         cmds << "--root=#{JAVASCRIPT_3P_DIR}"
         cmds << "--root=#{JAVASCRIPT_DMWA_DIR}"
-        cmds << "--root=#{JAVASCRIPT_TARGET_TEMPLATES_DIR}"
+        cmds << "--root=#{JAVASCRIPT_TARGET_DIR}"
         cmds << "--input=#{SRC_REQUIRE_FILE}"
         cmds << "--output_mode=compiled"
         cmds << "--compiler_jar=#{TASKS_JAVASCRIPT_DIR}/3p/compiler.jar"
