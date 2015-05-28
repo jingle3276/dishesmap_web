@@ -32,21 +32,21 @@ namespace "setup" do
         task :clean do
             rm_rf INDEX_HTML
         end
-
-        task :dev => :clean do
+        #unminified and web
+        task :dev => [:clean, "javascript:build"] do
             Rake::Task[INDEX_HTML].invoke(0, 0)
         end
-
-        task :phonegap => :clean do
+        #minified and for web
+        task :web => [:clean, "javascript:minify"] do
+            Rake::Task[INDEX_HTML].invoke(1, 0)
+        end
+        #unminified and for phonegap
+        task :phonegap => [:clean, "javascript:build"] do
             Rake::Task[INDEX_HTML].invoke(0, 1)
         end
-
-        task :prod => :clean do
+        #minified and for phonegap
+        task :prod => [:clean, "javascript:minify"] do
             Rake::Task[INDEX_HTML].invoke(1, 1)
-        end
-
-        task :web => :clean do
-            Rake::Task[INDEX_HTML].invoke(1, 0)
         end
     end
 

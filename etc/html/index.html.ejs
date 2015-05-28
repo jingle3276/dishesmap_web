@@ -11,16 +11,22 @@
         http://stackoverflow.com/questions/15194940/phonegap-application-text-and-layout-too-small  -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
 
-        <!-- load javascript files for the html5 application -->
+        <% if (minifyMode) { %>
+        <!-- load combined 3rd party javascript file -->
+        <script type='application/javascript' src="javascript/built/3p.min.js"></script>
+        <% } else { %>
+        <!-- load 3rd party javascript files in order -->
         <script src="javascript/3p/jquery.js"></script>
         <script src="javascript/3p/underscore.js"></script>
         <script src="javascript/3p/backbone.js"></script>
         <script src="javascript/3p/backbone.localStorage.js"></script>
         <script src="javascript/3p/bootstrap.js"></script>
-        <script src="javascript/3p/spin.min.js"></script>
+        <script src="javascript/3p/spin.js"></script>
         <script type='application/javascript' src="javascript/3p/fastclick.js"></script>
 
         <script src="javascript/3p/goog/base.js"></script>
+        <% } %>
+
         <% if (!minifyMode) { %>
         <script src="javascript/target/dmwa_deps.js"></script>
         <% } %>

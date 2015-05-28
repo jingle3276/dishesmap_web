@@ -9,7 +9,8 @@ namespace :javascript do
 
     file TARGET_JS_DEPS_FILE = "#{JAVASCRIPT_TARGET_DIR}/dmwa_deps.js" # for development
     file TARGET_EJS_INDEX_FILE = "#{JAVASCRIPT_TARGET_TEMPLATES_DIR}/app_template_index.js" # for development
-    file TARGET_MINIFIED_JS_FLIE = "#{JAVASCRIPT_BUILT_DIR}/dmwa.js" # for production
+    file TARGET_MINIFIED_JS_FLIE = "#{JAVASCRIPT_BUILT_DIR}/dmwa.js"
+    file TARGET_MINIFIED_3P_FLIE = "#{JAVASCRIPT_BUILT_DIR}/3p.min.js"
     file SRC_REQUIRE_FILE = "#{JAVASCRIPT_DIR}/dmwa/app/require_file.js"
 
 
@@ -52,10 +53,13 @@ namespace :javascript do
         sh cmds.join(" ")
     end
 
+    file TARGET_MINIFIED_3P_FLIE => JAVASCRIPT_BUILT_DIR do
+        sh "python #{TASKS_JAVASCRIPT_DIR}/1p/concatenate.py"
+    end
+
     desc "Build all javascript sources in development mode."
     task :build => [TARGET_EJS_INDEX_FILE, TARGET_JS_DEPS_FILE]
 
     desc "Build production minified javascript file"
-    task :minify => TARGET_MINIFIED_JS_FLIE
-
+    task :minify => [TARGET_MINIFIED_3P_FLIE, TARGET_MINIFIED_JS_FLIE]
 end
