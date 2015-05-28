@@ -1,5 +1,7 @@
 <html lang="en">
-	<head>
+    <% if (minifyMode) { %> <!--  Production Mode --> <% } else { %> <!--  Development Mode --> <% }
+       if (phonegapMode) { %> <!--  Phonegap Mode --> <% } %>
+    <head>
        <!--  For phonegap -->
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
@@ -9,48 +11,55 @@
         http://stackoverflow.com/questions/15194940/phonegap-application-text-and-layout-too-small  -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
 
-        <!-- load javascript files for the html5 application -->
-	    <script src="javascript/3p/jquery.js"></script>
-	    <script src="javascript/3p/underscore.js"></script>
-	    <script src="javascript/3p/backbone.js"></script>
+        <% if (minifyMode) { %>
+        <!-- load combined 3rd party javascript file -->
+        <script type='application/javascript' src="javascript/built/3p.min.js"></script>
+        <% } else { %>
+        <!-- load 3rd party javascript files in order -->
+        <script src="javascript/3p/jquery.js"></script>
+        <script src="javascript/3p/underscore.js"></script>
+        <script src="javascript/3p/backbone.js"></script>
         <script src="javascript/3p/backbone.localStorage.js"></script>
         <script src="javascript/3p/bootstrap.js"></script>
-        <script src="javascript/3p/spin.min.js"></script>
-   		<script src="javascript/3p/goog/base.js"></script>
+        <script src="javascript/3p/spin.js"></script>
         <script type='application/javascript' src="javascript/3p/fastclick.js"></script>
 
-        <script src="javascript/built/dmwa_deps.js"></script>
- 
+        <script src="javascript/3p/goog/base.js"></script>
+        <% } %>
+
+        <% if (!minifyMode) { %>
+        <script src="javascript/target/dmwa_deps.js"></script>
+        <% } %>
+
         <link href="stylesheets/3p/bootstrap.min.css" rel="stylesheet">
         <link href="stylesheets/theme.css" rel="stylesheet">
 
         <title>DishesMap</title>
-	</head>
+    </head>
  
-	<body role="document">
+    <body role="document">
         <div id="home" class="container-fluid">
-        	<!-- Dynamic content -->
+            <!-- Dynamic content -->
         </div>
 
-		<script >
-		    goog.require('wz.dmwa.lib.templates.index'); //global compileTemplates
-        	goog.require('wz.dmwa.core.templates.index');
-        	goog.require('wz.dmwa.app.templates.index');
-        	goog.require('wz.dmwa.app.routers.AppRouter'); //load all dependency files
-        </script>
+        <!-- loading must be after dom element constructin -->
+        <% if (minifyMode) { %>
+        <script src="javascript/built/dmwa.js"/>
+        <% } else { %>
+        <script src="javascript/dmwa/app/require_file.js"/> 
+        <% } %>    
 
-        <!-- for phonegap to work; if dev in browser mode, these files will not load -->
-        <!-- TODO: use template engine to automatically append the bellow statements -->
+        <% if (phonegapMode) { %>
         <script type="text/javascript" src="cordova.js"></script>
-        <!-- start the app here -->
+        <% } %>
         <script>
             //fastclick
             window.addEventListener('load', function() {
                 new FastClick(document.body);
             }, false);
 
-            //start app
+            //start the app here
             wz.dmwa.app.routers.AppRouter.runDishlistController();
         </script>
-	</body>
+    </body>
 </html>

@@ -23,7 +23,7 @@ module.exports = function(config) {
       'dmwa/public/javascript/3p/backbone.js',
       'dmwa/public/javascript/3p/backbone.localStorage.js',
       'dmwa/public/javascript/3p/bootstrap.js',
-      'dmwa/public/javascript/3p/spin.min.js',
+      'dmwa/public/javascript/3p/spin.js',
 
       // goog closure lib base
       'dmwa/public/javascript/3p/goog/base.js',
@@ -34,10 +34,10 @@ module.exports = function(config) {
       // unless they're needed in a test via a call to goog.require
       // includes all tests
       {pattern: 'dmwa/public/javascript/dmwa/**/*.js', included: false},
-      {pattern: 'dmwa/public/javascript/target/**/*.js', included: false},
+      {pattern: 'dmwa/public/javascript/target/templates/*.js', included: false},
 
       // load dependency tree file, tests, and helpers
-      'dmwa/public/javascript/built/dmwa_deps.js',
+      'dmwa/public/javascript/target/dmwa_deps.js',
 
       // all json files
       //TODO: remove json files

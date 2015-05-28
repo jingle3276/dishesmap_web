@@ -8,10 +8,12 @@
 *.pid
 *.pyc
 
-# target dir
+# build targets
 dmwa/public/javascript/target
 dmwa/public/javascript/built
+dmwa/public/index.html
 
-# node moudles
+# build dirs
 node_modules
+mobile_build
 
