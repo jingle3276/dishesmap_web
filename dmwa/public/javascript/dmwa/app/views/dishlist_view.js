@@ -55,6 +55,7 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
 
         startLoadingSpinner: function () {
             var target = document.getElementById('home');
+            $(target).append("<h3>Loading your location ...</h3>");
             this._spinner.spin(target);
         },
 
