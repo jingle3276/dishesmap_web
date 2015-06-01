@@ -29,9 +29,10 @@
 
 
 /* dishdetail */
+/* same as dl. remove this entry later*/
 #dd-header-container{
+	padding-bottom: 11px;
 	text-align: center;
-	padding-bottom: 14px;
 }
 
 .dd-header-title{
@@ -39,8 +40,11 @@
 	padding-right: 0;
 }
 
-.dd-body-container{
+#dd-body-container{
+	/* a hack to work with fixed header */
+	padding-top: 67px;
 	background-color: #f5f5f5;
+	margin-bottom: 0;
 }
 
 .dd-panel-group{
