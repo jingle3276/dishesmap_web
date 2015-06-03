@@ -31,9 +31,31 @@
 /* dishdetail */
 /* same as dl. remove this entry later*/
 #dd-header-container{
-	padding-bottom: 11px;
+	height: 67px;
 	text-align: center;
 }
+
+.dd-header-back-button{
+	width: 30px;
+	height: 30px;
+	padding: 0 0 0 0;
+	margin: 16px 0px 10px 28px;
+}
+
+.dd-header-fav-icon{
+	width: 45px;
+	height: 30px;
+	padding: 0 0 0 0;
+}
+
+
+.dd-header-title{
+	top: 26%;
+	width: 218px;
+	font-size: 18px;
+	padding: 0 10px 0 10px;
+}
+
 
 .dd-header-title{
 	padding-left: 0;
