@@ -1,10 +1,6 @@
 <div id="dd-body-container">
 
 	<div class="col-md-10 panel-info dd-panel-group ">
-		<div class="panel-heading">
-	    	<h3 class="panel-title"><%= obj.dishDetail.getDishName() %> </h3>
-		</div>
-
 		<ul class="list-group panel-body">
 			<% _.each(obj.dishDetail.getReviews(), function(r) { %>
 				<li class="list-group-item">
@@ -13,18 +9,6 @@
 				</li>
 			<% }); %>
 		</ul>
-	</div>
-
-
-	<div class="col-md-10 panel-info dd-panel-group">
-		<div class="panel-heading">
-		    <h3 class="panel-title"><%= obj.dishDetail.getRestaurantName() %></h3>
-		</div>
-
-		<div class="panel-body">
-		    <p><%= obj.dishDetail.getRestaurantAddr() %></p>
-		    <p><%= obj.dishDetail.getRestaurantTel() %></p>
-		</div>
 	</div>
 
 </div>

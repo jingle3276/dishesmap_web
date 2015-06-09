@@ -11,7 +11,7 @@
 
 .dl-item-group{
 	font-size: 16px;
-	padding: 5px 10px
+	padding: 5px 10px;
 }
 
 .dl-item-title{
@@ -29,18 +29,47 @@
 
 
 /* dishdetail */
+/* same as dl. remove this entry later*/
 #dd-header-container{
+	height: 67px;
 	text-align: center;
-	padding-bottom: 14px;
+}
+
+.dd-header-bk-button{
+	font-size: 30px;
+	top: 26%;
+	padding: 0 0 0 13px;
+	width: 20%;
 }
 
 .dd-header-title{
-	padding-left: 0;
-	padding-right: 0;
+	top: 26%;
+	padding: 0 0 0 0;
+	line-height: 1.2;
+	font-size: 18px;
+	width: 56%;
 }
 
-.dd-body-container{
+.dd-header-fav-icon{
+	font-size: 23px;
+	top: 28%;
+	padding: 0 0 0 0px;
+	width: 20%;
+}
+
+.back-btn-orange {
+    color: orange;
+}
+
+.dl-highlight{
+	background-color: #fcf8e3;
+}
+
+#dd-body-container{
+	/* a hack to work with fixed header */
+	padding-top: 67px;
 	background-color: #f5f5f5;
+	margin-bottom: 0;
 }
 
 .dd-panel-group{

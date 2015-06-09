@@ -1,16 +1,16 @@
-<div id="dd-header-container" class="row bg-primary">
-	<h3>
-	    <div class="col-xs-3">
-	    	<span class="glyphicon glyphicon-arrow-left success dd-header-bk-button" role="button"></span>
-	    </div>
+<div class="row navbar-fixed-top bg-primary">
+    <div id="dd-header-container">
+        <div class="col-xs-2 dd-header-bk-button">
+            <span class="glyphicon glyphicon-arrow-left success"/>
+        </div>
 
-	    <div class="col-xs-6 dd-header-title">
-		    Dish Reviews
-	    </div>
+        <div class="col-xs-7 dd-header-element dd-header-title">
+            <span><%= obj.dishDetail.getDishName() %></span>
+        </div>
 
-	    <div class="col-xs-3">
-	    	<span class='glyphicon glyphicon-thumbs-up'></span>
-	    	<span><%= obj.dishDetail.getReviews().length %></span>
-	    </div>
-    </h3>
+        <div class="col-xs-3 dd-header-fav-icon">
+            <span class="glyphicon glyphicon-thumbs-up"></span>
+            <span><%= obj.dishDetail.getReviews().length %></span>
+        </div>
+    </div>
 </div>
