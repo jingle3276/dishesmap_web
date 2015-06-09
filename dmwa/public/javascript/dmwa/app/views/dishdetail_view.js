@@ -28,6 +28,7 @@ goog.require('wz.dmwa.app.templates.DishdetailTemplate');
         },
 
         _backButtonClickHandler: function (options) {
+            $(".dd-header-bk-button span").addClass("back-btn-orange");
             this.trigger(this.EVENTS.GO_BACK);
         },
         

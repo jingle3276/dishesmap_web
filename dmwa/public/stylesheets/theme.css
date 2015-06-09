@@ -11,7 +11,7 @@
 
 .dl-item-group{
 	font-size: 16px;
-	padding: 5px 10px
+	padding: 5px 10px;
 }
 
 .dl-item-title{
@@ -55,6 +55,14 @@
 	top: 28%;
 	padding: 0 0 0 0px;
 	width: 20%;
+}
+
+.back-btn-orange {
+    color: orange;
+}
+
+.dl-highlight{
+	background-color: #fcf8e3;
 }
 
 #dd-body-container{
