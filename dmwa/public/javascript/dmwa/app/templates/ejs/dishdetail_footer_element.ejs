@@ -4,7 +4,9 @@
     </div>
 
     <div class="panel-body dd-footer-info">
-        <p><%= obj.dishDetail.getRestaurantAddr() %></p>
+        <a href="geo:0,0?q=<%= obj.dishDetail.getRestaurantAddr() %>">
+            <%= obj.dishDetail.getRestaurantAddr() %>
+        </a>
         <p><%= obj.dishDetail.getRestaurantTel() %></p>
     </div>
 </nav>

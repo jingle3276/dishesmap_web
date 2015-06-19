@@ -21,4 +21,7 @@
     <!-- http://stackoverflow.com/questions/23387007/phonegap-build-permissions-in-android -->
     <preference name="permissions" value="none"/>
     <feature name="http://api.phonegap.com/1.0/geolocation" />
+
+    <access origin="geo:*" launch-external="yes" />
+    <access origin="tel:*" launch-external="yes" />
 </widget>
