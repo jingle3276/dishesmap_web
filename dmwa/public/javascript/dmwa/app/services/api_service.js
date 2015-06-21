@@ -36,7 +36,8 @@ goog.require('wz.dmwa.app.services.LocationService');
                 //this service must wait locationService resolved and then 
                 //send ajax request. $.when().then() make sure when something
                 //is done, then do some other thing
-                $.when(locationService.load()).then(function(){
+                var locationServicePromise = locationService.load();
+                locationServicePromise.done(function(){
                     var lat = locationService.get_lat();
                     var lon = locationService.get_lon();
                     //var request_url = "http://localhost:3000/foodlist/where/?lat=" + lat + "&lon=" + lon; 
@@ -52,6 +53,11 @@ goog.require('wz.dmwa.app.services.LocationService');
                        d.resolve();
                     });
                 });
+
+                locationServicePromise.fail(function(){
+                    d.reject();
+                });
+
                 return d.promise();
             }
             else {
