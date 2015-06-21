@@ -2,7 +2,7 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "wz.dmwa.app"
-        versionCode = "16"
+        versionCode = "17"
         version     = "0.0.2" >
 
     <!-- versionCode is optional and Android only -->
@@ -22,6 +22,4 @@
     <preference name="permissions" value="none"/>
     <feature name="http://api.phonegap.com/1.0/geolocation" />
 
-    <access origin="geo:*" launch-external="yes" />
-    <access origin="tel:*" launch-external="yes" />
 </widget>
