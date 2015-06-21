@@ -17,3 +17,5 @@ dmwa/public/index.html
 node_modules
 mobile_build
 
+# release
+release
