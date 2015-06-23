@@ -28,7 +28,6 @@ goog.require('wz.dmwa.app.models.Dishdetail');
         initialize : function () {
             this._dishCollection = new DishlistItemCollection();
             this._asyncServices.push(this._apiService);
-            //this._asyncServices.push(locationService);
             Service.prototype.initialize.call(this);
         },
 

@@ -34,24 +34,30 @@ goog.require('wz.dmwa.app.services.LocationService');
         	var self = this;
             if (this._is_first_load){
                 //this service must wait locationService resolved and then 
-                //send ajax request. $.when().then() make sure when something
-                //is done, then do some other thing
+                //send ajax request.
                 var locationServicePromise = locationService.load();
                 locationServicePromise.done(function(){
                     var lat = locationService.get_lat();
                     var lon = locationService.get_lon();
-                    //var request_url = "http://localhost:3000/foodlist/where/?lat=" + lat + "&lon=" + lon; 
-                    var request_url = "http://192.241.173.181:8080/food/where/?lat=" + 
-                        lat + "&lon=" + lon + "&version=2";
+                    //producation
+                    var request_url = "http://192.241.173.181:8080/food/where/";
+                    //local service for test
+                    //var request_url =  "http://localhost:3000/foodlist/where/";
 
-                    var promise2 = $.getJSON(request_url, function (json) {
-                        //when got the response json, load into localStorage 
-                        //and resolve the promise so dishlistcontroller can start
-                       self._clear_local_storage();
-                       self._save_data(json);
-                       self._is_first_load = false;
-                       d.resolve();
+                    var success = function (json){
+                        self._clear_local_storage();
+                        self._save_data(json);
+                        self._is_first_load = false;
+                        d.resolve();
+                    };
+                    var args = {'lat': lat, 'lon': lon, 'version': 2};
+                    $.ajax({
+                        dataType: "json",
+                        url: request_url,
+                        data: args,
+                        success: success
                     });
+
                 });
 
                 locationServicePromise.fail(function(){
