@@ -6,6 +6,8 @@ namespace :release do
     RELEASE_DIR = "#{DMWA_HOME}/release"
     TMP_DIR = "#{RELEASE_DIR}/tmp"
 
+    DEPLOY_DEST = "root@yzhao.mooo.com:/mnt/storage/public/dmwa"
+
     task :clean do
         sh("rm -rf #{TMP_DIR}")
     end
@@ -25,7 +27,9 @@ namespace :release do
         notice("webapp release tar file built successfully in #{RELEASE_DIR}")
     end
 
-    #TODO 
-    # copy to servers
+    desc "deploy to local server"
+    task :deploy => [:tar] do
+        sh("rsync -av --progress --delete --progress #{TMP_DIR}/* #{DEPLOY_DEST}")
+    end
 
 end
