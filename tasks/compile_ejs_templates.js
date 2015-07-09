@@ -66,6 +66,7 @@ function generateTemplateIndex (path, indexPath, prefixString) {
     var templateIndex = [];
     for (templateId in ejsTemplateDictionary) {
         var templateStr = ejsTemplateDictionary[templateId];
+        //TODO: preprocess the template for ios, android, web.
         var functionStr = templatize(templateStr);
         templateIndex.push("wz.dmwa.lib.templates.index.compiledTemplates['" + templateId + "'] = " + functionStr + ";");
     }

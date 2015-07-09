@@ -4,9 +4,38 @@
     </div>
 
     <div class="panel-body dd-footer-info">
-        <a href="geo:0,0?q=<%= obj.dishDetail.getRestaurantAddr() %>">
+        <!--WEB-->
+        <p>
+            <a href="http://maps.google.com/?q=<%= obj.dishDetail.getRestaurantAddr() %>" target="_blank">
+                <%= obj.dishDetail.getRestaurantAddr() %>
+            </a>
+        </p>
+        <!--END_WEB-->
+
+        <!--ANDROID-->
+        <p>
+            <a href="geo:0,0?q=<%= obj.dishDetail.getRestaurantAddr() %>">
+                <%= obj.dishDetail.getRestaurantAddr() %>
+            </a>
+        </p>
+        <!--END_ANDROID-->
+
+        <!--IOS-->
+        <p>
+        <a href="maps:q=<%= obj.dishDetail.getRestaurantAddr() %>">
             <%= obj.dishDetail.getRestaurantAddr() %>
         </a>
+        </p>
+        <!--END_IOS-->
+
+        <!-- google map app on ios 
+        <p>
+        <a href="comgooglemaps://?q=<%= obj.dishDetail.getRestaurantAddr() %>">
+            <%= obj.dishDetail.getRestaurantAddr() %>
+        </a>
+        </p>
+        -->
+
         <p><%= obj.dishDetail.getRestaurantTel() %></p>
     </div>
 </nav>
