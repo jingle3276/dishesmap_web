@@ -29,7 +29,7 @@ namespace "setup" do
             sh cmds.join(" ")
         end
 
-        task :clean do
+        task :clean => ['javascript:clean'] do
             rm_rf INDEX_HTML
         end
         #unminified and web

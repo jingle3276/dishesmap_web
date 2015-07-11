@@ -5,37 +5,26 @@
 
     <div class="panel-body dd-footer-info">
         <!--WEB-->
-        <p>
             <a href="http://maps.google.com/?q=<%= obj.dishDetail.getRestaurantAddr() %>" target="_blank">
                 <%= obj.dishDetail.getRestaurantAddr() %>
             </a>
-        </p>
         <!--END_WEB-->
-
         <!--ANDROID-->
-        <p>
             <a href="geo:0,0?q=<%= obj.dishDetail.getRestaurantAddr() %>">
                 <%= obj.dishDetail.getRestaurantAddr() %>
             </a>
-        </p>
         <!--END_ANDROID-->
-
         <!--IOS-->
-        <p>
-        <a href="maps:q=<%= obj.dishDetail.getRestaurantAddr() %>">
-            <%= obj.dishDetail.getRestaurantAddr() %>
-        </a>
-        </p>
+            <a href="maps:q=<%= obj.dishDetail.getRestaurantAddr() %>">
+                <%= obj.dishDetail.getRestaurantAddr() %>
+            </a>
         <!--END_IOS-->
 
-        <!-- google map app on ios 
-        <p>
+        <!-- NOT USED yet: launch google map app on ios
         <a href="comgooglemaps://?q=<%= obj.dishDetail.getRestaurantAddr() %>">
             <%= obj.dishDetail.getRestaurantAddr() %>
         </a>
-        </p>
-        -->
-
+        -->        
         <p><%= obj.dishDetail.getRestaurantTel() %></p>
     </div>
 </nav>

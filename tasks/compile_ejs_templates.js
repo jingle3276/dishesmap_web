@@ -59,6 +59,35 @@ function templatize (str) {
     return func;
 }
 
+// use regex to match the begining and end of the block
+function removeCodeBlock(begingMark, endMark, inputStr) {
+    var pattern = "(.|\n)*";
+    var re = new RegExp(begingMark + pattern + endMark, "g");
+    var out = inputStr.replace(re, "");
+    return out;
+}
+
+// preprocess the input template string; only keep the specific 
+// environment element block
+function preprocess(env, inputStr) {
+    var TAGS = ["WEB", "ANDROID", "IOS"];
+    function getBeginMark(tag) {
+        return "<!--" + tag + "-->";
+    }
+    function getEndMark(tag) {
+        return "<!--END_" + tag + "-->";
+    }
+    var index = TAGS.indexOf(env);
+    if (index > -1) {
+        //remove the specified item in TAGS so that code block will be kept
+        TAGS.splice(index, 1);
+    }
+    var out = TAGS.reduce(function(pre, cur){
+        return removeCodeBlock(getBeginMark(cur), getEndMark(cur), pre);
+    }, inputStr);
+    return out;
+}
+
 // helper function to compile templates
 function generateTemplateIndex (path, indexPath, prefixString) {
     //console.log("path " + path + " indexPath: " + indexPath);
@@ -66,8 +95,8 @@ function generateTemplateIndex (path, indexPath, prefixString) {
     var templateIndex = [];
     for (templateId in ejsTemplateDictionary) {
         var templateStr = ejsTemplateDictionary[templateId];
-        //TODO: preprocess the template for ios, android, web.
-        var functionStr = templatize(templateStr);
+        var envSpecificStr = preprocess("ANDROID", templateStr);
+        var functionStr = templatize(envSpecificStr);
         templateIndex.push("wz.dmwa.lib.templates.index.compiledTemplates['" + templateId + "'] = " + functionStr + ";");
     }
     var indexOutput = prefixString + templateIndex.join("\n");
