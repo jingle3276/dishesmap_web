@@ -55,13 +55,13 @@ namespace :mobile do
     namespace :android do
 
         desc "Build android apk and deploy to the device"
-        task :run_device => [:init, :clean, 'setup:index_html:prod', BUILD_HOME_WWW] do
+        task :run_device => [:init, :clean, 'setup:index_html:android', BUILD_HOME_WWW] do
             sh("cp -r #{CORDOVA_CONFIG_FILES} #{BUILD_HOME}")
             run('cordova run android')
         end
 
         desc "Build android apk and run in browser in debug mode"
-        task :run_browser => [:init, :clean, 'setup:index_html:prod', BUILD_HOME_WWW] do
+        task :run_browser => [:init, :clean, 'setup:index_html:android', BUILD_HOME_WWW] do
             run('cordova run browser --debug')
         end
 

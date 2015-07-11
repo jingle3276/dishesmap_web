@@ -24,7 +24,7 @@ namespace :javascript do
         file TARGET_EJS_INDEX_FILE => src
     end
     file TARGET_EJS_INDEX_FILE => JAVASCRIPT_TARGET_TEMPLATES_DIR do
-        sh "phantomjs tasks/compile_ejs_templates.js"
+        sh "phantomjs tasks/compile_ejs_templates.js #{ENV['PLATFORM_MODE']}"
     end
     
     file TARGET_JS_DEPS_FILE => [JAVASCRIPT_3P_DIR, TARGET_EJS_INDEX_FILE, JAVASCRIPT_TARGET_DIR] do |t|

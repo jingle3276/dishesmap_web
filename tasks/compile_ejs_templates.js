@@ -2,11 +2,12 @@
 var EJS_EXTENSION = 'ejs';
 
 var fs = require('fs');
-
+var args = require('system').args;
 var sep = fs.separator;
 var rootDir = fs.workingDirectory + sep + "dmwa";
 var jsDir = rootDir + sep + "public" + sep + "javascript" + sep + "dmwa";
 var templatesDir =  rootDir + sep + "public" + sep + "javascript" + sep + "target" + sep + "templates";
+
 
 if (!fs.exists(templatesDir)) {
     fs.makeTree(templatesDir);
@@ -69,33 +70,31 @@ function removeCodeBlock(begingMark, endMark, inputStr) {
 
 // preprocess the input template string; only keep the specific 
 // environment element block
-function preprocess(env, inputStr) {
-    var TAGS = ["WEB", "ANDROID", "IOS"];
+function preprocess(platform, inputStr) {
     function getBeginMark(tag) {
         return "<!--" + tag + "-->";
     }
     function getEndMark(tag) {
         return "<!--END_" + tag + "-->";
     }
-    var index = TAGS.indexOf(env);
+    var index = PLATFORMS.indexOf(platform);
     if (index > -1) {
-        //remove the specified item in TAGS so that code block will be kept
-        TAGS.splice(index, 1);
+        //remove the specified item in PLATFORMS so that code block will be kept
+        PLATFORMS.splice(index, 1);
     }
-    var out = TAGS.reduce(function(pre, cur){
+    var out = PLATFORMS.reduce(function(pre, cur){
         return removeCodeBlock(getBeginMark(cur), getEndMark(cur), pre);
     }, inputStr);
     return out;
 }
 
 // helper function to compile templates
-function generateTemplateIndex (path, indexPath, prefixString) {
-    //console.log("path " + path + " indexPath: " + indexPath);
+function generateTemplateIndex (path, indexPath, prefixString, platform) {
     var ejsTemplateDictionary = findFilesByExtension(path, EJS_EXTENSION);
     var templateIndex = [];
     for (templateId in ejsTemplateDictionary) {
         var templateStr = ejsTemplateDictionary[templateId];
-        var envSpecificStr = preprocess("ANDROID", templateStr);
+        var envSpecificStr = preprocess(platform, templateStr);
         var functionStr = templatize(envSpecificStr);
         templateIndex.push("wz.dmwa.lib.templates.index.compiledTemplates['" + templateId + "'] = " + functionStr + ";");
     }
@@ -103,6 +102,15 @@ function generateTemplateIndex (path, indexPath, prefixString) {
     fs.write(indexPath, indexOutput, 'w');
 }
 
+
+// get command line argument: WEB, ANDROID, IOS
+var PLATFORMS = ["WEB", "ANDROID", "IOS"];
+
+var platform = args[1]
+if (platform === undefined || PLATFORMS.indexOf(platform) < 0) {
+    throw "Must specify what platform to build. choices: " + PLATFORMS;
+    phantom.exit(-1);
+}
 // get app directories
 // right now, only build templates in app dir
 var buildDirs = ['app']
@@ -124,7 +132,7 @@ for (index in keys) {
                   "goog.provide('wz.dmwa." + key + ".templates.index');\n" +
                   "goog.require('wz.dmwa.lib.templates.index');\n";
     indexPath = templatesDir + sep + key + "_template_index.js";
-    templateIndex = generateTemplateIndex(appPath, indexPath, prefixString);
+    templateIndex = generateTemplateIndex(appPath, indexPath, prefixString, platform);
 }
 
-phantom.exit();
+phantom.exit(0);

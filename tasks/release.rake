@@ -7,6 +7,7 @@ namespace :release do
     TMP_DIR = "#{RELEASE_DIR}/tmp"
 
     DEPLOY_DEST = "root@yzhao.mooo.com:/mnt/storage/public/dmwa"
+    PROD_DEST = "root@wisefoody.com:/var/www"
 
     task :clean do
         sh("rm -rf #{TMP_DIR}")
@@ -29,7 +30,13 @@ namespace :release do
 
     desc "deploy to local server"
     task :deploy => [:tar] do
-        sh("rsync -av --progress --delete --progress #{TMP_DIR}/* #{DEPLOY_DEST}")
+        sh("rsync -av --progress --delete #{TMP_DIR}/* #{DEPLOY_DEST}")
+    end
+
+    desc "deploy to production server"
+    task :deploy_prod => [:tar] do
+        # will prompt for ps
+        sh("rsync -av --progress --delete #{TMP_DIR}/* #{PROD_DEST}")
     end
 
 end
