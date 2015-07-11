@@ -24,6 +24,7 @@ namespace :mobile do
         sh("cordova create #{PROJECT_NAME} wz.dmwa wise_foody")
         Dir.chdir("#{PROJECT_NAME}/") do
             sh("cordova platform add android")
+            sh("cordova platform add ios")
             sh("cordova platform add browser")
             sh("cordova plugin add org.apache.cordova.geolocation")
         end
@@ -43,15 +44,6 @@ namespace :mobile do
         notice("Successfully deleted mobile build project")
     end
 
-    desc "Push to github for phonegap build"
-    task :push_build => [:init, :clean, 'setup:index_html:prod', BUILD_HOME_WWW] do
-        sh("cp -r #{PGB_CONFIG_FILES} #{BUILD_HOME_WWW}")
-        run('git init', "#{BUILD_HOME_WWW}")
-        run('git add .', "#{BUILD_HOME_WWW}")
-        run('git commit -m "phonegap build"', "#{BUILD_HOME_WWW}")
-        run('git push -u --force git@github.com:jingle3276/wisefoody_build.git master', "#{BUILD_HOME_WWW}")
-    end
-
     namespace :android do
 
         desc "Build android apk and deploy to the device"
@@ -69,6 +61,32 @@ namespace :mobile do
         task :release => [:init, :clean, 'setup:index_html:prod', BUILD_HOME_WWW] do
             run('cordova build android --release')
         end
+
+        desc "Push to github for android phonegap build"
+        task :push_build => [:init, :clean, 'setup:index_html:android', BUILD_HOME_WWW] do
+            sh("cp -r #{PGB_CONFIG_FILES} #{BUILD_HOME_WWW}")
+            run('git init', "#{BUILD_HOME_WWW}")
+            run('git add .', "#{BUILD_HOME_WWW}")
+            run('git commit -m "phonegap build"', "#{BUILD_HOME_WWW}")
+            run('git push -u --force git@github.com:jingle3276/wisefoody_build.git master', "#{BUILD_HOME_WWW}")
+        end
+    end
+
+    namespace :ios do
+        desc "Build ios project to be open in xcode"
+        task :prepare => [:init, :clean, 'setup:index_html:ios', BUILD_HOME_WWW] do
+            run('cordova build ios')
+        end
+
+        desc "Push to github for ios phonegap build"
+        task :push_build => [:init, :clean, 'setup:index_html:ios', BUILD_HOME_WWW] do
+            sh("cp -r #{PGB_CONFIG_FILES} #{BUILD_HOME_WWW}")
+            run('git init', "#{BUILD_HOME_WWW}")
+            run('git add .', "#{BUILD_HOME_WWW}")
+            run('git commit -m "phonegap build"', "#{BUILD_HOME_WWW}")
+            run('git push -u --force git@github.com:jingle3276/wisefoody_build.git master', "#{BUILD_HOME_WWW}")
+        end
+
     end
 
 end
