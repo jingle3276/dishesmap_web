@@ -35,6 +35,10 @@ goog.require('wz.dmwa.app.services.DishlistService');
             //stop loading pop
             this._view.stopLoadingSpinner();
             this._view.start(viewOptions);
+            if (this._service.hasScrollPosition()) {
+                var pos = this._service.getScrollPosition();
+                this._view.goToScrollPosition(pos);
+            }
         },
 
         //TODO
@@ -52,6 +56,7 @@ goog.require('wz.dmwa.app.services.DishlistService');
         },
 
         _onGoTODetail : function (dishId) {
+            this._service.saveScrollPosition(this._view.getCurrentScrollPosition());
             window.location.href = '#dishdetail/' + dishId;
         },
 
