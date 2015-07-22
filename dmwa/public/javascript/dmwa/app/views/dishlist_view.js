@@ -55,7 +55,7 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
 
         startLoadingSpinner: function () {
             var target = document.getElementById('home');
-            $(target).append("<h3>Finding best dishes round you ...</h3>");
+            $(target).append("<h3>Finding best dishes around you ...</h3>");
             this._spinner.spin(target);
         },
 
