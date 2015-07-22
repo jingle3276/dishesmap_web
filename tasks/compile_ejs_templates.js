@@ -102,7 +102,6 @@ function generateTemplateIndex (path, indexPath, prefixString, platform) {
     fs.write(indexPath, indexOutput, 'w');
 }
 
-
 // get command line argument: WEB, ANDROID, IOS
 var PLATFORMS = ["WEB", "ANDROID", "IOS"];
 

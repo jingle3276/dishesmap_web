@@ -14,7 +14,7 @@ namespace :test do
         sh cmds.join(" ")
     end
 
-    task :build => ['setup:node:init', 'javascript:build', 'setup:index_html:dev']
+    task :build => ['setup:node:init', 'setup:index_html:dev']
 
     desc "Run all karma unit tests using PhantomJS"
     task :all => [:build] do

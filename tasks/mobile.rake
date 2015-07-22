@@ -67,7 +67,7 @@ namespace :mobile do
             sh("cp -r #{PGB_CONFIG_FILES} #{BUILD_HOME_WWW}")
             run('git init', "#{BUILD_HOME_WWW}")
             run('git add .', "#{BUILD_HOME_WWW}")
-            run('git commit -m "phonegap build"', "#{BUILD_HOME_WWW}")
+            run('git commit -m "phonegap android build"', "#{BUILD_HOME_WWW}")
             run('git push -u --force git@github.com:jingle3276/wisefoody_build.git master', "#{BUILD_HOME_WWW}")
         end
     end
@@ -83,7 +83,7 @@ namespace :mobile do
             sh("cp -r #{PGB_CONFIG_FILES} #{BUILD_HOME_WWW}")
             run('git init', "#{BUILD_HOME_WWW}")
             run('git add .', "#{BUILD_HOME_WWW}")
-            run('git commit -m "phonegap build"', "#{BUILD_HOME_WWW}")
+            run('git commit -m "phonegap ios build"', "#{BUILD_HOME_WWW}")
             run('git push -u --force git@github.com:jingle3276/wisefoody_build.git master', "#{BUILD_HOME_WWW}")
         end
 
