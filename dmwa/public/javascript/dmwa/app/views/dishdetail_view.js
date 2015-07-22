@@ -44,6 +44,7 @@ goog.require('wz.dmwa.app.templates.DishdetailTemplate');
             this._render(options); //render view
             //Set up DOM event handlers
             View.prototype.start.call(this);
+            $(window).scrollTop(0);
         },
 
         _render: function (options) {

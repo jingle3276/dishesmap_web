@@ -41,6 +41,22 @@ goog.require('wz.dmwa.app.models.Dishdetail');
             var models = this._dishCollection.localStorage.findAll();
             this._dishCollection.reset(models);
             return this._dishCollection.models;
+        },
+
+        saveScrollPosition: function(pos) {
+            this._scrollPos = pos;
+        },
+
+        hasScrollPosition: function() {
+            if (this._scrollPos !== undefined){
+                return true;
+            }
+            else{
+                return false;
+            }
+        },
+        getScrollPosition: function () {
+            return this._scrollPos;
         }
 
     });
