@@ -75,6 +75,10 @@ goog.require('wz.dmwa.app.templates.DishlistTemplate');
             this.$el.empty().append(content); //el is #home
         },
 
+        showZeroState: function(options) {
+            alert("Sorry, no dishes found round you");
+        },
+
         _clickDishTitleHandler: function (ev) {
             var divNode = ev.currentTarget;
             $(divNode).addClass("dl-highlight");

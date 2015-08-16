@@ -35,10 +35,16 @@ goog.require('wz.dmwa.app.services.DishlistService');
             //stop loading pop
             this._view.stopLoadingSpinner();
             this._view.start(viewOptions);
+
             if (this._service.hasScrollPosition()) {
                 var pos = this._service.getScrollPosition();
                 this._view.goToScrollPosition(pos);
             }
+
+            if (_.size(viewOptions.dish_list) == 0) {
+                this._view.showZeroState();
+            }
+
         },
 
         //TODO
