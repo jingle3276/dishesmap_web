@@ -1,6 +1,15 @@
 CHANGE LOG
 ===========
 
+version 0.0.5(ios)
+----------
+- date:    2015-12-6
+- author:  Ying Zhao <jingle3276@hotmail.com>
+- changes:
+    - Change ios support to 7.0 (icon)
+    - Add ios launch screen
+    - Fix scroll screen
+
 version 0.0.2
 ----------
 - date:    2015-05-01
