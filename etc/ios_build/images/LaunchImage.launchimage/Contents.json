@@ -3,19 +3,19 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
-      "filename" : "Wisefoody~iphone.png",
+      "filename" : "Default~iphone.png",
       "scale" : "1x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
-      "filename" : "Wisefoody@2x~iphone.png",
+      "filename" : "Default@2x~iphone.png",
       "scale" : "2x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
-      "filename" : "Wisefoody-568h@2x~iphone.png",
+      "filename" : "Default-568h@2x~iphone.png",
       "subtype" : "retina4",
       "scale" : "2x"
     },

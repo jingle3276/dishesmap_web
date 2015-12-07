@@ -6,6 +6,10 @@ namespace :mobile do
     PGB_CONFIG_FILES = "etc/phonegap_build/"
     CORDOVA_CONFIG_FILES = "etc/cordova/"
 
+    Rake::FileList.new("#{JAVASCRIPT_DMWA_DIR}/**/ejs/*.ejs").each do |src|
+        file TARGET_EJS_INDEX_FILE => src
+    end
+
     def run(cmd, dir="#{BUILD_HOME}/")
         Dir.chdir(dir) do
             sh(cmd)
@@ -19,7 +23,7 @@ namespace :mobile do
         sh("cp -r #{CSS_DIR} #{BUILD_HOME_WWW}")
     end
 
-
+    # Create Cordova phonegap_build project folder
     file BUILD_HOME do
         sh("cordova create #{PROJECT_NAME} wz.dmwa wise_foody")
         Dir.chdir("#{PROJECT_NAME}/") do
@@ -28,6 +32,8 @@ namespace :mobile do
             sh("cordova platform add browser")
             sh("cordova plugin add org.apache.cordova.geolocation")
         end
+        #Clean default www folder content
+        sh("cp -r #{PGB_CONFIG_FILES}/*  #{BUILD_HOME}")
         sh("rm -rf #{BUILD_HOME_WWW}/*")
         notice("Successfully installed cordova build project")
     end
@@ -47,7 +53,7 @@ namespace :mobile do
     namespace :android do
 
         desc "Build android apk and deploy to the device"
-        task :run_device => [:init, :clean, 'setup:index_html:android', BUILD_HOME_WWW] do
+        task :run_device => [BUILD_HOME, :clean, 'setup:index_html:android', BUILD_HOME_WWW] do
             sh("cp -r #{CORDOVA_CONFIG_FILES} #{BUILD_HOME}")
             run('cordova run android')
         end
@@ -74,8 +80,16 @@ namespace :mobile do
 
     namespace :ios do
         desc "Build ios project to be open in xcode"
-        task :prepare => [:init, :clean, 'setup:index_html:ios', BUILD_HOME_WWW] do
+        task :xcode => [BUILD_HOME, :clean, 'setup:index_html:ios', BUILD_HOME_WWW] do
             run('cordova build ios')
+
+            # mobile_build/platforms/ios/Wise Foody/Images.xcassets/LaunchImage.launchimage
+            # FIXME: Copying png files to xcode launchimage dir to overide default images
+            # This is a temp solution. Better way is to define icon and launch pngs in Cordova config 
+            # Clean default Launch images
+
+            #run('rm platforms/ios/Wise\ Foody/Images.xcassets/LaunchImage.launchimage/*.png')
+            run('cp -r ../etc/ios_build/images/LaunchImage.launchimage/*.png platforms/ios/Wise\ Foody/Resources/splash/')
         end
 
         desc "Push to github for ios phonegap build"
