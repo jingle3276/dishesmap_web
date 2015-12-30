@@ -24,7 +24,11 @@
     <feature name="http://api.phonegap.com/1.0/geolocation" />
 
     <icon src="icon.png" />
-    
+
+    <platform name="android">
+        <icon src="icon.png" width="180" height="180" />
+    </platform>
+
     <!-- FIXME: not working in this way. Copying the images to ios platform build 
     folder directly at rake:ios:xcode -->
     <!-- iPhone and iPod touch -->
