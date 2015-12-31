@@ -24,22 +24,18 @@
     <feature name="http://api.phonegap.com/1.0/geolocation" />
 
     <icon src="icon.png" />
-
+    <!-- Android must have these to work properly with splash screen -->
+    <!-- https://forum.ionicframework.com/t/need-help-with-displaying-splash-screen-on-android-cordova-3-6/10436/10 -->
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="1000" />
     <platform name="android">
         <icon src="icon.png" width="180" height="180" />
+        <splash src="res/android/sps/hdpi.png" density="port-hdpi"/>
+        <splash src="res/android/sps/ldpi.png" density="port-ldpi"/>
+        <splash src="res/android/sps/mdpi.png" density="port-mdpi"/>
+        <splash src="res/android/sps/xhdpi.png" density="port-xhdpi"/>
     </platform>
 
-    <!-- FIXME: not working in this way. Copying the images to ios platform build 
-    folder directly at rake:ios:xcode -->
-    <!-- iPhone and iPod touch -->
-        <!-- <splash src="splash.png" />
- -->
-<!--     <splash src="Wisefoody.png" platform="ios" width="320" height="480" />
-    <splash src="Wisefoody@2x.png" platform="ios" width="640" height="960" /> -->
-    <!-- iPhone 5 / iPod Touch (5th Generation) -->
-<!--     <splash src="Wisefoody-568h@2x.png" platform="ios" width="640" height="1136" />
- -->
     <content src="index.html" />
     <access origin="*" />
 </widget>
-
