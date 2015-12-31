@@ -37,8 +37,8 @@
 }
 
 .dd-header-bk-button{
-	font-size: 30px;
-	top: 26%;
+	font-size: 36px;
+	top: 20%;
 	padding: 0 0 0 13px;
 	width: 20%;
 }
@@ -93,6 +93,7 @@
 
 .dd-footer-info{
 	padding: 0;
+	font-size: 16px;
 }
 
 /* Global */
