@@ -4,8 +4,8 @@
 <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "wz.dmwa.app"
-        versionCode = "18"
-        version     = "0.0.2" >
+        versionCode = "20"
+        version     = "0.0.5" >
         <!-- version is optional and Android only -->
     <name>Wise Foody</name>
     <description>
@@ -27,7 +27,7 @@
     <!-- Android must have these to work properly with splash screen -->
     <!-- https://forum.ionicframework.com/t/need-help-with-displaying-splash-screen-on-android-cordova-3-6/10436/10 -->
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="1000" />
+    <preference name="SplashScreenDelay" value="5000" />
     <platform name="android">
         <icon src="icon.png" width="180" height="180" />
         <splash src="res/android/sps/hdpi.png" density="port-hdpi"/>

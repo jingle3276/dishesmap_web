@@ -40,9 +40,9 @@ goog.require('wz.dmwa.app.services.LocationService');
                     var lat = locationService.get_lat();
                     var lon = locationService.get_lon();
                     //producation
-                    //var request_url = "http://192.241.173.181:8080/food/where/";
+                    var request_url = "http://192.241.173.181:8080/food/where/";
                     //local service for test
-                    var request_url =  "http://localhost:3000/foodlist/where/";
+                    //var request_url =  "http://localhost:3000/foodlist/where/";
 
                     var success = function (json){
                         self._clear_local_storage();

@@ -1,6 +1,15 @@
 CHANGE LOG
 ===========
 
+
+version 0.0.5(android)
+----------
+- date:   2015-12-31
+- author: Yng Zhao <jingle3276@hotmail.com>
+- changes:
+    - Add splash screen
+    - Adjust button sizes for better user interaction
+
 version 0.0.5(ios)
 ----------
 - date:    2015-12-6
