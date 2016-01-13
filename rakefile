@@ -10,6 +10,7 @@ CODE_DIR='dmwa'
 JAVASCRIPT_DIR="#{CODE_DIR}/public/javascript"
 INDEX_HTML="#{CODE_DIR}/public/index.html"
 CSS_DIR="#{CODE_DIR}/public/stylesheets"
+IMAGES_DIR="#{CODE_DIR}/public/images"
 NODE_MODULE_DIR="node_modules"
 
 # Load other rake tasks

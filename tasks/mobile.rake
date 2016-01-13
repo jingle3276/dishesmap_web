@@ -21,6 +21,7 @@ namespace :mobile do
         sh ("mkdir -p #{BUILD_HOME_WWW}/javascript/built")
         sh("cp -r #{JAVASCRIPT_DIR}/built #{BUILD_HOME_WWW}/javascript/")
         sh("cp -r #{CSS_DIR} #{BUILD_HOME_WWW}")
+        sh("cp -r #{IMAGES_DIR} #{BUILD_HOME_WWW}")
     end
 
     # Create Cordova phonegap_build project folder

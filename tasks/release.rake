@@ -17,6 +17,7 @@ namespace :release do
         mkdir_p TMP_DIR
         sh("rsync -a #{PUBLIC_DIR}/javascript/built #{TMP_DIR}/javascript")
         sh("rsync -a #{PUBLIC_DIR}/stylesheets #{TMP_DIR}")
+        sh("rsync -a #{PUBLIC_DIR}/images #{TMP_DIR}")
         sh("rsync -a #{PUBLIC_DIR}/index.html #{TMP_DIR}")
     end
 
