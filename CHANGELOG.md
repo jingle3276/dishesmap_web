@@ -1,6 +1,12 @@
 CHANGE LOG
 ===========
 
+version 0.0.6(ios)
+----------
+- date:   2016-02-01
+- author: Yng Zhao <jingle3276@hotmail.com>
+- changes:
+    - fix loading state
 
 version 0.0.5(android)
 ----------
