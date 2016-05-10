@@ -17,7 +17,9 @@
     "express": "^4.9.7",
     "forever": "0.12.0",
     "bunyan": "1.2.1",
-    "underscore": "1.7.0"
+    "underscore": "1.7.0",
+
+    "ios-sim": "5.0.5"
   }
 
 }

@@ -41,7 +41,7 @@ goog.require('wz.dmwa.app.services.DishlistService');
                 this._view.goToScrollPosition(pos);
             }
 
-            if (_.size(viewOptions.dish_list) == 0) {
+            if (_.size(viewOptions.dish_list) === 0) {
                 this._view.showZeroState();
             }
 
